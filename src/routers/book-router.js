@@ -1,6 +1,6 @@
 import { Router } from "express";
 // import { bookService } from "../services";
-import books from "../db/mockBooks.json"
+import books from "../db/mockBooks"
 
 let mockBookDB = books;
 
