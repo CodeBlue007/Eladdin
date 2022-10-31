@@ -2,7 +2,7 @@
   {
     "imgUrl": "https://image.aladin.co.kr/product/844/69/cover500/8991268935_1.jpg",
     "title": "UML, 실전에서는 이것만 쓴다 - Java 프로그래머를 위한",
-    "ISBN": "9788991268937",
+    "ISBN": 9788991268937,
     "EBook": true,
     "author": "로버트 C. 마틴",
     "publisher": "인사이트",
@@ -13,7 +13,7 @@
   {
     "imgUrl": "https://image.aladin.co.kr/product/67/13/cover500/8991268102_1.jpg",
     "title": "익스트림 프로그래밍",
-    "ISBN": "9788991268104",
+    "ISBN": 9788991268104,
     "EBook": true,
     "author": "켄트 벡,신시아 안드레스",
     "publisher": "인사이트",
@@ -24,7 +24,7 @@
   {
     "imgUrl": "https://image.aladin.co.kr/product/22267/76/cover500/k072636928_1.jpg",
     "title": "인클루시브 디자인 패턴 - 접근성 있는 웹디자인하기",
-    "ISBN": "9791185885247",
+    "ISBN": 9791185885247,
     "EBook": true,
     "author": "헤이던 피커링",
     "publisher": "웹액츄얼리코리아",
@@ -35,7 +35,7 @@
   {
     "imgUrl": "https://image.aladin.co.kr/product/4735/99/cover500/8966261175_1.jpg",
     "title": "탐험적 테스팅 - 배우고 통찰하며 개선하는 소프트웨어 테스트",
-    "ISBN": "9788966261178",
+    "ISBN": 9788966261178,
     "EBook": true,
     "author": "엘리자베스 헨드릭슨",
     "publisher": "인사이트",
@@ -46,7 +46,7 @@
   {
     "imgUrl": "https://image.aladin.co.kr/product/844/69/cover500/8991268935_1.jpg",
     "title": "테스트 주도 개발",
-    "ISBN": "9788966261024",
+    "ISBN": 9788966261024,
     "EBook": true,
     "author": "켄트 벡",
     "publisher": "인사이트",
@@ -56,8 +56,8 @@
   },
   {
     "imgUrl": "https://image.aladin.co.kr/product/23618/61/cover500/k932638523_1.jpg",
-    "title": "리팩티링",
-    "ISBN": "9791162242742",
+    "title": "리팩터링",
+    "ISBN": 9791162242742,
     "EBook": true,
     "author": "마틴 파울러",
     "publisher": "한빛미디어",
@@ -68,7 +68,7 @@
   {
     "imgUrl": "http://image.yes24.com/goods/108748841/XL",
     "title": "쏙쏙 들어오는 함수형 코딩",
-    "ISBN": "9791191600759",
+    "ISBN": 9791191600759,
     "EBook": true,
     "author": "에릭 노먼드",
     "publisher": "제이펍",
@@ -79,7 +79,7 @@
   {
     "imgUrl": "http://image.yes24.com/goods/104643906/XL",
     "title": "리액트 네이티브를 다루는 기술",
-    "ISBN": "9791165217341",
+    "ISBN": 9791165217341,
     "EBook": true,
     "author": "김민준",
     "publisher": "길벗",
@@ -90,7 +90,7 @@
   {
     "imgUrl": "https://image.aladin.co.kr/product/18013/79/cover500/k232534740_1.jpg",
     "title": "사람을 배려하는 디자인",
-    "ISBN": "9791185885186",
+    "ISBN": 9791185885186,
     "EBook": true,
     "author": "에릭 마이어,사라 와터 보에처",
     "publisher": "웹액츄얼리코리아",
