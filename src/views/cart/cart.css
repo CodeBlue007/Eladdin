@@ -1,0 +1,85 @@
+@import url("./reset.css");
+
+nav{
+    display : flex;
+    justify-content: space-around;
+}
+
+.container{
+    border-radius: 1px solid black;
+}
+
+.container .selectbox{
+    display: flex;
+    align-items: center;
+}
+
+.container #select_btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    margin-right : 5px;
+    
+}
+
+.item-container{
+    border: 1px solid black;
+    width: 80%;
+    position: relative;
+}
+
+.item-container .itembox{
+    border : 1px solid black;
+    display : flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.item-container .itembox .imgbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.item-container .itembox .infoBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.item-container .itembox .priceBox{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.add_btn_container{
+    display: flex;
+    justify-content: space-between;
+    width : 80px;
+    text-align: cemter;
+    background-color: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: chartreuse;
+}
+
+
+.add_btn_container .add_btn_input{
+    width: 20px;
+    border: none;
+    background-color: chartreuse;
+    font-weight: bold;
+    padding: 0;
+    text-align: center;
+
+}
+
+.add_btn{
+    border: none;
+    background-color: chartreuse;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
