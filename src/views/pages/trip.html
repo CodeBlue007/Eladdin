@@ -13,8 +13,8 @@
     <script defer src="https://kit.fontawesome.com/9daa42bcef.js" crossorigin="anonymous"></script>
 
     <!-- 커스텀 css, js -->
-    <link rel="stylesheet" href="category-booklist.css" />
-    <script src="category-booklist.js" type="module" defer></script>
+    <link rel="stylesheet" href="../category-booklist/category-booklist.css" />
+    <script src="../category-booklist/category-booklist.js" type="module" defer></script>
 </head>
 
 <body>
@@ -55,78 +55,96 @@
         </div>
 
 
-
     </nav>
+    <!-- 카테고리List & 카테고리명 & bookList contatiner -->
+    <div class="category-categoryTitle-books-container">
+        <!-- 카테고리 list container -->
+        <div class="category-list-container">
+            <div class="box" id="category">
+                <p class="title is-5 has-text-info">Categories</p>
+                <div class="field">
+                    <li><a href="../pages/essay.html">에세이</li>
+                </div>
+                <div class="field">
+                    <li><a href="../pages/trip.html">여행</li>
+                </div>
+                <div class="field">
+                    <li><a href="../pages/self-dev.html">자기계발</li>
+                </div>
+                <div class="field">
+                    <li><a href="../pages/com-mob.html">컴퓨터/모바일</li>
+                </div>
+                <div class="field mb-5">
+                    <li><a href="../pages/det-story.html">추리소설</li>
+                </div>
+            </div>
+        </div>
 
-    <!-- 카테고리 list container -->
-    <div class="category-list-container">
-        <div class="box" id="category">
-            <p class="title is-5 has-text-info">Categories</p>
-            <div class="field">
-                <li><a href="../pages/essay.html">에세이</li>
+        <!-- 카테고리명 & bookList container -->
+        <div class="categoryTitle-books-container">
+            <!-- 카테고리명 container -->
+            <div class="essay-category-container">
+                <div class="box" id="essayBooks">
+                    <p class="title is-5 has-text-info">여행(${N}권)</p>
+                </div>
             </div>
-            <div class="field">
-                <li><a href="../pages/trip.html">여행</li>
+
+            <!-- 카테고리별 bookList container -->
+            <div class="essay-bookList-container">
+                <div class="box" id="book">
+                    <div id="bookBox">
+                        <div class="field">
+                            <img src="" alt="bookcover" width="200">
+                        </div>
+                        <div class="box" id="bookInfo">
+                            <div id="mainBookField">
+                                <div class="field" id="bookName">
+                                    <p>책 제목</p>
+                                </div>
+                                <div class="field infoValue">
+                                    <p>"책 소개"</p>
+                                </div>
+                            </div>
+
+                            <div id="author_publishField">
+                                <div class="field" id="authorValue">
+                                    <p>저자</p>
+                                </div>
+                                <div class="field infoValue" id="publisherValue">
+                                    <p>출판사</p>
+                                </div>
+                                <div class="field infoValue" id="publicationDateValue">
+                                    <p>출판일</p>
+                                </div>
+                            </div>
+                            <div class="field" id="bookPrice">
+                                <p>가격</p>
+                            </div>
+                            <div id="isEbookField">
+                                <div class="field">
+                                    <p>eBook</p>
+                                </div>
+                                <div class="field infoValue">
+                                    <p>이북 여부</p>
+                                </div>
+                            </div>
+                            <!-- <span class="icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span> -->
+                            <!-- <div class="field">
+                            <li>(판매가)13,500원</li>
+                        </div> -->
+                        </div>
+                        <div id="cartButton">
+                            <button class="button is-info is-fullwidth" id="submitCartButton">
+                                장바구니
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="field">
-                <li><a href="../pages/self-dev.html">자기계발</li>
-            </div>
-            <div class="field">
-                <li><a href="../pages/com-mob.html">컴퓨터/모바일</li>
-            </div>
-            <div class="field mb-5">
-                <li><a href="../pages/det-story.html">추리소설</li>
-            </div>
-            </form>
         </div>
     </div>
-
-    <!-- 카테고리명 container -->
-    <div class="essay-category-container">
-        <div class="box" id="essayBooks">
-            <p class="title is-5 has-text-info">여행</p>
-        </div>
-    </div>
-
-    <!-- 카테고리별 booklist container -->
-    <div class="essay-bookList-container">
-        <div class="box" id="book">
-            <!-- <div class="field">
-            <img src="../bookcoverEx.jpeg" alt="bookcover" width="200">
-        </div>
-        <div class="field">
-            <li><a href="/book">아버지의 해방일지</li>
-        </div>
-        <div class="field">
-            <li>"죽음에서 시작하는 삶의 이야기"</li>
-        </div>
-        <div class="field">
-            <li>정지아</li>
-        </div>
-        <div class="field">
-            <li>창비</li>
-        </div>
-        <div class="field">
-            <li>2022</li>
-        </div>
-        <div class="field">
-            <li>창비</li>
-        </div>
-        <div class="field">
-            <li>(정가)15,000원</li>
-        </div>
-        <span class="icon">
-            <i class="fa-solid fa-arrow-right"></i>
-        </span>
-        <div class="field">
-            <li>(판매가)13,500원</li>
-        </div>
-        <button class="button is-info is-fullwidth" id="submitButton">
-            장바구니
-        </button> -->
-        </div>
-    </div>
-
 </body>
 
 </html>
