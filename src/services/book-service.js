@@ -1,4 +1,4 @@
-import { bookModel } from '../db/models/book-model'
+import { bookModel } from '../db/models/book-model.js'
 
 
 export class BookService {
