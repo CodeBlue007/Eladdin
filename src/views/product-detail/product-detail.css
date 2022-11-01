@@ -1,0 +1,51 @@
+main .product-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.img {
+  margin-top: 50px;
+}
+
+.book {
+  margin: 50px 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 800px;
+}
+
+.book-info {
+  margin-left: 50px;
+}
+
+.title {
+  margin-top: 30px;
+}
+
+.author {
+  margin-top: 20px;
+}
+
+.publisher {
+  margin-top: 20px;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.price {
+  margin-top: 20px;
+}
+
+.publicationDate {
+  margin-top: 20px;
+}
+
+.cart {
+  margin-top: 250px;
+  width: 300px;
+}
