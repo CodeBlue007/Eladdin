@@ -8,3 +8,12 @@ export function getLocal(key) {
 
   return localDatas? JSON.parse(localDatas) : {};
 }
+
+export function getTotalPrice(datas){
+   const totalPrice = datas? datas.reduce((acc,cur)=> {
+    const price = Number(cur.price);
+    acc += price;
+    return acc;
+   },0) : 0;
+   return totalPrice;
+}

@@ -1,114 +1,158 @@
-@import url("./reset.css");
+@import url('./reset.css');
 
-nav{
-    display : flex;
-    justify-content: space-around;
+nav {
+  display: flex;
+  justify-content: space-around;
 }
 
-.container{
-    border-radius: 1px solid black;
-    margin: auto;
+.container {
+  margin: auto;
 }
 
 .header {
-    text-align: center;
-    margin-bottom : 50px;
-    font-size: 50px;
-}
-.container .selectbox{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top : -30px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 50px;
 }
 
-.container #select_btn{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: none;    
+.select_container {
+  display: flex;
+  height: 35px;
+  width: 80%;
+  margin : auto;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.select_container .select_box {
+    height: inherit;
+}
+.select_container .delete_box {
+    height: inherit;
+}
+
+
+.container #delete_btn{
     margin : 5px;
+
+}
+.container #select_btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  margin : 5px;
+
 }
 
-.item-container{
-    border: 1px solid black;
-    width: 80%;
-    position: relative;
-    margin: auto;
+.item-container {
+  width: 80%;
+  position: relative;
+  margin: auto;
 }
 
-.item-container .itembox{
-    border : 1px solid black;
-    display : flex;
-    margin-bottom : 10px;
+.item-container .itembox {
+  display: flex;
+  margin-bottom: 10px;
 }
 
-.item-container .itembox .imgbox{
+.item-container .itembox .imgbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  border: 1px solid black;
+  width: 200px;
+}
+
+.item-container .itembox .imgbox .bookImg {
+  width: 150px;
+  height: 200px;
+  margin: auto;
+}
+
+.item-container .itembox .infoBox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  flex-basis: 400px;
+  flex-grow: 2;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item-container .itembox .priceBox {
+  display: flex;
+  flex-basis: 200px;
+  flex-direction: column;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.item-container .itembox .priceBox .delete_btn{
+    position: absolute;
+    top : 5px;
+    right : 5px;
+}
+
+.add_btn_container {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  text-align: cemter;
+  background-color: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: chartreuse;
+}
+
+.add_btn_container .add_btn_input {
+  width: 20px;
+  border: none;
+  background-color: chartreuse;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+}
+
+.add_btn {
+  border: none;
+  background-color: chartreuse;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.orderbar{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    border : 1px solid black;
-    width: 200px;
-}
-
-.item-container .itembox .imgbox .bookImg{
-    width: 150px ;
-    height: 200px;
-    border : 1px solid black;
-    margin:auto;
-}
-
-.item-container .itembox .infoBox{
-    display: flex;
-    flex-direction: column;
-    border : 1px solid black;
-    flex-basis: 400px;
-    flex-grow : 2;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
-
-
-}
-
-.item-container .itembox .priceBox{
-    display: flex;
-    flex-basis: 200px;
-    flex-direction: column;
-    border : 1px solid black;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.add_btn_container{
-    display: flex;
-    justify-content: space-between;
-    width : 80px;
-    text-align: cemter;
-    background-color: none;
-    box-sizing: border-box;
-    overflow: hidden;
     border-radius: 10px;
-    background-color: chartreuse;
+    height: 10vh;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3000;
+    background-color: blanchedalmond;
 }
 
-
-.add_btn_container .add_btn_input{
-    width: 20px;
-    border: none;
-    background-color: chartreuse;
-    font-weight: bold;
-    padding: 0;
-    text-align: center;
-
+.orderbar.hidden{
+    display:none;
 }
 
-.add_btn{
+.orderbar .order_btn{
+    margin: 0 20px 0 20px;
     border: none;
-    background-color: chartreuse;
-    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
     cursor: pointer;
 }
 
 
+.orderbar .priceTag{
+    padding: 10px;
+}
