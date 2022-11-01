@@ -25,7 +25,9 @@ function htmlTemplate(datas) {
         <li class="author">저자 &nbsp;&nbsp;&nbsp;${author}</li>
         <li class="publisher">출판사 &nbsp;&nbsp;&nbsp;${publisher}</li>
         <li class="description">책 소개글 &nbsp;&nbsp;&nbsp;${description}</li>
-        <li class="price">가격 &nbsp;&nbsp;&nbsp;${price}원</li>
+        <li class="price">가격 &nbsp;&nbsp;&nbsp;${price
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</li>
         <li class="publicationDate">출시일 &nbsp;&nbsp;&nbsp;${publicationDate}</li>
         <button class="cart"><a href="/cart">장바구니</a></button>
       </ul>
