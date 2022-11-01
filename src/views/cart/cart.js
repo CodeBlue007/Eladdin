@@ -1,14 +1,17 @@
-import { setLocal } from "./util/util.js"
+import { setLocal,getLocal } from "./util/util.js"
+import {addCommas} from "../useful-functions.js"
 
 async function fetchData() {
-  const res = await fetch("./data/data.json");
+  const res = await fetch("../../db/mockBooks.json");
   const data = await res.json();
   setLocal(data);
   console.log(data);
-  return data;
+  return "bookInfo";
 }
 
+
 function renderData(datas) {
+  console.log(datas);
   const itemContainer = document.querySelector(".item-container");
   const dataString = htmlTemplate(datas);
   itemContainer.innerHTML += dataString;
@@ -16,17 +19,18 @@ function renderData(datas) {
 
 function htmlTemplate(datas) {
 
-  return datas.items.map(data => {
+  return datas.map(data => {
 
-    const { itemName, itemPrice, itemNumber, itemImg, itemAuthor } = data;
+    const { imgUrl, title, author, price} = data;
+    const newPrice = addCommas(price);
 
     return `<div class="itembox">
         <div class="imgbox">
           <button id="select_btn"></button>
-          <div>${itemImg}</div>
+          <img class="bookImg" src=${imgUrl} alt="book"></img>
         </div>
         <div class="infoBox">
-          <span>${itemName}/ ${itemAuthor}</span>
+          <span>${title}/ ${author}</span>
           <div class="add_btn_container">
             <button class="add_btn">🔺</button>
             <input type="text" value="1" class="add_btn_input" />
@@ -35,12 +39,18 @@ function htmlTemplate(datas) {
         </div>
         <div class="priceBox">
           <div>금액</div>
-          <div>${itemPrice}</div>
+          <div>${newPrice}</div>
         </div>
         </div>`
-  })
+  }).join('')
 }
 
 
-fetchData()
-  .then(data => renderData(data))
+function App(){
+
+  fetchData()
+  .then(key => getLocal(key))
+  .then(data => renderData(data));
+}
+
+App();
