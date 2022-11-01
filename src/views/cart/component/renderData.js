@@ -1,14 +1,15 @@
-import {addCommas} from "../../useful-functions.js"
-import {getTotalPrice} from "../util/util.js"
+import { addCommas } from "../../useful-functions.js"
+import { getTotalPrice } from "../util/util.js"
+import { addEvents } from "./addEvents.js";
 
 function addItems(datas) {
 
-    return datas.map(data => {
-  
-      const { imgUrl, title, author, price} = data;
-      const newPrice = addCommas(price);
-  
-      return `<div class="itembox"> 
+  return datas?.map(data => {
+
+    const { imgUrl, title, author, price ,ISBN } = data;
+    const newPrice = addCommas(price);
+
+    return `<div class="itembox"> 
           <div class="imgbox">
             <button id="select_btn"></button>
             <img class="bookImg" src=${imgUrl} alt="book"></img>
@@ -22,23 +23,23 @@ function addItems(datas) {
             </div>
           </div>
           <div class="priceBox">
-            <button class="delete_btn">❌</button>
+            <button class="delete_btn" data-id=${ISBN}>❌</button>
             <div>금액</div>
             <div>${newPrice}</div>
           </div>
           </div>`
-    }).join('');
+  }).join('');
 }
 
 
-export function renderData(datas) {
-    const itemContainer = document.querySelector(".item-container");
-    const priceTag = document.querySelector(".priceTag");
-    const dataString = addItems(datas);
-    const totalPrice = addCommas(getTotalPrice(datas));
-    priceTag.innerText = `총금액 : ${totalPrice}`
-    itemContainer.innerHTML = dataString;
+export function renderData(datas =[]) {
+  const itemContainer = document.querySelector(".item-container");
+  const priceTag = document.querySelector(".priceTag");
+  const dataString = addItems(datas);
+  const totalPrice = addCommas(getTotalPrice(datas));
+  priceTag.innerText = `총금액 : ${totalPrice}`
+  itemContainer.innerHTML = dataString;
 
-  }
-  
-  
+  addEvents();
+}
+
