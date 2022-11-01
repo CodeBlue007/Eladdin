@@ -1,26 +1,26 @@
 import { setLocal } from "./util/util.js"
 
 async function fetchData() {
-    const res = await fetch("./data/data.json");
-    const data = await res.json();
-    setLocal(data);
-    console.log(data);
-    return data;
+  const res = await fetch("./data/data.json");
+  const data = await res.json();
+  setLocal(data);
+  console.log(data);
+  return data;
 }
 
 function renderData(datas) {
-    const itemContainer = document.querySelector(".item-container");
-    const dataString = htmlTemplate(datas);
-    itemContainer.innerHTML += dataString;
+  const itemContainer = document.querySelector(".item-container");
+  const dataString = htmlTemplate(datas);
+  itemContainer.innerHTML += dataString;
 }
 
-function htmlTemplate(datas){
+function htmlTemplate(datas) {
 
-    return datas.items.map(data =>{
+  return datas.items.map(data => {
 
-        const {itemName, itemPrice, itemNumber, itemImg, itemAuthor} = data;
+    const { itemName, itemPrice, itemNumber, itemImg, itemAuthor } = data;
 
-        return `<div class="itembox">
+    return `<div class="itembox">
         <div class="imgbox">
           <button id="select_btn"></button>
           <div>${itemImg}</div>
@@ -38,9 +38,9 @@ function htmlTemplate(datas){
           <div>${itemPrice}</div>
         </div>
         </div>`
-    })
+  })
 }
 
 
 fetchData()
-    .then(data => renderData(data))
+  .then(data => renderData(data))
