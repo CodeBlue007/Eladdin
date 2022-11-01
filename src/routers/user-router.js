@@ -1,8 +1,8 @@
 import { Router } from "express";
 import is from "@sindresorhus/is";
 // 폴더에서 import하면, 자동으로 폴더의 index.js에서 가져옴
-import { loginRequired } from "../middlewares";
-import { userService } from "../services";
+import { loginRequired } from "../middlewares/index.js";
+import { userService } from "../services/index.js";
 
 const userRouter = Router();
 

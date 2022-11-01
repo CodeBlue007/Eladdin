@@ -1,11 +1,13 @@
 {
+  "type": "module",
   "name": "shopping-mall",
   "author": "team-n",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js --exec babel-node"
+    "dev": "nodemon index.js --exec babel-node",
+    "start" : "node index.js"
   },
   "dependencies": {
     "@sindresorhus/is": "^4.6.0",
