@@ -11,7 +11,7 @@ function addItems(datas) {
 
     return `<div class="itembox"> 
           <div class="imgbox">
-            <button id="select_btn"></button>
+            <button class="select_btn checked" data-id=${ISBN}></button>
             <img class="bookImg" src=${imgUrl} alt="book"></img>
           </div>
           <div class="infoBox">

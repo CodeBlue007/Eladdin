@@ -1,4 +1,4 @@
-export default [
+[
   {
     "imgUrl": "https://image.aladin.co.kr/product/844/69/cover500/8991268935_1.jpg",
     "title": "UML, 실전에서는 이것만 쓴다 - Java 프로그래머를 위한",

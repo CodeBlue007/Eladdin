@@ -1,3 +1,4 @@
+import { checkAll , checkToggleOne} from "./checkFn.js";
 import { deleteAll ,deleteOne } from "./deleteFn.js";
 import { plusItem , minusItem} from "./modifyItems.js";
 
@@ -6,7 +7,8 @@ export function addEvents(){
     const deleteEach = document.querySelectorAll('.delete_btn');
     const plusBtn = document.querySelectorAll(".plus_btn");
     const minusBtn = document.querySelectorAll(".minus_btn");
-
+    const checkAllbtn = document.querySelector("#selectAll_btn");
+    const checkBtns = document.querySelectorAll(".imgbox .select_btn");
 
     deleteAllBtn.addEventListener("click", deleteAll);
     
@@ -20,8 +22,14 @@ export function addEvents(){
 
     [...minusBtn].forEach(button =>{
         button.addEventListener("click", minusItem)
-    }); //어 이거 버블링, 캡처링해서 컨테이너에 넣는건가?
-  //상위 container에 모든 이벤트를 등록 > target값이 아니면 예외처리?
+    });
+
+    checkAllbtn.addEventListener("click", checkAll);
+
+    checkBtns.forEach(button =>{
+        button.addEventListener("click", checkToggleOne)
+    })
+
   
 }
 
