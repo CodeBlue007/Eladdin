@@ -2,7 +2,7 @@ import { Schema } from 'mongoose';
 
 const BookSchema = new Schema({
   price: {
-    type: number,
+    type: Number,
     required: true,
   },
   imgUrl: {
@@ -15,11 +15,11 @@ const BookSchema = new Schema({
   },
   //성능상의 문제로 인해 Number Type으로 변경함
   ISBN: {
-    type: number,
+    type: Number,
     required: true,
   },
   EBook: {
-    type: boolean,
+    type: Boolean,
     required: false,
   },
   author: {
