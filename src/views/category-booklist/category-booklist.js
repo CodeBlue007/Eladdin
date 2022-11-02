@@ -1,11 +1,12 @@
-import { renderHTML } from "./components/pageRenderer.js"
+import { renderBookList } from "./components/pageRenderer.js"
 import { addEventListeners } from "./components/eventListeners.js";
 
 async function fetchData() {
     const res = await fetch("../../db/mockBooks.js");
     const data = await res.json();
-    const slicedData = data.map(item => ({ ...item, volume: 1, checked: true }));
-    console.log(slicedData);
+    const bookData = data.map(item => ({ ...item, volume: 1, checked: true }));
+    console.log(bookData);
+    return bookData;
 }
 
 async function App() {

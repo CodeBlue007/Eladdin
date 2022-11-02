@@ -2,48 +2,50 @@ import { addCommas } from "../../useful-functions.js"
 import { addEvents } from "./eventListeners.js";
 import { } from "./util/pagination.js"
 
-function getItems(datas) {
+function renderBookList(datas) {
 
     return datas?.map(data => {
-        const { imgUrl, title, author, price, ISBN } = data;
+        // 책표지, 제목, 소개글, 저자, 출판사, 출판일, 가격, 이북 (key: ISBN)
+        const { imgUrl, title, description, author, publisher, publicationDate, price, EBook, ISBN } = data;
 
-        return `<!-- 카테고리명 container -->
+        commaPrice = addCommas(price);
+
+        return `
         <div class="essay-category-container">
             <div class="box" id="essayBooks">
-                <p class="title is-5 has-text-info">에세이(${N}권)</p>
+                <p class="title is-5 has-text-info">에세이(${data.length}권)</p>
             </div>
         </div>
 
-        <!-- 카테고리별 bookList container -->
         <div class="essay-bookList-container">
             <div class="box" id="book">
                 <div id="bookBox">
                     <div class="field">
-                        <img src="../bookcoverEx.jpeg" alt="bookcover" width="200">
+                        <img src=${imgUrl} alt="bookcover" width="200"></img>
                     </div>
-                    <div class="box" id="bookInfo">
+                    <div class="box" id="${ISBN}">
                         <div id="mainBookField">
                             <div class="field" id="bookName">
-                                <p>아버지의 해방일지</p>
+                                <p>${title}</p> //span? p?
                             </div>
-                            <div class="field infoValue">
-                                <p>"죽음에서 시작하는 삶의 이야기"</p>
+                            <div class="field infoValue" id="bookDescription">
+                                <p>"${description}"</p>
                             </div>
                         </div>
 
                         <div id="author_publishField">
                             <div class="field" id="authorValue">
-                                <p>정지아</p>
+                                <p>${author}</p>
                             </div>
                             <div class="field infoValue" id="publisherValue">
-                                <p>창비</p>
+                                <p>${publisher}</p>
                             </div>
                             <div class="field infoValue" id="publicationDateValue">
-                                <p>2022-06-10</p>
+                                <p>${publicationDate}</p>
                             </div>
                         </div>
                         <div class="field" id="bookPrice">
-                            <p>15,000원</p>
+                            <p>`${ commaPrice } 원`</p>
                         </div>
                         <div id="isEbookField">
                             <div class="field">
@@ -72,8 +74,8 @@ function getItems(datas) {
 }
 
 export function renderData(datas = []) {
-    const itemContainer = document.querySelector(".item-container");
-    const dataString = getItems(datas);
+    const itemContainer = document.querySelector(".categoryTitle-books-container");
+    const dataString = renderBookList(datas);
     itemContainer.innerHTML = dataString;
     addEvents();
 }

@@ -6,7 +6,7 @@ function addItems(datas) {
 
   return datas?.map(data => {
 
-    const { imgUrl, title, author, price ,ISBN } = data;
+    const { imgUrl, title, author, price, ISBN } = data;
     const newPrice = addCommas(price);
 
     return `<div class="itembox"> 
@@ -31,14 +31,14 @@ function addItems(datas) {
   }).join('');
 }
 
-export function setTotalPrice(datas){
+export function setTotalPrice(datas) {
   const priceTag = document.querySelector(".priceTag");
   const totalPrice = addCommas(getTotalPrice(datas));
   priceTag.innerText = `총금액 : ${totalPrice}`
 }
 
 
-export function renderData(datas =[]) {
+export function renderData(datas = []) {
   const itemContainer = document.querySelector(".item-container");
   const dataString = addItems(datas);
   setTotalPrice(datas);
