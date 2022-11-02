@@ -17,6 +17,8 @@ const BookSchema = new Schema({
   ISBN: {
     type: Number,
     required: true,
+    index: true,
+    unique: true // 유일성 제약
   },
   EBook: {
     type: Boolean,
