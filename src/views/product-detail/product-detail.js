@@ -29,11 +29,13 @@ function htmlTemplate(datas) {
           .toString()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</li>
         <li class="publicationDate">출시일 &nbsp;&nbsp;&nbsp;${publicationDate}</li>
-        
         <a href="#pop1" class="cart">장바구니</a>
         <div class="popup" id="pop1">
           <a href="#a">닫기</a>
-          <div class="move_to_cart">장바구니로 이동하시겠습니까?</div>
+          <div class="move_to_cart">
+            <span>장바구니에 추가되었습니다.<br></span>
+            <span>장바구니로 이동하시겠습니까?</span>
+          </div>
           <div class="next_move">
             <a href="#b">취소</a>
             <a href="/cart" class="confirm">확인</a>

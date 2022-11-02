@@ -45,12 +45,41 @@ main .product-detail {
   margin-top: 20px;
 }
 
+.add_btn_container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  text-align: cemter;
+  background-color: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: chartreuse;
+}
+
+.add_btn_container .add_btn_input {
+  width: 20px;
+  border: none;
+  background-color: chartreuse;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+}
+
+.add_btn {
+  border: none;
+  background-color: chartreuse;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .cart {
   display: block;
   width: 300px;
   text-align: center;
   margin-top: 200px;
-  background-color: plum;
+  background-color: chartreuse;
   border-radius: 50px;
 }
 
@@ -102,6 +131,7 @@ main .product-detail {
   margin: auto;
   font-weight: 800;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .popup:target {
