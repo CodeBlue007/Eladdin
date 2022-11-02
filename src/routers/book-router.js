@@ -1,6 +1,6 @@
 import { Router } from "express";
 // import { bookService } from "../services";
-import books from "../db/mockBooks"
+import books from "../db/mockBooks.js"
 
 let mockBookDB = books;
 
@@ -9,6 +9,15 @@ const bookRouter = Router();
 bookRouter.get("/", async (req, res) => {
     res.json(mockBookDB);
   }
+);
+
+bookRouter.get("/:ISBN", async (req, res) => {
+  const ISBN = parseInt(req.params.ISBN)
+
+  const book = mockBookDB.find(book=> book.ISBN === ISBN);
+  console.log(book)
+  res.json(book);
+}
 );
 
 // TODO: 로그인 기능 구현 시 middleware 추가

@@ -1,5 +1,13 @@
 import express from "express";
 import path from "path";
+import url from 'url'
+
+const __filename = url.fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+// console.log('import.meta.url : ', import.meta.url)
+// console.log('__filename : ', __filename)
+// console.log('__dirname : ', __dirname)
 
 const viewsRouter = express.Router();
 
