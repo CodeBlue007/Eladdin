@@ -3,7 +3,7 @@ import { BookSchema } from "../schemas/book-schema.js";
 
 const Book = model("books", BookSchema);
 
-export class BookModel { // BookRepository에 가까운듯
+export class BookModel {
     //basic-user만 가능한 기능
     async findAll(){
         return Book.find({});

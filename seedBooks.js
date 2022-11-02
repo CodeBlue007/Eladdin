@@ -13,7 +13,7 @@ const db = mongoose.connection;
 db.on("connected", async () =>{
     const existBooks = await bookService.findAll();
     if(existBooks.length > 0){
-        console.error('이미 데이터가 존재합니다.', existBooks)
+        console.error('이미 동일한 데이터가 존재합니다.', existBooks)
         return;
     }
     console.log('시딩을 시작합니다.')
