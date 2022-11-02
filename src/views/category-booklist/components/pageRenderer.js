@@ -1,22 +1,13 @@
 import { addCommas } from "../../useful-functions.js"
-import { addEvents } from "./eventListeners.js";
-import { } from "./util/pagination.js"
+// import { addEventListeners } from "./eventListeners.js";
 
 function renderBookList(datas) {
-
     return datas?.map(data => {
         // 책표지, 제목, 소개글, 저자, 출판사, 출판일, 가격, 이북 (key: ISBN)
         const { imgUrl, title, description, author, publisher, publicationDate, price, EBook, ISBN } = data;
-
-        commaPrice = addCommas(price);
+        const commaPrice = addCommas(price);
 
         return `
-        <div class="essay-category-container">
-            <div class="box" id="essayBooks">
-                <p class="title is-5 has-text-info">에세이(${data.length}권)</p>
-            </div>
-        </div>
-
         <div class="essay-bookList-container">
             <div class="box" id="book">
                 <div id="bookBox">
@@ -26,7 +17,7 @@ function renderBookList(datas) {
                     <div class="box" id="${ISBN}">
                         <div id="mainBookField">
                             <div class="field" id="bookName">
-                                <p>${title}</p> //span? p?
+                                <p>${title}</p>
                             </div>
                             <div class="field infoValue" id="bookDescription">
                                 <p>"${description}"</p>
@@ -45,22 +36,16 @@ function renderBookList(datas) {
                             </div>
                         </div>
                         <div class="field" id="bookPrice">
-                            <p>`${ commaPrice } 원`</p>
+                            <p>${commaPrice}원</p>
                         </div>
                         <div id="isEbookField">
                             <div class="field">
                                 <p>eBook</p>
                             </div>
                             <div class="field infoValue">
-                                <p>true</p>
+                                <p>${EBook}</p>
                             </div>
                         </div>
-                        <!-- <span class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span> -->
-                        <!-- <div class="field">
-                        <li>(판매가)13,500원</li>
-                    </div> -->
                     </div>
                     <div id="cartButton">
                         <button class="button is-info is-fullwidth" id="submitCartButton">
@@ -73,10 +58,8 @@ function renderBookList(datas) {
     }).join('');
 }
 
-export function renderData(datas = []) {
+export function renderBookData(datas = []) {
     const itemContainer = document.querySelector(".categoryTitle-books-container");
     const dataString = renderBookList(datas);
     itemContainer.innerHTML = dataString;
-    addEvents();
 }
-
