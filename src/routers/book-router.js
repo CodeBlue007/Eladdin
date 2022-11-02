@@ -1,5 +1,5 @@
 import { Router } from "express";
-// import { bookService } from "../services";
+import { bookService } from "../services/index.js";
 import books from "../db/mockBooks.js"
 
 let mockBookDB = books;
@@ -7,7 +7,9 @@ let mockBookDB = books;
 const bookRouter = Router();
 //eladin.com/books
 bookRouter.get("/", async (req, res) => {
-    res.json(mockBookDB);
+    const books = await bookService.findAll();
+
+    res.json(books);
   }
 );
 
