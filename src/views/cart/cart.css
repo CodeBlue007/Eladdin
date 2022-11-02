@@ -119,7 +119,7 @@ nav {
   text-align: center;
 }
 
-.add_btn {
+.plus_btn, .minus_btn   {
   border: none;
   background-color: chartreuse;
   font-weight: bold;

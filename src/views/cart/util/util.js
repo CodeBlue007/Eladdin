@@ -11,7 +11,7 @@ export function getLocal(key) {
 
 export function getTotalPrice(datas) {
   const totalPrice = datas ? datas.reduce((acc, cur) => {
-    const price = Number(cur.price);
+    const price = Number(cur.price) * (cur.volume);
     acc += price;
     return acc;
   }, 0) : 0;

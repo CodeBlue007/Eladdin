@@ -17,9 +17,9 @@ function addItems(datas) {
           <div class="infoBox">
             <span>${title}/ ${author}</span>
             <div class="add_btn_container">
-              <button class="add_btn">🔺</button>
-              <div class="add_btn_input">1</div>
-              <button class="add_btn">🔻</button>
+              <button class="plus_btn" data-id=${ISBN}>🔺</button>
+              <input class="add_btn_input" type="text" disabled value="1"/>
+              <button class="minus_btn" data-id=${ISBN}>🔻</button>
             </div>
           </div>
           <div class="priceBox">
@@ -31,15 +31,18 @@ function addItems(datas) {
   }).join('');
 }
 
+export function setTotalPrice(datas){
+  const priceTag = document.querySelector(".priceTag");
+  const totalPrice = addCommas(getTotalPrice(datas));
+  priceTag.innerText = `총금액 : ${totalPrice}`
+}
+
 
 export function renderData(datas =[]) {
   const itemContainer = document.querySelector(".item-container");
-  const priceTag = document.querySelector(".priceTag");
   const dataString = addItems(datas);
-  const totalPrice = addCommas(getTotalPrice(datas));
-  priceTag.innerText = `총금액 : ${totalPrice}`
+  setTotalPrice(datas);
   itemContainer.innerHTML = dataString;
-
   addEvents();
 }
 
