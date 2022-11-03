@@ -6,7 +6,10 @@ import { bookService } from "../services/index.js";
 const bookRouter = Router();
 
 function nextError(callback){
-  return async (req, res, next) => callback(req, res, next).then(next);
+  return async (req, res, next) => {
+    await callback(req, res, next)
+      .catch(next)
+  };
 }
 
 //eladin.com/books
@@ -46,7 +49,6 @@ bookRouter.delete("/:ISBN", nextError(async (req, res, next) => {
     await bookService.deleteByISBN(ISBN)
     res.status(204).end()
 }));
-
 
 
 export { bookRouter };

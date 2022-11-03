@@ -46,7 +46,6 @@ const BookSchema = new Schema({
   },
   // 추가기능
   // TODO 양탄자 배송 이름이 양탄자여야할까요?
-  // TODO 카테고리는 어떻게 구현할까요?
 });
 
 export { BookSchema };

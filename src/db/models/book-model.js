@@ -29,11 +29,13 @@ export class BookModel {
     async update({ ISBN, bookInfo }) {
         //DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르면
         //이미 존재하지 않으면
-        if(await Book.exists({ISBN}) == null){
-            throw new Error(`DB에 ${bookInfo.ISBN}는 존재합니다. 고유한 ISBN을 입력해주세요.`)
+        console.log(ISBN)
+        console.log(await Book.exists({ISBN}))
+        console.log(await Book.findOne({ISBN}))
+        if((await Book.exists({ISBN})) == null){
+            throw new Error(`DB에 ${ISBN}에 해당하는 Book이 존재하지 않습니다`)
         }
-        Book.findOneAndUpdate({ ISBN }, bookInfo, { returnOriginal: false });
-        return Book.create(bookInfo);
+        await Book.findOneAndUpdate({ ISBN }, bookInfo, { returnOriginal: false });
     }
 
     async deleteByISBN(ISBN) {
