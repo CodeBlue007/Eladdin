@@ -5,7 +5,7 @@ import {addEvents} from "./component/addEvents.js";
 async function fetchData() {
   const res = await fetch("../../db/mockBooks.json");
   const data = await res.json();
-  const slicedData = data.slice(0,10).map(item => ({...item, volume:1, checked:true}));
+  const slicedData = data.slice(0,9).map(item => ({...item, volume:1, checked:true}));
   console.log(slicedData);
   setLocal(slicedData);
   return "bookInfo";
@@ -15,7 +15,6 @@ async function fetchData() {
 async function App() {
 
   try{
-
     const key = await fetchData();
     const data = await getLocal(key);
     renderData(data);
