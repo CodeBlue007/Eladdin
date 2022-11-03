@@ -1,6 +1,10 @@
+import { addCommas } from "../../useful-functions.js";
+
 export function renderOrder(datas){
 
 return datas?.map(data => {
+
+  if(!data.checked) return '';
 
     const { imgUrl, title, author, price, ISBN } = data;
     const newPrice = addCommas(price);  
@@ -16,9 +20,10 @@ return datas?.map(data => {
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>${title}</strong> / <small>${author}</small>
-              <br />
-              ${newPrice}
+              <strong>${title}</strong>
+              <br/>
+              <small>${author}</small>
+              <div>${newPrice}</div>
             </p>
           </div>
         </div>
@@ -26,6 +31,4 @@ return datas?.map(data => {
     </div>
   </div>`
   }).join('');
-
-
 }
