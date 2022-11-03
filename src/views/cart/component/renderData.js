@@ -37,12 +37,27 @@ export function setTotalPrice(datas) {
   priceTag.innerText = `총금액 : ${totalPrice}`
 }
 
+function renderBTnColor(datas){
+  const selectBtns = document.querySelectorAll(".imgbox button");
+  const btnArray = [...selectBtns];
+
+  datas.forEach((data,idx) =>{
+    if(data.checked){
+      btnArray[idx].classList.add("checked");
+    }
+    else{
+      btnArray[idx].classList.remove("checked");
+    }
+  });
+}
+
 
 export function renderData(datas = []) {
   const itemContainer = document.querySelector(".item-container");
   const dataString = addItems(datas);
-  setTotalPrice(datas);
   itemContainer.innerHTML = dataString;
+  setTotalPrice(datas);
+  renderBTnColor(datas);
   addEvents();
 }
 
