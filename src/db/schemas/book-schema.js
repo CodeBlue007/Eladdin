@@ -39,6 +39,11 @@ const BookSchema = new Schema({
     type: Date,
     required: true,
   },
+  category: {
+    index: true,    
+    type: String,
+    required: true,
+  },
   // 추가기능
   // TODO 양탄자 배송 이름이 양탄자여야할까요?
   // TODO 카테고리는 어떻게 구현할까요?
