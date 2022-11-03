@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import mongoose from "mongoose";
-import { bookModel } from "./src/db/models/book-model.js";
+//import { bookModel } from "./src/db/models/book-model.js";
 import { bookService } from "./src/services/index.js";
 import mockBooks from "./src/db/mockBooks.js";
 
@@ -13,8 +13,9 @@ const db = mongoose.connection;
 
 db.on("connected", async () =>{
 
-    // await bookModel.dangerousDeleteAll();
-    console.log('기존 데이터를 모두 삭제합니다.')
+    //  await bookModel.dangerousDeleteAll();
+    // console.log('기존 데이터를 모두 삭제합니다.')
+
     const existBooks = await bookService.findAll();
     if(existBooks.length > 0){
         console.error('이미 데이터가 존재합니다.', existBooks)

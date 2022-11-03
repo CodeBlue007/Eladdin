@@ -13,12 +13,12 @@ export class BookService {
 
   // admin만 가능한 기능
   async create(bookInfo) { //Object
-      return bookModel.create(bookInfo);
+      await bookModel.create(bookInfo);
   }
 
   async update({ ISBN, bookInfo }) {
       //DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르면
-      return bookModel.update({ ISBN, bookInfo });
+      await bookModel.update({ ISBN, bookInfo });
   }
 
   async deleteByISBN(ISBN) {

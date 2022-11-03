@@ -2,6 +2,7 @@
 // 나중에 import 할 때의 코드도 짧아지는 효과가 있음.
 
 export * from "./views-router.js";
-// export * from "./user-router";
+export * from "./user-router.js";
 export * from "./book-router.js";
 export * from "./img-router.js";
+export * from "./order-router.js";
