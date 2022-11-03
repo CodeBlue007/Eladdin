@@ -11,8 +11,8 @@ export class BookModel {
     }
 
     async findByISBN(ISBN) {
-        if(await Book.exists({ISBN : bookInfo.ISBN}) == null){
-            throw new Error(`DB에 ${bookInfo.ISBN}는 존재하지 않습니다.`)
+        if(await Book.exists({ISBN}) == null){
+            throw new Error(`DB에 ${ISBN}는 존재하지 않습니다.`)
         }
         return Book.findOne({ ISBN });
     }
@@ -37,14 +37,14 @@ export class BookModel {
     }
 
     async deleteByISBN(ISBN) {
-        if(await Book.exists({ISBN : bookInfo.ISBN}) == null){
-            throw new Error(`DB에 ${bookInfo.ISBN}는 존재하지 않아 삭제할 수 없습니다.`)
+        if(await Book.exists({ISBN}) == null){
+            throw new Error(`DB에 ${ISBN}는 존재하지 않아 삭제할 수 없습니다.`)
         }
         await Book.deleteOne({ ISBN })
     }
 
     //사용하지 마세요! db 초기화 용도로 사용하는 함수입니다.
-    async dangerousDeleteAll(ISBN) {
+    async dangerousDeleteAll() {
         await Book.deleteMany({});
     }
   }
