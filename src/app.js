@@ -1,8 +1,9 @@
 import cors from "cors";
 import express from "express";
-import { viewsRouter, userRouter, bookRouter} from "./routers/index.js";
+import { viewsRouter, userRouter, bookRouter, imgRouter } from "./routers/index.js";
 import { errorHandler } from "./middlewares/index.js";
 import morgan from 'morgan';
+
 
 const app = express();
 
@@ -25,7 +26,7 @@ app.use(viewsRouter);
 // /api/login 으로 요청을 해야 하게 됨. 백엔드용 라우팅을 구분하기 위함임.
 
 app.use("/api/auth", userRouter);
-
+app.use("/api/loadimg", imgRouter);
 app.use("/api/books", bookRouter);
 
 // 순서 중요 (errorHandler은 다른 일반 라우팅보다 나중에 있어야 함)
