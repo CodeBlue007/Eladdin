@@ -7,9 +7,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon index.js --exec babel-node",
-    "start" : "node index.js"
+    "start": "node index.js"
   },
   "dependencies": {
+    "@google-cloud/storage": "^6.6.0",
     "@sindresorhus/is": "^4.6.0",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",

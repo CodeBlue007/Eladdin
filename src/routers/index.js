@@ -4,3 +4,4 @@
 export * from "./views-router.js";
 // export * from "./user-router";
 export * from "./book-router.js";
+export * from "./img-router.js";
