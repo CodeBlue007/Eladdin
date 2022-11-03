@@ -9,6 +9,9 @@ class UserService {
     this.userModel = userModel;
   }
 
+  async findAll(){
+    return userModel.findAll();
+  }
   // 회원가입
   async addUser(userInfo) {
     // 객체 destructuring
