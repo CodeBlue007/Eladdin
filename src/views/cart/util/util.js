@@ -1,3 +1,6 @@
+import { addCommas } from "../../useful-functions.js"
+
+
 export function setLocal(data = {}) {
   localStorage.setItem("bookInfo", JSON.stringify(data));
 }
@@ -9,7 +12,7 @@ export function getLocal(key) {
   return localDatas ? JSON.parse(localDatas) : [];
 }
 
-export function getTotalPrice(datas) {
+function getTotalPrice(datas) {
   const totalPrice = datas ? datas.reduce((acc, cur) => {
     if (cur.checked) {
       const price = Number(cur.price) * (cur.volume);
@@ -19,4 +22,10 @@ export function getTotalPrice(datas) {
   }, 0) : 0;
   
   return totalPrice;
+}
+
+export function setTotalPrice(datas) {
+  const priceTag = document.querySelector(".priceTag");
+  const totalPrice = addCommas(getTotalPrice(datas));
+  priceTag.innerText = `총금액 : ${totalPrice}`
 }

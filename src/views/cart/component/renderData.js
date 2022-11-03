@@ -1,5 +1,5 @@
 import { addCommas } from "../../useful-functions.js"
-import { getTotalPrice } from "../util/util.js"
+import { setTotalPrice } from "../util/util.js"
 import { addEvents } from "./addEvents.js";
 
 function addItems(datas) {
@@ -7,7 +7,7 @@ function addItems(datas) {
   return datas?.map(data => {
 
     const { imgUrl, title, author, price, ISBN } = data;
-    const newPrice = addCommas(price);
+    const newPrice = addCommas(price);  
 
     return `<div class="itembox"> 
           <div class="imgbox">
@@ -31,21 +31,16 @@ function addItems(datas) {
   }).join('');
 }
 
-export function setTotalPrice(datas) {
-  const priceTag = document.querySelector(".priceTag");
-  const totalPrice = addCommas(getTotalPrice(datas));
-  priceTag.innerText = `총금액 : ${totalPrice}`
-}
 
-function renderBTnColor(datas){
+function renderBTnColor(datas) {
   const selectBtns = document.querySelectorAll(".imgbox button");
   const btnArray = [...selectBtns];
 
-  datas.forEach((data,idx) =>{
-    if(data.checked){
+  datas.forEach((data, idx) => {
+    if (data.checked) {
       btnArray[idx].classList.add("checked");
     }
-    else{
+    else {
       btnArray[idx].classList.remove("checked");
     }
   });

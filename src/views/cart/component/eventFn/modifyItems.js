@@ -1,5 +1,4 @@
-import { setLocal, getLocal } from "../util/util.js";
-import { setTotalPrice } from "./renderData.js";
+import { setLocal, getLocal, setTotalPrice} from "../../util/util.js";
 
 export function plusItem(event) {
     const input = event.target.nextElementSibling;
