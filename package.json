@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon index.js --exec babel-node",
-    "start" : "node index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "@sindresorhus/is": "^4.6.0",
@@ -16,7 +16,8 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.3.1"
+    "mongoose": "^6.3.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
