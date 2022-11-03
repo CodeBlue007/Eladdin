@@ -15,7 +15,6 @@ async function fetchData() {
 async function App() {
 
   try{
-
     const key = await fetchData();
     const data = await getLocal(key);
     renderData(data);

@@ -28,7 +28,6 @@ export function checkAll() {
 
 export function checkToggleOne(event) {
     const selectAllBtn = document.querySelector('#selectAll_btn');
-
     selectAllBtn.classList.remove("checked");
     event.target.classList.toggle("checked");
     const { id } = event.target.dataset;

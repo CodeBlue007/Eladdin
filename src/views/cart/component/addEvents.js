@@ -1,8 +1,8 @@
-import { checkAll , checkToggleOne} from "./checkFn.js";
-import { deleteAll ,deleteOne } from "./deleteFn.js";
-import { plusItem , minusItem} from "./modifyItems.js";
+import { checkAll, checkToggleOne } from "./checkFn.js";
+import { deleteAll, deleteOne } from "./deleteFn.js";
+import { plusItem, minusItem } from "./modifyItems.js";
 
-export function addEvents(){
+export function addEvents() {
     const deleteAllBtn = document.querySelector('#deleteall_btn');
     const deleteEach = document.querySelectorAll('.delete_btn');
     const plusBtn = document.querySelectorAll(".plus_btn");
@@ -11,25 +11,25 @@ export function addEvents(){
     const checkBtns = document.querySelectorAll(".imgbox .select_btn");
 
     deleteAllBtn.addEventListener("click", deleteAll);
-    
-    [...deleteEach].forEach(button =>{
+
+    [...deleteEach].forEach(button => {
         button.addEventListener("click", deleteOne);
     });
 
-    [...plusBtn].forEach(button =>{
+    [...plusBtn].forEach(button => {
         button.addEventListener("click", plusItem)
     });
 
-    [...minusBtn].forEach(button =>{
+    [...minusBtn].forEach(button => {
         button.addEventListener("click", minusItem)
     });
 
     checkAllbtn.addEventListener("click", checkAll);
 
-    checkBtns.forEach(button =>{
+    checkBtns.forEach(button => {
         button.addEventListener("click", checkToggleOne)
     })
 
-  
+
 }
 
