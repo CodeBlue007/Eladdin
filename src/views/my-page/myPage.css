@@ -1,0 +1,108 @@
+header {
+  text-align: center;
+  margin-top: 80px;
+}
+
+header .profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
+
+header .welcome {
+  font-size: larger;
+}
+
+header .wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.list {
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.order-list {
+  background-color: lavender;
+  font-size: x-large;
+  display: inline-block;
+  width: 200px;
+}
+
+.cart {
+  margin-top: 50px;
+  background-color: lavender;
+  font-size: x-large;
+  display: inline-block;
+  width: 200px;
+}
+
+.logout {
+  margin-top: 50px;
+  background-color: lavender;
+  font-size: x-large;
+  display: inline-block;
+  width: 200px;
+}
+
+.cart-products {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  border: 1px solid grey;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cart-products .title {
+  font-size: large;
+  margin: 0 50px 0 50px;
+}
+
+.cart-products .price {
+  font-size: large;
+  margin-bottom: 25px;
+}
+
+.order-products {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  border: 1px solid grey;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.order .title {
+  font-size: large;
+  margin: 0 50px 0 50px;
+}
+
+.order .price {
+  font-size: large;
+  margin-bottom: 25px;
+}

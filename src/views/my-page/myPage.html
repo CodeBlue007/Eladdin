@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./product-detail.css" />
+    <link rel="stylesheet" href="./myPage.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <script src="./product-detail.js" defer type="module"></script>
-    <script src="./toCart.js" defer type="module"></script>
+    <script src="./myPage-cart.js" defer type="module"></script>
+    <script src="./myPage-order.js" defer type="module"></script>
+    <script src="./addEvent.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
-    <title>product-detail</title>
+    <title>my-page</title>
   </head>
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -22,7 +23,7 @@
         </div>
         <div class="navbar-end breadcrumb my-auto" aria-label="breadcrumbs">
           <ul id="navbar">
-            <li><a href="/mypage">마이페이지</a></li>
+            <li><a href="../mypage">마이페이지</a></li>
             <li><a href="../login/login.html">로그인</a></li>
             <li><a href="../register/register.html">회원가입</a></li>
             <li>
@@ -38,7 +39,23 @@
       </div>
     </nav>
     <main>
-      <div class="product-detail"></div>
+      <header>
+        <div class="wrapper">
+          <img class="profile-picture" src="../my-page/image/eladin.png" />
+          <div class="text-area">
+            <h1>Hi, Yoo Jeong Kim</h1>
+            <div class="welcome">마이페이지에 오신 걸 환영합니다!</div>
+          </div>
+        </div>
+      </header>
+
+      <ul class="list">
+        <button class="order-list"><li>주문 조회</li></button>
+        <div class="order-products"></div>
+        <button class="cart"><li>장바구니</li></button>
+        <div class="cart-products"></div>
+        <button class="logout"><li>로그아웃</li></button>
+      </ul>
     </main>
   </body>
 </html>
