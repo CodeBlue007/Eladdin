@@ -1,72 +1,52 @@
 import { addCommas } from "../../useful-functions.js"
-import { renderTitleData } from "./categoryTitleRenderer.js";
-// import { addEventListeners } from "./eventListeners.js";
 
 let categories = [
     {
-        title: '설계',
-        quantity: 0
+        name: '설계',
+        cnt: 0
     },
     {
-        title: '애자일',
-        quantity: 0
+        name: '애자일',
+        cnt: 0
     },
     {
-        title: '프론트엔드',
-        quantity: 0
+        name: '프론트엔드',
+        cnt: 0
     },
     {
-        title: '테스트',
-        quantity: 0
+        name: '테스트',
+        cnt: 0
     },
     {
-        title: '백엔드',
-        quantity: 0
+        name: '백엔드',
+        cnt: 0
     },
     {
-        title: '보안',
-        quantity: 0
+        name: '보안',
+        cnt: 0
     },
     {
-        title: '컴퓨터 과학',
-        quantity: 0
-    }
+        name: '컴퓨터 과학',
+        cnt: 0
+    },
 ];
 
 let bookInfo = '';
 
-function renderCategoryTitle(datas) {
-    return datas?.map(data => {
+let categoryTitle = '';
+
+let cnt = 0;
+
+function setCategories(datas) {
+    datas.forEach(data => {
         const { category } = data;
 
-        let categoryBookQuantity = 0;
-
-        let categoryTitle = '';
-
-        for (const elem of categories) {
-            if (category === elem.title) {
-                elem.quantity += 1;
+        categories.forEach(ctg => {
+            if (category == ctg.name) {
+                ctg.cnt++;
             }
-        }
-
-        for (const elem of categories) {
-            categoryTitle = `
-                <div class="${elem.title}-category-container">
-                    <div class="box" id="${elem.title}-books">
-                        <p class="title is-5 has-text-info">${elem.title}(${elem.quantity}권)</p>
-                    </div>
-                </div>
-            `;
-        }
-
-        console.log(categories);
-        return categoryTitle;
-
-    });//.join('');
-
-    for (const elem of categories) {
-        console.log(`${elem.title}: ${elem.quantity}`);
-    }
+        });
+    });
 }
 
 function renderBookList(datas) {
@@ -77,7 +57,6 @@ function renderBookList(datas) {
         const { imgUrl, title, description, author, publisher, publicationDate, price, EBook, category, ISBN } = data;
         const commaPrice = addCommas(price);
 
-        // for (const elem of categories) {
         bookInfo = `
             <div class="${category}-bookList-container">
                 <div class="box" id="${category}-book">
@@ -121,16 +100,47 @@ function renderBookList(datas) {
                     </div>
                 </div>
             </div>
-        `;
-        // }
+            `;
         return bookInfo;
     }).join('');
+}
+
+function renderCategoryList(datas, category) {
+    let categoryQuantity = 0;
+
+    categories.forEach(ctg => {
+        if (Object.values(ctg)[0] === category)
+            categoryQuantity = ctg.cnt;
+    });
+
+    categoryTitle =
+        `
+            <div class="${category}-category-container">
+                <div class="box" id="${category}-books">
+                    <p class="title is-5 has-text-info">${category}(${categoryQuantity}권)</p>
+                </div>
+            </div>
+        `;
+    return categoryTitle;
 }
 
 export function renderBookData(datas = []) {
     const itemContainer = document.querySelector(".categoryTitle-books-container");
     const bookListHTML = renderBookList(datas);
-    const categoryTitleHTML = renderCategoryTitle(datas);
+    setCategories(datas);
+
+    // 카테고리 한번씩만 title 생성
+    let categoryTitleHTML = '';
+    datas.forEach(data => {
+        let { category } = data;
+
+        categories.forEach(ctg => {
+            if (category == ctg.name) {
+                categoryTitleHTML = renderCategoryList(datas, category = '설계'); // 해당 자리에 click event로 얻은 카테고리名 할당
+            }
+        });
+    });
+    // const categoryTitleHTML = renderCategoryList(datas, categories); // 전체 책에 대해 카테고리 title 전부 생성
     const bookContainer = document.createElement("div");
     const categoryContainer = document.createElement("div");
     bookContainer.id = 'bookList-container';

@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>essay-booklist</title>
+    <title>category-booklist</title>
     <!-- 아이콘 -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/elice-rabbit-favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../elice-rabbit-favicon.png" />
     <!-- bulma css 관련 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
     <!-- 폰트 어썸: 아이콘 -->
@@ -14,7 +14,7 @@
 
     <!-- 커스텀 css, js -->
     <link rel="stylesheet" href="../category-booklist.css" />
-    <script src="../category-booklist.js" type="module" defer></script>
+    <script src="../subCategory-booklist.js" type="module" defer></script>
 </head>
 
 <body>
@@ -63,21 +63,31 @@
             <div class="box" id="category">
                 <p class="title is-5 has-text-info">Categories</p>
                 <div class="field">
-                    <li><a href="../pages/essay.html">에세이</li>
+                    <li><a href="../pages/essay.html">설계</li>
                 </div>
                 <div class="field">
-                    <li><a href="../pages/trip.html">여행</li>
+                    <li><a href="">애자일</li>
                 </div>
                 <div class="field">
-                    <li><a href="../pages/self-dev.html">자기계발</li>
+                    <li><a href="">프론트엔드</li>
                 </div>
                 <div class="field">
-                    <li><a href="../pages/com-mob.html">컴퓨터/모바일</li>
+                    <li><a href="">백엔드</li>
+                </div>
+                <div class="field">
+                    <li><a href="">테스트</li>
+                </div>
+                <div class="field">
+                    <li><a href="">보안</li>
                 </div>
                 <div class="field mb-5">
-                    <li><a href="../pages/det-story.html">추리소설</li>
+                    <li><a href="">컴퓨터 과학</li>
                 </div>
             </div>
+        </div>
+
+        <!-- 카테고리 타이틀 container -->
+        <div class="categoryTitle-container">
         </div>
 
         <!-- 카테고리명 & bookList container -->
