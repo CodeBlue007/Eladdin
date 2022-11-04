@@ -31,6 +31,10 @@ export class UserModel {
     const updatedUser = await User.findOneAndUpdate(filter, update, option);
     return updatedUser;
   }
+
+  async dangerousDeleteAll() {
+    await User.deleteMany({});
+}
 }
 
 const userModel = new UserModel();

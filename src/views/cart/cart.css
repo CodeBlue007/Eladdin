@@ -37,13 +37,18 @@ nav {
     margin : 5px;
 
 }
-.container #select_btn {
+
+.container .select_btn {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   border: none;
   margin : 5px;
+  cursor: pointer;
+}
 
+.container .select_btn.checked{
+  background-color: black;
 }
 
 .item-container {
@@ -155,4 +160,9 @@ nav {
 
 .orderbar .priceTag{
     padding: 10px;
+}
+
+.footer{
+  font-size: 30px;
+  text-align: center;
 }

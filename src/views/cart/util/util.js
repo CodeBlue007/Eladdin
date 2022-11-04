@@ -11,9 +11,12 @@ export function getLocal(key) {
 
 export function getTotalPrice(datas) {
   const totalPrice = datas ? datas.reduce((acc, cur) => {
-    const price = Number(cur.price) * (cur.volume);
-    acc += price;
+    if (cur.checked) {
+      const price = Number(cur.price) * (cur.volume);
+      acc += price;
+    }
     return acc;
   }, 0) : 0;
+  
   return totalPrice;
 }

@@ -34,7 +34,7 @@ const UserSchema = new Schema(
     role: {
       type: String,
       required: false,
-      default: "basic-user",
+      default: "basic-user", // basic-user, admin
     },
   },
   {
