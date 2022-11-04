@@ -1,3 +1,6 @@
+import { addCommas } from "../../useful-functions.js"
+
+
 export function setLocal(data = {}) {
   localStorage.setItem("bookInfo", JSON.stringify(data));
 }
@@ -17,6 +20,22 @@ export function getTotalPrice(datas) {
     }
     return acc;
   }, 0) : 0;
-  
-  return totalPrice;
+
+  return addCommas(totalPrice);
+}
+
+export function setTotalPrice(datas) {
+  const priceTag = document.querySelector(".priceTag");
+  const totalPrice = getTotalPrice(datas);
+  priceTag.innerText = `총금액 : ${totalPrice}`
+}
+
+export function getFullDate() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth() + 1;
+  const date = today.getDate();
+  const nowDate = `${year}/${month}/${date}`;
+
+  return nowDate;
 }

@@ -1,5 +1,5 @@
-import { setLocal, getLocal } from "../util/util.js";
-import { renderData } from "./renderData.js";
+import { setLocal, getLocal } from "../../util/util.js";
+import { renderData } from "../renderData.js";
 
 export function deleteAll() {
     const selectAllBtn = document.querySelector('#selectAll_btn');
