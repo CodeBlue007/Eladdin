@@ -6,8 +6,9 @@ return datas?.map(data => {
 
   if(!data.checked) return '';
 
-    const { imgUrl, title, author, price, ISBN } = data;
-    const newPrice = addCommas(price);  
+    const { imgUrl, title, author, price, ISBN ,volume} = data;
+    const totalPrice = parseInt(price) * parseInt(volume);
+    const newPrice = addCommas(totalPrice); 
 
     return ` <div class="orderItem">
     <div class="box">
@@ -23,7 +24,8 @@ return datas?.map(data => {
               <strong>${title}</strong>
               <br/>
               <small>${author}</small>
-              <div>${newPrice}</div>
+              <div>수량 : ${volume}</div>
+              <div>상품가격 : ${newPrice}</div>
             </p>
           </div>
         </div>

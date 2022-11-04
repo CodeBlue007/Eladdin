@@ -49,7 +49,14 @@
           <div class="field">
             <label class="label">수령자 이름</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-success" type="text" placeholder="Write your Name" value="" />
+              <input
+                class="input is-success name"
+                type="text"
+                placeholder="Write your Name"
+                value=""
+                maxlength="7"
+                required
+              />
               <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
@@ -62,7 +69,14 @@
           <div class="field">
             <label class="label">연락처</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-success" type="text" placeholder="Phone Number" value="" />
+              <input
+                class="input is-success phone"
+                type="text"
+                placeholder="010-1234-5678"
+                value=""
+                maxlength="15"
+                required
+              />
               <span class="icon is-small is-left">
                 <i class="fa-solid fa-phone"></i>
               </span>
@@ -76,27 +90,30 @@
             <label class="label">배송지 정보</label>
             <div class="control has-icons-left has-icons-right">
               <input
-                class="input is-danger"
+                class="input is-success address"
                 type="address"
                 placeholder="주소를 적어주세요"
                 value=""
+                required
               />
               <span class="icon is-small is-left">
                 <i class="fa-sharp fa-solid fa-house"></i>
               </span>
               <span class="icon is-small is-right">
-                <i class="fas fa-exclamation-triangle"></i>
+                <i class="fas fa-check"></i>
               </span>
             </div>
           </div>
 
           <label class="label">상품목록</label>
-          <div class="orderItem_container">
-          </div>
+          <div class="orderItem_container"></div>
 
           <div class="order_result_container">
             <div class="control">
-              <button class="button is-link">주문하기</button>
+              <div class="box">총가격</div>
+            </div>
+            <div class="control">
+              <button class="button is-link submit">주문하기</button>
             </div>
           </div>
         </form>

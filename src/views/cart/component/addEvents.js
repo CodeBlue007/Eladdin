@@ -2,6 +2,7 @@ import { checkAll, checkToggleOne } from "./eventFn/checkFn.js";
 import { deleteAll, deleteOne } from "./eventFn/deleteFn.js";
 import { plusItem, minusItem } from "./eventFn/modifyItems.js";
 import { makeOrder, modifyOrder} from "./eventFn/orderFn.js";
+import {sendForm} from "./eventFn/sendForm.js";
 
 export function addEvents() {
 
@@ -13,6 +14,7 @@ export function addEvents() {
     const checkBtns = document.querySelectorAll(".imgbox .select_btn");
     const orderBtn = document.querySelector(".orderbar .order_btn");
     const orderModifyBtn = document.querySelector(".label_container button");
+    const sumbitBtn = document.querySelector(".button.is-link.submit");
     
     deleteAllBtn.addEventListener("click", deleteAll);
 
@@ -37,6 +39,8 @@ export function addEvents() {
     orderBtn.addEventListener("click", makeOrder);
 
     orderModifyBtn.addEventListener("click", modifyOrder);
+
+    sumbitBtn.addEventListener("click", sendForm);
     
 }
 

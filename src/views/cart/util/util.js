@@ -12,7 +12,7 @@ export function getLocal(key) {
   return localDatas ? JSON.parse(localDatas) : [];
 }
 
-function getTotalPrice(datas) {
+export function getTotalPrice(datas) {
   const totalPrice = datas ? datas.reduce((acc, cur) => {
     if (cur.checked) {
       const price = Number(cur.price) * (cur.volume);
@@ -21,11 +21,11 @@ function getTotalPrice(datas) {
     return acc;
   }, 0) : 0;
   
-  return totalPrice;
+  return addCommas(totalPrice);
 }
 
 export function setTotalPrice(datas) {
   const priceTag = document.querySelector(".priceTag");
-  const totalPrice = addCommas(getTotalPrice(datas));
+  const totalPrice = getTotalPrice(datas);
   priceTag.innerText = `총금액 : ${totalPrice}`
 }
