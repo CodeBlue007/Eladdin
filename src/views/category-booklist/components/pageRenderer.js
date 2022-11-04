@@ -18,7 +18,7 @@ let categories = [
     {
         title: '테스트',
         quantity: 0
-    }
+    },
     {
         title: '백엔드',
         quantity: 0
