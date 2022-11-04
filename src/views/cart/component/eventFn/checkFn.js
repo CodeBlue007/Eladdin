@@ -1,5 +1,4 @@
-import { getLocal, setLocal } from "../util/util.js";
-import { setTotalPrice } from "./renderData.js";
+import { getLocal, setLocal, setTotalPrice } from "../../util/util.js";
 
 export function checkAll() {
     const selectAllBtn = document.querySelector('#selectAll_btn');
