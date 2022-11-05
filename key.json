@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "eladin",
+  "private_key_id": "d71021afc060078624df27493f7d2be489620a88",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDVMZh2XfDdVDP1\nyzeSWgePNmdoDfwz1jTwg5d9LaEcYrY1ofJeXxPFpqRbGBZvbVo1a+Bb0YR2wzxr\nqMYPUv89BOfwGdaOVZYhLFzQ3ElouLiyZkyTRyMKLreMrMWu3XxacYngdrIY24lj\n6gy4zn/MZ7hr5eEdcsz71vwpmHNyKH2PcSrdTZ0XpxOX4CtyFAIvJCczpJyrb4K2\nrYsSyZlSldjE7OhykJ7JLYd0+KD7ugwhAFUmZgnX2lB8YtcMHFILuYn528MNYOgd\n5ubx7K4WN3yEesBSbihiV5IxmBS/Mp/fmGRIcIRKRoKPfoG1SvcsIQGZy+JYzUWw\nKlW41AaLAgMBAAECggEAMtQdPnNNPueZb8uglzMBxGI7KzLSY2V5v7IQBxc+5y6d\ntJHE4D0Y0LHXU6SdjLlsnXn3xsxgIZSQrjZR6ktmcRzfU35Fii/bmFMkWeN7WQ1Z\nc6cyMJbwQrg6qL50byl9QW76aVrDQWvuCLU/jTwmegxsisUG8+dv+cca3avsMlYH\nWebNXW4IPkzjLY+yuetR/IdXQWXBiwQYsMEDBeLHfgnRmbBot1h3JtBOI8z53ycR\nZaL+HeyCITPGdb/xjKTmkY8WqpubeeczF+ZGgUzm0q+MUgLDVbH6Mo29lLIi3det\nZzlOmGRV5l+wugp1BCUmnCLQkLcLXYHa+txFUtUmoQKBgQD6CMxQTbo6m0u0XpeG\nXdEZG86NiQk7n9LqeQmwCBGUi3w9a+eKbRU6TbQP+lvqZMGqXeBbVTXZ5NcVGUUf\naOAOie5EBhnZeG7A4p1H3d0aoJPw1oJdS+LhORmWuGxqFoFv4e/vtLZd4ciC+EcH\nymd4zN3cvbj24wL65nSwWCXO2wKBgQDaR8aqfIO+S9d9Q8FTHcNpZcHFXenLO9oj\nRyGbQrj6p8j8sXH8jpjCyLexo/J0wbeS/A2MQjpDOLpk7atA+Z7w6GE/qmsPOVDF\nWhmPfNzVLrkKlLRrmm/zgxfOLkiwm1Ban6bBIMc0C19LCx02NX+nT5//O7rnUoMH\nt2vAS3z+EQKBgH3dtfRq3GeqS3bV81M5oQwRum33YQV51DQikCTkOu1bNkS5MAq4\nFOqPuSgd8O1SoUdBELMJdx1kHH3LhcdlBP1so9vsclDOVnqU2XYXErnXwgGICoIq\ntGCKXP5JgpH5GFmZFC7H+tHR2h1MHH2of2QJRVpcy2LFLnfdUTqAdS/nAoGADntM\nlusD4pAtj8X7AYSr/kYeAPYmGLGz2ztQ43gdxaN0Fi+/nD3prKKcbVCvOUfQ4hOO\n4otSSjttQlzyS7FD9j+0lAC+cZgf37gGkhp6nDopVKZhAfKREtrTrX4snGrxfdGx\nwoZmMPHANL5cBciu227Q8qIH2GkFAHIO2AcqF8ECgYEAzYO07+b813eCIMgBx1kn\nMwg0RCP15WjLxLWVy2L/P53j9C0CpIjfBzsgmtjEZ0GYW836dDDramNuXE+x/bqZ\nq650HCwCZAP1w/S8vA11tYtZpxgXufMcHVIHw+6obBNi9USW8hTsLQcMVSXuA9p7\nOCNwPMj9nvyjg8Ml9cGxP+0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "eladin-img@eladin.iam.gserviceaccount.com",
+  "client_id": "110476127827451402270",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/eladin-img%40eladin.iam.gserviceaccount.com"
+}
