@@ -35,7 +35,8 @@ export async function registerForm(event) {
         "postalCode" : postCode,
         "address1" : address,
         "address2" : add_detail,
-      }
+      },
+      "role": "basic-user"
     }
 
 
