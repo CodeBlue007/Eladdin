@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./admin-page.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <script src="./admin-page.js" defer type="module"></script>
+    <script src="./admin-page-orders.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
-    <title>my-admin</title>
+    <title>admin-page</title>
   </head>
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -21,15 +22,15 @@
         </div>
         <div class="navbar-end breadcrumb my-auto" aria-label="breadcrumbs">
           <ul id="navbar">
-            <li><a href="../mypage/mypage.html">마이페이지</a></li>
-            <li><a href="../../login/login.html">로그인</a></li>
-            <li><a href="../../register/register.html">회원가입</a></li>
+            <li><a href="../my-page/myPage.html">마이페이지</a></li>
+            <li><a href="../login/login.html">로그인</a></li>
+            <li><a href="../register/register.html">회원가입</a></li>
             <li>
               <a href="#cart" aria-current="page">
                 <span class="icon">
                   <i class="fas fa-cart-shopping"></i>
                 </span>
-                <span><a href="../../cart/cart.html">장바구니</a></span>
+                <span><a href="../cart/cart.html">장바구니</a></span>
               </a>
             </li>
           </ul>
@@ -37,18 +38,17 @@
       </div>
     </nav>
     <main>
-      <button class="order-management">
-        <a href="../admin-order-management/orderManagement.html">주문관리</a>
-      </button>
-      <button class="add-category">
-        <a href="../admin-add-category/addCategory.html">카테고리 추가</a>
-      </button>
-      <button class="add-product">
-        <a href="../admin-add-product/addProduct.html">제품 추가</a>
-      </button>
-      <button class="order-status">
-        <a href="../admin-order-status/orderStatus.html">주문 조회</a>
-      </button>
+      <header class="title">&nbsp;&nbsp;&nbsp;관리자 페이지</header>
+      <div class="contents">
+        <ul class="category">
+          <button class="orderManagement"><li>주문관리</li></button>
+          <button class="addCategory"><li>카테고리 추가</li></button>
+          <button class="addProduct"><li>제품 추가</li></button>
+        </ul>
+        <div class="view-orders"></div>
+        <div class="view-category"></div>
+        <div class="view-product"></div>
+      </div>
     </main>
   </body>
 </html>
