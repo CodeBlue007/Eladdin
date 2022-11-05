@@ -25,8 +25,6 @@ export async function registerForm(event) {
 
   console.log("검증완료");
 
-  console.log(infoArray);
-
   try {
     const data = { 
       email,
@@ -41,12 +39,13 @@ export async function registerForm(event) {
     }
 
 
-    await Api.post("/register", data);
+    await Api.post("https://eladin-lgurfdxfjq-du.a.run.app/api/auth/register"
+    , data);
 
     alert(`정상적으로 회원가입되었습니다.`);
 
     // // 로그인 페이지 이동
-    window.location.href = "/login";
+    window.location.href = "/src/views/login/login.html";
   } catch (err) {
     console.error(err.stack);
     alert(`문제가 발생하였습니다. 확인 후 다시 시도해 주세요: ${err.message}`);
