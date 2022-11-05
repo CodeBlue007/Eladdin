@@ -2,31 +2,23 @@ import { addCommas } from "../../useful-functions.js"
 
 let categories = [
     {
-        name: '설계',
+        name: '에세이',
         cnt: 0
     },
     {
-        name: '애자일',
+        name: '여행',
         cnt: 0
     },
     {
-        name: '프론트엔드',
+        name: '자기계발',
         cnt: 0
     },
     {
-        name: '테스트',
+        name: '컴퓨터/모바일',
         cnt: 0
     },
     {
-        name: '백엔드',
-        cnt: 0
-    },
-    {
-        name: '보안',
-        cnt: 0
-    },
-    {
-        name: '컴퓨터 과학',
+        name: '추리소설',
         cnt: 0
     },
 ];
@@ -49,15 +41,15 @@ function setCategories(datas) {
     });
 }
 
-function renderBookList(datas) {
-    const totalBookNum = datas.length;
-
+function renderBookList(datas, bookCategory) {
     return datas?.map(data => {
         // 책표지, 제목, 소개글, 저자, 출판사, 출판일, 가격, 이북, 카테고리 (key: ISBN)
         const { imgUrl, title, description, author, publisher, publicationDate, price, EBook, category, ISBN } = data;
         const commaPrice = addCommas(price);
 
-        bookInfo = `
+        // 받아온 category와 같은 category 값을 갖는 bookList만 띄우기
+        if (category === bookCategory) {
+            bookInfo = `
             <div class="${category}-bookList-container">
                 <div class="box" id="${category}-book">
                     <div id="bookBox">
@@ -101,6 +93,7 @@ function renderBookList(datas) {
                 </div>
             </div>
             `;
+        }
         return bookInfo;
     }).join('');
 }
@@ -124,21 +117,21 @@ function renderCategoryList(datas, category) {
     return categoryTitle;
 }
 
-export function renderBookData(datas = []) {
+export function renderBookData(datas = [], category) {
     const itemContainer = document.querySelector(".categoryTitle-books-container");
-    const bookListHTML = renderBookList(datas);
+    const bookListHTML = renderBookList(datas, category);
     setCategories(datas);
 
     // 카테고리 한번씩만 title 생성
     let categoryTitleHTML = '';
-    datas.forEach(data => {
-        let { category } = data;
+    // datas.forEach(data => {
+    //     let { category } = data;
 
-        categories.forEach(ctg => {
-            if (category == ctg.name) {
-                categoryTitleHTML = renderCategoryList(datas, category = '설계'); // 해당 자리에 click event로 얻은 카테고리名 할당
-            }
-        });
+    categories.forEach(ctg => {
+        if (category == ctg.name) {
+            categoryTitleHTML = renderCategoryList(datas, category);
+        }
+        // });
     });
     // const categoryTitleHTML = renderCategoryList(datas, categories); // 전체 책에 대해 카테고리 title 전부 생성
     const bookContainer = document.createElement("div");
