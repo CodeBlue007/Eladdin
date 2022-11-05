@@ -2,7 +2,7 @@ import { renderBookData } from "./components/pageRenderer.js"
 import { addEventListeners } from "./components/eventListeners.js";
 
 async function fetchData() {
-    const res = await fetch('../../../db/mockBooks.json');
+    const res = await fetch('../../../db/mockBooks_1.json');
     const data = await res.json();
     const bookData = data.map(item => ({ ...item, volume: 1, checked: true }));
     return bookData;

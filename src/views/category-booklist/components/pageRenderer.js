@@ -2,31 +2,23 @@ import { addCommas } from "../../useful-functions.js"
 
 let categories = [
     {
-        name: '설계',
+        name: '에세이',
         cnt: 0
     },
     {
-        name: '애자일',
+        name: '여행',
         cnt: 0
     },
     {
-        name: '프론트엔드',
+        name: '자기계발',
         cnt: 0
     },
     {
-        name: '테스트',
+        name: '컴퓨터/모바일',
         cnt: 0
     },
     {
-        name: '백엔드',
-        cnt: 0
-    },
-    {
-        name: '보안',
-        cnt: 0
-    },
-    {
-        name: '컴퓨터 과학',
+        name: '추리소설',
         cnt: 0
     },
 ];
@@ -136,7 +128,7 @@ export function renderBookData(datas = []) {
 
         categories.forEach(ctg => {
             if (category == ctg.name) {
-                categoryTitleHTML = renderCategoryList(datas, category = '설계'); // 해당 자리에 click event로 얻은 카테고리名 할당
+                categoryTitleHTML = renderCategoryList(datas, category = '에세이'); // 해당 자리에 click event로 얻은 카테고리名 할당
             }
         });
     });

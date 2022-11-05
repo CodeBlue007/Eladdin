@@ -2,7 +2,7 @@ import { renderCategoryData } from "./components/mainPageRenderer.js"
 import { addEventListeners } from "./components/eventListeners.js";
 
 async function fetchData() {
-    const res = await fetch('../../db/mockBooks.json'); // ${하위 카테고리}.html에서 접근 시 ../../../
+    const res = await fetch('../../db/mockBooks_1.json'); // ${하위 카테고리}.html에서 접근 시 ../../../
     const data = await res.json();
     const bookData = data.map(item => ({ ...item, volume: 1, checked: true }));
     return bookData;
