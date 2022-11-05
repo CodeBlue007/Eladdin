@@ -6,7 +6,9 @@ nav {
 }
 
 .container {
+  width: 100%;
   margin: auto;
+  border: 1px solid green;
 }
 
 .header {
@@ -18,7 +20,7 @@ nav {
 .select_container {
   display: flex;
   height: 35px;
-  width: 80%;
+  width: inherit;
   margin: auto;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +52,7 @@ nav {
 }
 
 .item-container {
-  width: 80%;
+  width: inherit;
   position: relative;
   margin: auto;
 }
@@ -171,7 +173,7 @@ nav {
 }
 
 .orderpage .form_container {
-  width: 90%;
+  width: inherit;
   margin: 20px auto;
 }
 

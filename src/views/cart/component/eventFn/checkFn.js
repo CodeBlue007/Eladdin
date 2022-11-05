@@ -17,6 +17,7 @@ export function checkAll() {
     }
     else {
         btnArrays.forEach(button => {
+            
             button.classList.add("checked");
         });
         const checkedAll = local.map(data => ({ ...data, checked: true }));

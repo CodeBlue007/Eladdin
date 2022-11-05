@@ -14,7 +14,7 @@ export async function sendForm(event){
 
     if(!isValidInfo(infoArray)) return;
 
-    const formData = makeForm(infoArray);
+    const formData = makeForm(infoArray)
 
 
 
