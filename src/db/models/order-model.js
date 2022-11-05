@@ -92,9 +92,9 @@ export class OrderModel {
         })
     }
     //????
-    async editOrderInfo({ }, orderId) { //Object
-        return Order.findOneAndUpdate({_id : orderId }, newOrder, { returnOriginal: false });
-    }
+    // async editOrderInfo({ }, orderId) { //Object
+    //     return Order.findOneAndUpdate({_id : orderId }, newOrder, { returnOriginal: false });
+    // }
 
     async editShippingStatus({ shippingStatus }, orderId) { //Object
         return Order.findOneAndUpdate({ _id : orderId }, { shippingStatus }, { returnOriginal: false });
@@ -105,7 +105,7 @@ export class OrderModel {
     }
     
     //admin
-    async cancelOrdersById(orderIdList) {
+    async cancelOrdersById(orderIdList) { //Array
         await Order.deleteOne({ _id : { $in: orderIdList } })
     }
 
