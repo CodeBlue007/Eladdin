@@ -32,7 +32,7 @@ const OrderSchema = new Schema(
       type: String,
       enum: ['배송준비중', '배송중', '배송완료'], //준비중 배송중 배송완료
       required: true,
-      default: '배송준비중',
+      //default: '배송준비중',
     },
     user: {
       type: Schema.Types.ObjectId,
