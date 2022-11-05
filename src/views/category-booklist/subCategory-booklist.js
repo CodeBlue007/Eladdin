@@ -11,8 +11,9 @@ async function fetchData() {
 async function App() {
     try {
         const data = await fetchData();
+        let { category } = data;
         addEventListeners(data);
-        renderBookData(data); // 여기서 실행되지 않고 각 카테고리 클릭 시 실행하려고 함.
+        renderBookData(data, category = '여행'); // 여기서 실행되지 않고 각 카테고리 클릭 시 실행하려고 함.
     } catch (err) {
         console.log(err);
     }
