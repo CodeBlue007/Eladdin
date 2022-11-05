@@ -1,0 +1,59 @@
+main {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.order-management {
+  width: 300px;
+  height: 100px;
+  border-radius: 30px;
+  font-size: xx-large;
+  background-color: lavender;
+  cursor: pointer;
+}
+
+.order-management:hover {
+  background-color: yellow;
+}
+
+.add-category {
+  width: 300px;
+  height: 100px;
+  border-radius: 30px;
+  font-size: xx-large;
+  background-color: lavender;
+  cursor: pointer;
+}
+
+.add-category:hover {
+  background-color: yellow;
+}
+
+.add-product {
+  width: 300px;
+  height: 100px;
+  border-radius: 30px;
+  font-size: xx-large;
+  background-color: lavender;
+  cursor: pointer;
+}
+
+.add-product:hover {
+  background-color: yellow;
+}
+
+.order-status {
+  width: 300px;
+  height: 100px;
+  border-radius: 30px;
+  font-size: xx-large;
+  background-color: lavender;
+  cursor: pointer;
+}
+
+.order-status:hover {
+  background-color: yellow;
+}

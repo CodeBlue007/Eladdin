@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./product-detail.css" />
+    <link rel="stylesheet" href="./admin-page.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <script src="./product-detail.js" defer type="module"></script>
-    <script src="./toCart.js" defer type="module"></script>
+    <script src="./admin-page.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
-    <title>product-detail</title>
+    <title>my-admin</title>
   </head>
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -22,15 +21,15 @@
         </div>
         <div class="navbar-end breadcrumb my-auto" aria-label="breadcrumbs">
           <ul id="navbar">
-            <li><a href="/mypage">마이페이지</a></li>
-            <li><a href="../login/login.html">로그인</a></li>
-            <li><a href="../register/register.html">회원가입</a></li>
+            <li><a href="../mypage/mypage.html">마이페이지</a></li>
+            <li><a href="../../login/login.html">로그인</a></li>
+            <li><a href="../../register/register.html">회원가입</a></li>
             <li>
               <a href="#cart" aria-current="page">
                 <span class="icon">
                   <i class="fas fa-cart-shopping"></i>
                 </span>
-                <span><a href="../cart/cart.html">장바구니</a></span>
+                <span><a href="../../cart/cart.html">장바구니</a></span>
               </a>
             </li>
           </ul>
@@ -38,7 +37,18 @@
       </div>
     </nav>
     <main>
-      <div class="product-detail"></div>
+      <button class="order-management">
+        <a href="../admin-order-management/orderManagement.html">주문관리</a>
+      </button>
+      <button class="add-category">
+        <a href="../admin-add-category/addCategory.html">카테고리 추가</a>
+      </button>
+      <button class="add-product">
+        <a href="../admin-add-product/addProduct.html">제품 추가</a>
+      </button>
+      <button class="order-status">
+        <a href="../admin-order-status/orderStatus.html">주문 조회</a>
+      </button>
     </main>
   </body>
 </html>
