@@ -1,20 +1,31 @@
+async function fetchData() {
+  const res = await fetch('../../db/mockBooks_1.json');
+  const data = await res.json();
+  console.log(data);
+  return data;
+}
+
 function renderData(datas) {
-  const bookInfo = document.querySelector('.view-content_2');
+  const bookInfo = document.querySelector('.view-category');
   const dataString = htmlTemplate(datas);
   bookInfo.innerHTML += dataString;
 }
 
 function htmlTemplate(datas) {
-  return datas.map((data) => {
-    const { imgUrl, title, price } = data;
+  return datas
+    .map((data) => {
+      const { category } = data;
 
-    return `<img
-    src=${imgUrl}
-    width="150"
-  />
-  <ul class="order">
-    <li class="title">${title}</li>
-    <li class="price">${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</li>
-  </ul>`;
-  });
+      return `
+    <div class="category">
+      <ul class="category-list">
+        <li class="category-name">${category}</li>
+        <button class="editCategory-btn">수정</button>
+        <button class="deleteCategory-btn">삭제</button>
+      </ul>
+    </div>`;
+    })
+    .join('');
 }
+
+fetchData().then((data) => renderData(data));
