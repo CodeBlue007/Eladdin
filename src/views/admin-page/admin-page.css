@@ -29,7 +29,6 @@ header {
   width: 80%;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   position: relative;
 }
 
@@ -149,7 +148,7 @@ header {
 }
 
 .addCategory {
-  margin-right: 100px;
+  margin-right: 50px;
   text-align: center;
 }
 
@@ -181,7 +180,6 @@ header {
   width: 80%;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   position: relative;
   display: none;
 }
@@ -201,7 +199,7 @@ header {
 }
 
 .bar_2 .book-title {
-  flex-basis: 30%;
+  flex-basis: 20%;
   text-align: center;
 }
 
@@ -211,22 +209,27 @@ header {
 }
 
 .bar_2 .book-author {
-  flex-basis: 5%;
+  flex-basis: 10%;
   text-align: center;
 }
 
 .bar_2 .book-publisher {
-  flex-basis: 5%;
+  flex-basis: 10%;
   text-align: center;
 }
 
 .bar_2 .book-intro {
-  flex-basis: 30%;
+  flex-basis: 15%;
+  text-align: center;
+}
+
+.bar_2 .book-price {
+  flex-basis: 10%;
   text-align: center;
 }
 
 .bar_2 .book-publicationDate {
-  flex-basis: 5%;
+  flex-basis: 10%;
   text-align: center;
 }
 
@@ -234,13 +237,12 @@ header {
   flex-basis: 10%;
   align-items: right;
   text-align: center;
-  border: 1px solid red;
 }
 
 .product-list {
   display: flex;
   flex-direction: row;
-  font-size: smaller;
+  font-size: medium;
 }
 
 .products {
@@ -248,37 +250,48 @@ header {
   flex-direction: row;
 }
 
-.product-list .book-img {
+.book-img {
   flex-basis: 10%;
   text-align: center;
 }
 
-.product-list .book-title {
+.book-title {
+  flex-basis: 20%;
+  text-align: center;
+}
+
+.EBook {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.author {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.publisher {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.intro {
   flex-basis: 30%;
   text-align: center;
 }
 
-.product-list .EBook {
+.price {
   flex-basis: 5%;
   text-align: center;
 }
 
-.product-list .author {
-  flex-basis: 5%;
-  text-align: center;
+.edit-btn {
+  flex-basis: 10%;
+  height: 30px;
+  align-items: center;
 }
 
-.product-list .publisher {
-  flex-basis: 5%;
-  text-align: center;
-}
-
-.product-list .intro {
-  flex-basis: 40%;
-  text-align: center;
-}
-
-.product-list .price {
-  flex-basis: 5%;
-  text-align: center;
+.delete-btn {
+  flex-basis: 10%;
+  height: 30px;
 }
