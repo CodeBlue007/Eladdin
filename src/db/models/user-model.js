@@ -9,7 +9,7 @@ export class UserModel {
     return user;
   }
 
-  async findById(userId) {
+  async findUserById(userId) {
     const user = await User.findOne({ _id: userId });
     if(await Book.exists({_id : userId}) == null){
       throw new Error(`DB에 ${userId}는 존재하지 않습니다.`)

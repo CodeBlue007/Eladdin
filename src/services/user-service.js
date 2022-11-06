@@ -10,7 +10,7 @@ class UserService {
   }
 
   async findUserById(userId){
-    return UserModel.findById(userId)
+    return UserModel.findUserById(userId)
   }
 
   async findAll(){
