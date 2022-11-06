@@ -1,6 +1,6 @@
 import cors from "cors";
 import express from "express";
-import { viewsRouter, userRouter, bookRouter, imgRouter, categoryRouter } from "./routers/index.js";
+import { viewsRouter, userRouter, bookRouter, imgRouter, orderRouter, categoryRouter } from "./routers/index.js";
 import { errorHandler } from "./middlewares/index.js";
 import morgan from 'morgan';
 
