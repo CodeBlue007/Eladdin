@@ -1,5 +1,4 @@
-import { getLocal, setLocal } from "../util/util.js";
-import { setTotalPrice } from "./renderData.js";
+import { getLocal, setLocal, setTotalPrice } from "../../util/util.js";
 
 export function checkAll() {
     const selectAllBtn = document.querySelector('#selectAll_btn');
@@ -18,6 +17,7 @@ export function checkAll() {
     }
     else {
         btnArrays.forEach(button => {
+            
             button.classList.add("checked");
         });
         const checkedAll = local.map(data => ({ ...data, checked: true }));

@@ -21,3 +21,39 @@
   border-color: #00d1b2;
   box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
 }
+
+.form_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin : auto;
+}
+
+.form_container .field{
+  width: 80%;
+}
+
+.form_container .label_container{
+  text-align: center;
+}
+
+.control{
+  margin-bottom: 20px;
+}
+
+.postal_container{
+  display: flex;
+  align-items: center;
+}
+
+.tag.is-success{
+  font-size: 20px;
+}
+
+.button.is-primary{
+  width : 130px;
+  margin : 0 20px 20px 20px;
+}
+
+

@@ -1,15 +1,21 @@
-import { checkAll, checkToggleOne } from "./checkFn.js";
-import { deleteAll, deleteOne } from "./deleteFn.js";
-import { plusItem, minusItem } from "./modifyItems.js";
+import { checkAll, checkToggleOne } from "./eventFn/checkFn.js";
+import { deleteAll, deleteOne } from "./eventFn/deleteFn.js";
+import { plusItem, minusItem } from "./eventFn/modifyItems.js";
+import { makeOrder, modifyOrder} from "./eventFn/orderFn.js";
+import {sendForm} from "./eventFn/sendForm.js";
 
 export function addEvents() {
+
     const deleteAllBtn = document.querySelector('#deleteall_btn');
     const deleteEach = document.querySelectorAll('.delete_btn');
     const plusBtn = document.querySelectorAll(".plus_btn");
     const minusBtn = document.querySelectorAll(".minus_btn");
     const checkAllbtn = document.querySelector("#selectAll_btn");
     const checkBtns = document.querySelectorAll(".imgbox .select_btn");
-
+    const orderBtn = document.querySelector(".orderbar .order_btn");
+    const orderModifyBtn = document.querySelector(".label_container button");
+    const sumbitBtn = document.querySelector(".button.is-link.submit");
+    
     deleteAllBtn.addEventListener("click", deleteAll);
 
     [...deleteEach].forEach(button => {
@@ -28,8 +34,13 @@ export function addEvents() {
 
     checkBtns.forEach(button => {
         button.addEventListener("click", checkToggleOne)
-    })
+    });
 
+    orderBtn.addEventListener("click", makeOrder);
 
+    orderModifyBtn.addEventListener("click", modifyOrder);
+
+    sumbitBtn.addEventListener("click", sendForm);
+    
 }
 
