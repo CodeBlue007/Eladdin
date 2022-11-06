@@ -26,7 +26,7 @@ categoryRouter.get("/:title", nextError(async (req, res, next) => {
       res.status(200).end()
   }));
   
-  categoryRouter.delete("/:title", nextError(async (req, res, next) => {
+categoryRouter.delete("/:title", nextError(async (req, res, next) => {
       const { title } = req.params;    
       await categoryService.deleteByTitle(title);
       res.status(204).end()
