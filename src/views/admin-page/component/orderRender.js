@@ -1,17 +1,4 @@
-async function fetchData() {
-  const res = await fetch('../../db/mockBooks_1.json');
-  const data = await res.json();
-  console.log(data);
-  return data;
-}
-
-function renderData(datas) {
-  const bookInfo = document.querySelector('.view-orders');
-  const dataString = htmlTemplate(datas);
-  bookInfo.innerHTML += dataString;
-}
-
-function htmlTemplate(datas) {
+function orderTemplate(datas) {
   return datas
     .map((data) => {
       const { title, price } = data;
@@ -36,4 +23,8 @@ function htmlTemplate(datas) {
     .join('');
 }
 
-fetchData().then((data) => renderData(data));
+export function orderRender(datas) {
+  const bookInfo = document.querySelector('.view-orders');
+  const dataString = orderTemplate(datas);
+  bookInfo.innerHTML += dataString;
+}

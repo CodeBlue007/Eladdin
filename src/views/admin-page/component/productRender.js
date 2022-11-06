@@ -1,17 +1,4 @@
-async function fetchData() {
-  const res = await fetch('../../db/mockBooks_1.json');
-  const data = await res.json();
-  console.log(data);
-  return data;
-}
-
-function renderData(datas) {
-  const bookInfo = document.querySelector('.view-product');
-  const dataString = htmlTemplate(datas);
-  bookInfo.innerHTML += dataString;
-}
-
-function htmlTemplate(datas) {
+function productTemplate(datas) {
   return datas
     .map((data) => {
       const { imgUrl, title, EBook, author, publisher, description, price, publicationDate } = data;
@@ -34,4 +21,10 @@ function htmlTemplate(datas) {
     .join('');
 }
 
-fetchData().then((data) => renderData(data));
+export function productRender(datas) {
+  const bookInfo = document.querySelector('.view-product');
+  const dataString = productTemplate(datas);
+  bookInfo.innerHTML += dataString;
+}
+
+
