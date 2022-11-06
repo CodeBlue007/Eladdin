@@ -37,6 +37,7 @@ header .wrapper {
   font-size: x-large;
   display: inline-block;
   width: 200px;
+  cursor: pointer;
 }
 
 .cart {
@@ -45,6 +46,7 @@ header .wrapper {
   font-size: x-large;
   display: inline-block;
   width: 200px;
+  cursor: pointer;
 }
 
 .userInfo_btn {
