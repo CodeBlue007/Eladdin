@@ -6,7 +6,7 @@ async function get(endpoint, params = "") {
   const res = await fetch(apiUrl, {
     // JWT 토큰을 헤더에 담아 백엔드 서버에 보냄.
     headers: {
-      Authorization: `Bearer ${localStorage.getItem("token")}`,
+      Authorization: `Bearer ${localStorage.getItem("token")}`, 
     },
   });
 
@@ -49,9 +49,9 @@ async function post(endpoint, data) {
     throw new Error(reason);
   }
 
-  const result = await res.json();
+  // const result = await res.json();
 
-  return result;
+  // return result;
 }
 
 // api 로 PATCH 요청 (/endpoint/params 로, JSON 데이터 형태로 요청함)

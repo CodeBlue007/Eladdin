@@ -3,6 +3,15 @@ import {renderOrder} from "../renderOrder.js";
 
 
 export function makeOrder(){
+    
+    const token = localStorage.getItem("token");
+    
+    if(!token){
+        alert("로그인이 필요한 서비스입니다");
+        return;
+    }
+
+
     const orderPage = document.querySelector(".orderpage");
     const orderBar = document.querySelector(".orderbar");
     const orderContainer = document.querySelector(".orderItem_container");

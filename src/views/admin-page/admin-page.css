@@ -1,3 +1,4 @@
+/* 헤더 */
 header {
   border-bottom: 1px solid grey;
   margin: 20px 0 20px 70px;
@@ -6,27 +7,29 @@ header {
   color: grey;
 }
 
+/* 본문 */
 .contents {
   display: flex;
 }
 
-.category {
+.admin-category {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 130px;
+  width: 120px;
   height: 200px;
-  margin: 0 50px 0 80px;
+  margin: 0 10px 0 80px;
   padding: 30px 0 30px 0;
   align-items: center;
 }
 
+/* 주문관리 */
 .view-orders {
   width: 80%;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .orderManagement {
@@ -36,13 +39,13 @@ header {
   width: 80px;
 }
 
-.addCategory {
+.categoryManagement {
   border: none;
   background-color: white;
   cursor: pointer;
 }
 
-.addProduct {
+.productManegement {
   border: none;
   background-color: white;
   cursor: pointer;
@@ -121,4 +124,174 @@ header {
 .order .orderDate {
   flex-basis: 10%;
   text-align: right;
+}
+
+/* 카테고리 설정 */
+.view-category {
+  display: none;
+}
+
+.bar_1 {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  padding-left: 30px;
+  background-color: bisque;
+  text-align: left;
+  justify-content: space-between;
+  margin-left: 600px;
+}
+
+.categoryName {
+  margin-left: 30px;
+  text-align: center;
+}
+
+.addCategory {
+  margin-right: 50px;
+  text-align: center;
+}
+
+.category-list {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 10px 600px;
+}
+
+.category-list .category-name {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.category-list .editCategory-btn {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.category-list .deleteCategory-btn {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+/* 제품 설정 */
+
+.view-product {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  display: none;
+}
+
+.bar_2 {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  background-color: bisque;
+  padding-left: 20px;
+  font-size: medium;
+}
+
+.bar_2 .book-img {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar_2 .book-title {
+  flex-basis: 20%;
+  text-align: center;
+}
+
+.bar_2 .book-ebook {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.bar_2 .book-author {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar_2 .book-publisher {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar_2 .book-intro {
+  flex-basis: 15%;
+  text-align: center;
+}
+
+.bar_2 .book-price {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar_2 .book-publicationDate {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar_2 .add-product {
+  flex-basis: 10%;
+  align-items: right;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  font-size: medium;
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+}
+
+.book-img {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.book-title {
+  flex-basis: 20%;
+  text-align: center;
+}
+
+.EBook {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.author {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.publisher {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.intro {
+  flex-basis: 30%;
+  text-align: center;
+}
+
+.price {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.edit-btn {
+  flex-basis: 10%;
+  height: 30px;
+  align-items: center;
+}
+
+.delete-btn {
+  flex-basis: 10%;
+  height: 30px;
 }
