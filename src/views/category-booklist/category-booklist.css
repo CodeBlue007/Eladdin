@@ -1,59 +1,102 @@
-.container{
+.category-categoryTitle-books-container,
+#bookBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.categoryTitle-books-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 60%;
+}
+
+.category-list-container {
   align-items: center;
-  margin:auto;
+  justify-content: left;
+  list-style: none;
+  width: 30vh;
 }
 
-.tabs{
-  margin-top: 40px;
-  width: 100%;
+.essay-category-container {
+  align-items: center;
+  justify-content: right;
+  width: 85vh;
 }
 
-.book_container{
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap : 20px;
+.trip-category-container {
+  align-items: center;
+  justify-content: right;
+  width: 85vh;
 }
 
-.book_container .itemcontainer{
-  width: 100%;
-  margin: 20px 0px;
-  border-radius: 10px;
+.self-dev-category-container {
+  align-items: center;
+  justify-content: right;
+  width: 85vh;
 }
 
-.book_container .itemcontainer .box{
-  height: 250px;
-  padding: 0;
+.com-mob-category-container {
+  align-items: center;
+  justify-content: right;
+  width: 85vh;
 }
 
-.media .image.is-64x64{
-  width: 200px;
-  height: 250px;
+.det-story-category-container {
+  align-items: center;
+  justify-content: right;
+  width: 85vh;
 }
 
-.media .image.is-64x64 img{
-  width: inherit;
-  height: inherit;
-}
-
-.itemcontainer .box .media{
+#bookBox {
   display: flex;
-  width: inherit;
-  height: inherit;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
 }
 
-.itemcontainer.hidden{
-  display: none;
-} 
-
-.itemcontainer .box .media .content{
+#bookBox > div {
   display: flex;
   flex-direction: column;
+  margin-left: 3vh;
+}
+
+.infoValue {
+  margin-left: 2vh;
+}
+
+#cartButton {
+  margin-left: 20vh;
+}
+#submitCartButton {
+  margin-right: 3vh;
+}
+
+#mainBookField {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  height: 250px;
+}
+
+#bookName > p {
+  font-size: 2rem;
+}
+
+#mainBookField > div > p {
+  font-size: 1.5rem;
+}
+
+#author_publishField {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+}
+
+#bookPrice {
+  font-size: 1.2rem;
+}
+
+#isEbookField {
+  display: flex;
+  flex-direction: row;
+
+  font-size: 1.1rem;
 }
