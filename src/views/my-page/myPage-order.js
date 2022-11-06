@@ -1,5 +1,5 @@
 async function fetchData() {
-  const res = await fetch('../../db/mockBooks.json');
+  const res = await fetch('../../db/mockBooks_1.json');
   const data = await res.json();
   console.log(data);
   return data;
@@ -15,11 +15,9 @@ function htmlTemplate(datas) {
   return datas.map((data) => {
     const { imgUrl, title, price } = data;
 
-    return `<img
-    src=${imgUrl}
-    width="150"
-  />
+    return `
   <ul class="order">
+    <img src=${imgUrl} width="150"/>
     <li class="title">${title}</li>
     <li class="price">${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</li>
   </ul>`;

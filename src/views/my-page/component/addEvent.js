@@ -1,7 +1,9 @@
 const orderList = document.querySelector('.order-products');
 const cartList = document.querySelector('.cart-products');
+const userInfo = document.querySelector('.userInfo');
 const orderList_btn = document.querySelector('.order-list');
 const cartList_btn = document.querySelector('.cart');
+const userInfo_btn = document.querySelector('.user-info');
 
 function showOrderList() {
   if (orderList.style.display !== 'none') {
@@ -19,5 +21,14 @@ function showCartList() {
   }
 }
 
+function showUserInfo() {
+  if (userInfo.style.display !== 'none') {
+    userInfo.style.display = 'none';
+  } else {
+    userInfo.style.display = 'block';
+  }
+}
+
 orderList_btn.addEventListener('click', showOrderList);
 cartList_btn.addEventListener('click', showCartList);
+userInfo_btn.addEventListener('click', showUserInfo);

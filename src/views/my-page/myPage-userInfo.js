@@ -1,12 +1,12 @@
 async function fetchData() {
-  const res = await fetch('../../db/mockBooks_1.json');
+  const res = await fetch('../../db/mockUsers.js');
   const data = await res.json();
   console.log(data);
   return data;
 }
 
 function renderData(datas) {
-  const bookInfo = document.querySelector('.cart-products');
+  const bookInfo = document.querySelector('.userInfo');
   const dataString = htmlTemplate(datas);
   bookInfo.innerHTML += dataString;
 }
@@ -16,7 +16,7 @@ function htmlTemplate(datas) {
     const { imgUrl, title, price } = data;
 
     return `
-  <ul class="book">
+  <ul class="order">
     <img src=${imgUrl} width="150"/>
     <li class="title">${title}</li>
     <li class="price">${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</li>

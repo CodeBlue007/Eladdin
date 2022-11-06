@@ -47,6 +47,14 @@ header .wrapper {
   width: 200px;
 }
 
+.user-info {
+  margin-top: 50px;
+  background-color: lavender;
+  font-size: x-large;
+  display: inline-block;
+  width: 200px;
+}
+
 .logout {
   margin-top: 50px;
   background-color: lavender;
@@ -63,20 +71,21 @@ header .wrapper {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  display: none;
 }
 
 .book {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
 }
 
-.cart-products .title {
+.book .title {
   font-size: large;
   margin: 0 50px 0 50px;
 }
 
-.cart-products .price {
+.book .price {
   font-size: large;
   margin-bottom: 25px;
 }
@@ -89,12 +98,13 @@ header .wrapper {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  display: none;
 }
 
 .order {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
 }
 
 .order .title {
@@ -105,4 +115,15 @@ header .wrapper {
 .order .price {
   font-size: large;
   margin-bottom: 25px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  border: 1px solid grey;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  display: none;
 }
