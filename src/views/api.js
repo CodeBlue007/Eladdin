@@ -49,9 +49,9 @@ async function post(endpoint, data) {
     throw new Error(reason);
   }
 
-  // const result = await res.json();
+  const result = await res.json();
 
-  // return result;
+  return result;
 }
 
 // api 로 PATCH 요청 (/endpoint/params 로, JSON 데이터 형태로 요청함)
