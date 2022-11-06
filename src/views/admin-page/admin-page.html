@@ -39,14 +39,16 @@
     <main>
       <div id="modal-js-example" class="modal">
         <div class="modal-background"></div>
-      
         <div class="modal-content">
           <div class="box">
-            <p>Modal JS example</p>
-            이수빈
+            <label for="add_category" class="category_input">카테고리를 적어주세요</label>
+            <div class="input_container">
+              <input id="add_category" class="input is-info" type="text" placeholder="카테고리를 적어주세요" />
+              <button class="button is-info">추가</button>
+            </div>
           </div>
         </div>
-      
+
         <button class="modal-close is-large" aria-label="close"></button>
       </div>
       <header class="title">&nbsp;&nbsp;&nbsp;관리자 페이지</header>
@@ -72,9 +74,7 @@
             <div class="categoryName">카테고리명</div>
             <button class="addCategory">카테고리 추가하기</button>
           </div>
-          <div class= "category_container">
-            
-          </div>
+          <div class="category_container"></div>
         </div>
 
         <div class="view-product">

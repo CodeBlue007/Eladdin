@@ -2,7 +2,7 @@ import { addEvents } from "./component/addEvent.js";
 import { orderRender } from "./component/orderRender.js";
 import { categoryRender } from "./component/categoryRender.js";
 import {productRender} from "./component/productRender.js";
-import { fetchData,fetchOrders, fetchCategory } from "./component/fetchFn.js";
+import { fetchData, fetchOrders, fetchCategory } from "./component/fetchFn.js";
 
   
   
