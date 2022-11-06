@@ -1,4 +1,4 @@
-import { userModel } from "../db/index.js";
+import { UserModel, userModel } from "../db/index.js";
 
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -9,6 +9,13 @@ class UserService {
     this.userModel = userModel;
   }
 
+  async findUserById(userId){
+    return UserModel.findUserById(userId)
+  }
+
+  async findAll(){
+    return userModel.findAll();
+  }
   // 회원가입
   async addUser(userInfo) {
     // 객체 destructuring
@@ -124,6 +131,11 @@ class UserService {
     });
 
     return user;
+  }
+
+
+  async deleteUser(userId){
+    return userModel.deleteUser(userId)
   }
 }
 

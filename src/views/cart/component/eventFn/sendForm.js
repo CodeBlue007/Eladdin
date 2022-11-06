@@ -12,7 +12,6 @@ export async function sendForm(event){
             "ISBN" : checked.ISBN,
             "volume" : checked.volume,
         }));
-
     
         const result = await Api.post("https://eladin-lgurfdxfjq-du.a.run.app/api/order/", sendData);
         
@@ -26,8 +25,6 @@ export async function sendForm(event){
         console.error(err.stack);
         alert(`문제가 발생하였습니다. 확인 후 다시 시도해 주세요: ${err.message}`);
       }
-
-
 
 }
 

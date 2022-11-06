@@ -2,7 +2,7 @@ import { Schema } from 'mongoose';
 
 const BookSchema = new Schema({
   price: {
-    type: number,
+    type: Number,
     required: true,
   },
   imgUrl: {
@@ -15,11 +15,13 @@ const BookSchema = new Schema({
   },
   //성능상의 문제로 인해 Number Type으로 변경함
   ISBN: {
-    type: number,
+    type: Number,
     required: true,
+    index: true,
+    unique: true // 유일성 제약
   },
   EBook: {
-    type: boolean,
+    type: Boolean,
     required: false,
   },
   author: {
@@ -37,9 +39,13 @@ const BookSchema = new Schema({
     type: Date,
     required: true,
   },
+  category: {
+    index: true,    
+    type: String,
+    required: true,
+  },
   // 추가기능
   // TODO 양탄자 배송 이름이 양탄자여야할까요?
-  // TODO 카테고리는 어떻게 구현할까요?
 });
 
 export { BookSchema };

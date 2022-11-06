@@ -38,7 +38,7 @@ function htmlTemplate(datas) {
           </div>
           <div class="next_move">
             <a href="#b">취소</a>
-            <a href="/cart" class="confirm">확인</a>
+              <a href="../cart/cart.html" class="confirm">확인</a>
           </div>
         </div>
         <div class="dim"></div>
