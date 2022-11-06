@@ -13,13 +13,6 @@ function nextError(callback){
   };
 }
 
-userRouter.get('/:userId', loginRequired, nextError(async (req, res, next)=> {
-  const { userId } = req.params;
-  const user = await userService.findUserById(userId)
-  res.json(user)
-
-}))
-
 userRouter.post("/register", async (req, res, next) => {
   try {
     // Content-Type: application/json 설정을 안 한 경우, 에러를 만들도록 함.
@@ -147,6 +140,12 @@ userRouter.patch(
   }
 );
 
+userRouter.get('/:userId', loginRequired, nextError(async (req, res, next)=> {
+  const { userId } = req.params;
+  const user = await userService.findUserById(userId)
+  res.json(user)
+
+}))
 
 userRouter.delete('/:userId', nextError(async (req,res,next)=> {
   const { userId } = req.params

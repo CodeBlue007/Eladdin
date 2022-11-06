@@ -1,4 +1,4 @@
-import { model } from "mongoose";
+import { model, Schema } from "mongoose";
 import { OrderSchema, ItemSchema } from "../schemas/order-schema.js";
 import { Book } from './book-model.js';
 
@@ -18,22 +18,24 @@ export class OrderModel {
 
     //admin
     //TODO router에서 admin인거 확인하는 미들웨어 추가
+
+    // https://mongoosejs.com/docs/api.html#model_Model-populate
     async getAllOrders(){
-        return Order.find({})
-            .populate('items')
-            .populate(['items', 'book']);
+        const orders = await Order.find({})
+        await Order.populate(orders, ['items'])
+        return Order.populate(orders, ['items', 'book'])
     }
 
     async getOrderById(orderId) {
-        return Order.findOne({ _id : orderId })            
-            .populate('items')
-            .populate(['items', 'book']);
+        const order = await Order.findById(orderId)
+        await Order.populate(orders, ['items'])
+        return Order.populate(order, ['items', 'book'])
     }
-    //주문상태정보조회
+    
     async getOrdersForUser(userId) {
-        return Order.findMany({ user: userId })
-            .populate('items')
-            .populate(['items', 'book']);
+        const orders = await Order.find({ user: { _id: userId } })
+        await Order.populate(orders, ['items'])
+        return Order.populate(orders, ['items', 'book'])
     }
 
     /*
@@ -70,7 +72,11 @@ export class OrderModel {
 
         // book은 가져오고, 가져온 book 정보로 totalPrice를 계산해야 함
         const ISBNList = cartItems.map(item => item.ISBN)
-        const books = await Book.find({ ISBN: { $in: ISBNList } })
+        console.log({
+            cartItems,
+            ISBNList,
+        })
+        const books = await Promise.all(ISBNList.map(ISBN => Book.findOne({ ISBN }).exec())) 
 
         const items = books.map((book, i) =>{
             const volume = cartItems[i].volume;
@@ -79,17 +85,18 @@ export class OrderModel {
                 book,
                 volume,
                 totalPrice: book.price * volume,
-            })
-        })
+            });
+        });
 
         const totalPrice = items.reduce((acc, orderItem) => acc + orderItem.totalPrice, 0)
 
-        return Order.create({
+        const order = new Order({
             items,
             totalPrice,
             shippingStatus: '배송준비중', // 처음에는 준비중
             user: userId
         })
+        await order.save()
     }
     //????
     // async editOrderInfo({ }, orderId) { //Object
