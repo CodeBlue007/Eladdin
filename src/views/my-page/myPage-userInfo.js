@@ -6,22 +6,64 @@ async function fetchData() {
 }
 
 function renderData(datas) {
-  const bookInfo = document.querySelector('.userInfo');
+  const userInfo = document.querySelector('.userInfo');
   const dataString = htmlTemplate(datas);
-  bookInfo.innerHTML += dataString;
+  userInfo.innerHTML += dataString;
 }
 
 function htmlTemplate(datas) {
   return datas.map((data) => {
-    const { email, fullName, phoneNumber } = data;
+    const { email, fullName, phoneNumber, address } = data;
 
     return `
-  <ul class="user-info">
-    <li class="fullName">이름 &nbsp;${fullName}</li>
-    <li class="phoneNumber">휴대폰 번호 &nbsp;${phoneNumber}</li>
-    <li class="email">이메일 &nbsp;${email}</li>
-    <button class="password">비밀번호 변경하기</button>
-  </ul>`;
+      <table class="user-info">
+        <tbody>
+          <tr>
+            <th scope="row">이메일</th>
+            <td>
+              <div class="usermodity-email">
+                ${email} &nbsp;&nbsp;
+                <button> 이메일 변경 </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">이름</th>
+            <td>
+              <div class="usermodity-name">
+                ${fullName} &nbsp;&nbsp;
+                <button> 이름 변경 </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">휴대폰 번호</th>
+            <td>
+              <div class="usermodity-phoneNumber">
+                ${phoneNumber} &nbsp;&nbsp;
+                <button> 휴대폰 번호 변경 </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">비밀 번호</th>
+            <td>
+              <div class="usermodity-phoneNumber">
+                <button> 비밀 번호 변경 </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">주소 변경</th>
+            <td>
+              <div class="usermodity-address">
+              ${address} &nbsp;&nbsp;
+                <button> 주소 변경 </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>`;
   });
 }
 

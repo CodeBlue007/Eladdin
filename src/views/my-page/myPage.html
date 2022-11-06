@@ -44,7 +44,7 @@
         <div class="wrapper">
           <img class="profile-picture" src="../my-page/image/eladin.png" />
           <div class="text-area">
-            <h1>Hi, Yoo Jeong Kim</h1>
+            <h1>Hi, 토끼 님!</h1>
             <div class="welcome">마이페이지에 오신 걸 환영합니다!</div>
           </div>
         </div>
@@ -55,9 +55,28 @@
         <div class="order-products"></div>
         <button class="cart"><li>장바구니</li></button>
         <div class="cart-products"></div>
-        <button class="userInfo_btn"><li>회원정보</li></button>
+        <a href="#pop1" class="userInfo_btn"><li>회원정보</li></a>
+        <div class="popup" id="pop1">
+          <a href="#a">닫기</a>
+          <div class="view-userInfo">
+            <span>회원정보를 조회하려면<br /></span>
+            <span>비밀번호를 입력하셔야 합니다.</span>
+            <label class="label" for="passwordInput">비밀번호</label>
+            <div class="control">
+              <input
+                class="input"
+                id="passwordInput"
+                type="password"
+                placeholder="********"
+                autocomplete="on"
+              />
+            </div>
+          </div>
+          <a class="confirm-btn">확인</a>
+        </div>
+        <div class="dim"></div>
         <div class="userInfo"></div>
-        <button class="logout"><li>로그아웃</li></button>
+        <button class="logout">로그아웃</button>
       </ul>
     </main>
   </body>

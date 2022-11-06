@@ -3,7 +3,7 @@ const cartList = document.querySelector('.cart-products');
 const userInfo = document.querySelector('.userInfo');
 const orderList_btn = document.querySelector('.order-list');
 const cartList_btn = document.querySelector('.cart');
-const userInfo_btn = document.querySelector('.userInfo_btn');
+const confirm_btn = document.querySelector('.confirm-btn');
 
 function showOrderList() {
   if (orderList.style.display !== 'none') {
@@ -31,4 +31,4 @@ function showUserInfo() {
 
 orderList_btn.addEventListener('click', showOrderList);
 cartList_btn.addEventListener('click', showCartList);
-userInfo_btn.addEventListener('click', showUserInfo);
+confirm_btn.addEventListener('click', showUserInfo);
