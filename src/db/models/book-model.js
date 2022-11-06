@@ -27,11 +27,11 @@ export class BookModel {
     }
 
     async update({ ISBN, bookInfo }) {
-        //DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르면
+        // DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르면
         //이미 존재하지 않으면
-        console.log(ISBN)
-        console.log(await Book.exists({ISBN}))
-        console.log(await Book.findOne({ISBN}))
+        //console.log(ISBN)
+        //console.log(await Book.exists({ISBN}))
+        //console.log(await Book.findOne({ISBN}))
         if((await Book.exists({ISBN})) == null){
             throw new Error(`DB에 ${ISBN}에 해당하는 Book이 존재하지 않습니다`)
         }
@@ -53,5 +53,5 @@ export class BookModel {
   
   const bookModel = new BookModel();
   
-  export { bookModel };
+  export { Book, bookModel };
   
