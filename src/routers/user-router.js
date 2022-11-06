@@ -1,10 +1,24 @@
 import { Router } from "express";
 import is from "@sindresorhus/is";
 // 폴더에서 import하면, 자동으로 폴더의 index.js에서 가져옴
-import { loginRequired } from "../middlewares/index.js";
+import { loginRequired, adminRequired } from "../middlewares/index.js";
 import { userService } from "../services/index.js";
 
 const userRouter = Router();
+
+function nextError(callback){
+  return async (req, res, next) => {
+    await callback(req, res, next)
+      .catch(next)
+  };
+}
+
+userRouter.get('/:userId', loginRequired, nextError(async (req, res, next)=> {
+  const { userId } = req.params;
+  const user = await userService.findById(userId)
+  res.json(user)
+
+}))
 
 userRouter.post("/register", async (req, res, next) => {
   try {
@@ -62,7 +76,7 @@ userRouter.post("/login", async function (req, res, next) {
 
 // 전체 유저 목록을 가져옴 (배열 형태임)
 // 미들웨어로 loginRequired 를 썼음 (이로써, jwt 토큰이 없으면 사용 불가한 라우팅이 됨)
-userRouter.get("/userlist", loginRequired, async function (req, res, next) {
+userRouter.get("/userlist", loginRequired, adminRequired, async function (req, res, next) {
   try {
     // 전체 사용자 목록을 얻음
     const users = await userService.getUsers();
@@ -133,4 +147,11 @@ userRouter.patch(
   }
 );
 
+
+userRouter.delete('/:userId', nextError(async (req,res,next)=> {
+  const { userId } = req.params
+  userService.delete(userId)
+
+  res.status(204).end(`${userId}는 삭제되었습니다.`)
+}))
 export { userRouter };
