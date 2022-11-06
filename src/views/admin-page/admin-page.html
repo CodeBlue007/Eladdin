@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <script src="./admin-page.js" defer type="module"></script>
     <script src="./admin-page-orders.js" defer type="module"></script>
+    <script src="./admin-page-category.js" defer type="module"></script>
+    <script src="./admin-page-product.js" defer type="module"></script>
+    <script src="./component/addEvent.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
     <title>admin-page</title>
   </head>
@@ -40,14 +43,67 @@
     <main>
       <header class="title">&nbsp;&nbsp;&nbsp;관리자 페이지</header>
       <div class="contents">
-        <ul class="category">
+        <ul class="admin-category">
           <button class="orderManagement"><li>주문관리</li></button>
-          <button class="addCategory"><li>카테고리 추가</li></button>
-          <button class="addProduct"><li>제품 추가</li></button>
+          <button class="categoryManagement"><li>카테고리 설정</li></button>
+          <button class="productManegement"><li>제품 설정</li></button>
         </ul>
-        <div class="view-orders"></div>
-        <div class="view-category"></div>
-        <div class="view-product"></div>
+        <div class="view-orders">
+          <div class="bar">
+            <div class="orderDate">주문일자</div>
+            <div class="bookTitle">책 제목</div>
+            <div class="count">수량</div>
+            <div class="price">금액</div>
+            <div class="shipping">배송현황</div>
+            <div class="cancelOrder">주문취소</div>
+          </div>
+        </div>
+
+        <div class="view-category">
+          <div class="bar_1">
+            <div class="categoryName">카테고리명</div>
+            <button class="addCategory">카테고리 추가하기</button>
+          </div>
+          <ul class="category-list">
+            <li class="category-name">에세이</li>
+            <button class="editCategory-btn">수정</button>
+            <button class="deleteCategory-btn">삭제</button>
+          </ul>
+          <ul class="category-list">
+            <li class="category-name">여행</li>
+            <button class="editCategory-btn">수정</button>
+            <button class="deleteCategory-btn">삭제</button>
+          </ul>
+          <ul class="category-list">
+            <li class="category-name">컴퓨터/모바일</li>
+            <button class="editCategory-btn">수정</button>
+            <button class="deleteCategory-btn">삭제</button>
+          </ul>
+          <ul class="category-list">
+            <li class="category-name">자기계발</li>
+            <button class="editCategory-btn">수정</button>
+            <button class="deleteCategory-btn">삭제</button>
+          </ul>
+          <ul class="category-list">
+            <li class="category-name">추리소설</li>
+            <button class="editCategory-btn">수정</button>
+            <button class="deleteCategory-btn">삭제</button>
+          </ul>
+        </div>
+
+        <div class="view-product">
+          <div class="bar_2">
+            <div class="book-img">이미지</div>
+            <div class="book-title">책 제목</div>
+            <div class="book-ebook">eBook</div>
+            <div class="book-author">저자</div>
+            <div class="book-publisher">출판사</div>
+            <div class="book-intro">책 소개글</div>
+            <div class="book-price">가격</div>
+            <div class="book-publicationDate">출시일</div>
+            <button class="add-product">상품추가하기</button>
+          </div>
+        </div>
       </div>
     </main>
   </body>

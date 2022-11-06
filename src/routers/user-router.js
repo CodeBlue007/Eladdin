@@ -15,7 +15,7 @@ function nextError(callback){
 
 userRouter.get('/:userId', loginRequired, nextError(async (req, res, next)=> {
   const { userId } = req.params;
-  const user = await userService.findById(userId)
+  const user = await userService.findUserById(userId)
   res.json(user)
 
 }))
