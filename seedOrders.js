@@ -16,7 +16,7 @@ db.on("connected", async () =>{
     //  await orderModel.dangerousDeleteAll();
     // console.log('기존 데이터를 모두 삭제합니다.')
 
-    const existOrders = await orderService.findAll();
+    const existOrders = await orderService.getAllOrders();
     if(existOrders.length > 0){
         console.error('이미 데이터가 존재합니다.', existOrders)
         return;
@@ -39,7 +39,7 @@ db.on("connected", async () =>{
     for (const order of mockOrders){
         await orderService.addOrder(order)
     }
-    console.log('시딩을 완료했습니다.', await orderService.findAll())
+    console.log('시딩을 완료했습니다.', await orderService.getAllOrders())
 
 }
   

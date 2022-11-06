@@ -1,43 +1,45 @@
-import { OrderModel } from '../db/models/order-model.js'
+import { orderModel } from '../db/models/order-model.js'
 
-
+//console.log(orderModel)
 
 
 export class OrderService {
-
+   
+    
     async getAllOrders(){
-        return OrderModel.getAllOrders()
-    }
-
-    async getOrderById(orderId) {
-        return OrderModel.getOrderById(orderId);
+        return orderModel.getAllOrders()
     }
     
     async getOrdersForUser(userId) { //Object
-        return OrderModel.getOrdersForUser(userId);
+        return orderModel.getOrdersForUser(userId);
     }
+
+    async getOrderById(orderId) {
+        return orderModel.getOrderById(orderId);
+    }
+    
 
     async addOrder(cartItems, userId) { //Object
 
-        return OrderModel.addOrder(cartItems, userId);
+        return orderModel.addOrder(cartItems, userId);
 
     }
 
 
     // async editOrderInfo(orderId) {
-    //     await OrderModel.editOrderInfo({ _id : orderId })
+    //     await orderModel.editOrderInfo({ _id : orderId })
     // }
 
     async editShippingStatus({ shippingStatus }, orderId){
-        await OrderModel.editShippingStatus({ shippingStatus }, orderId)
+        await orderModel.editShippingStatus({ shippingStatus }, orderId)
     }
 
     async cancelOrderById(orderId){
-        await OrderModel.cancelOrderById(orderId)
+        await orderModel.cancelOrderById(orderId)
     }
   
     async cancelOrdersById(orderIdList) {
-        await OrderModel.cancelOrdersById(orderIdList)
+        await orderModel.cancelOrdersById(orderIdList)
     }
 
 }
