@@ -65,6 +65,7 @@ header .wrapper {
   font-size: x-large;
   display: inline-block;
   width: 200px;
+  cursor: pointer;
 }
 
 .cart-products {
@@ -148,37 +149,14 @@ header .wrapper {
   border: 1px solid grey;
 }
 
-.popup {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 5;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 300px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  box-sizing: border-box;
-  opacity: 0;
-  transition: all 0.5s;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-}
-
-.popup a {
-  color: grey;
-  text-decoration: none;
-  text-align: right;
-  padding: 0;
-}
-
 .view-userInfo {
   margin: auto;
   font-weight: 800;
   font-size: 1.5rem;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 tr {
@@ -196,25 +174,4 @@ tr {
 
 .label {
   margin-top: 20px;
-}
-
-.popup:target {
-  opacity: 1;
-}
-
-.popup:target + dim {
-  opacity: 1;
-  z-index: 2;
-}
-
-.dim {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 1);
-  opacity: 0;
-  transition: all 0.5s;
 }
