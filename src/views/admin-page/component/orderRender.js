@@ -1,25 +1,4 @@
-async function fetchData() {
-  const res = await fetch('../../db/mockBooks.json');
-  const data = await res.json();
-  console.log(data);
-  return data;
-}
-
-function renderData(datas) {
-  const bookInfo = document.querySelector('.view-orders');
-  const dataString = htmlTemplate(datas);
-  bookInfo.innerHTML += `<div class="bar">
-  <div class="orderDate">주문일자</div>
-  <div class="bookTitle">책 제목</div>
-   <div class="count">수량</div>
-   <div class="price">금액</div>
-   <div class="shipping">배송현황</div>
-   <div class="cancelOrder">주문취소</div>
-  </div>`;
-  bookInfo.innerHTML += dataString;
-}
-
-function htmlTemplate(datas) {
+function orderTemplate(datas) {
   return datas
     .map((data) => {
       const { title, price } = data;
@@ -44,4 +23,8 @@ function htmlTemplate(datas) {
     .join('');
 }
 
-fetchData().then((data) => renderData(data));
+export function orderRender(datas) {
+  const bookInfo = document.querySelector('.view-orders');
+  const dataString = orderTemplate(datas);
+  bookInfo.innerHTML += dataString;
+}
