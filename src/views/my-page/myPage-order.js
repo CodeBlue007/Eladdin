@@ -20,6 +20,7 @@ function htmlTemplate(datas) {
     <img src=${imgUrl} width="150"/>
     <li class="title">${title}</li>
     <li class="price">${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</li>
+    <button class="cancel-order">주문취소</class>
   </ul>`;
   });
 }

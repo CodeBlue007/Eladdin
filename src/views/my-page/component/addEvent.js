@@ -3,7 +3,7 @@ const cartList = document.querySelector('.cart-products');
 const userInfo = document.querySelector('.userInfo');
 const orderList_btn = document.querySelector('.order-list');
 const cartList_btn = document.querySelector('.cart');
-const userInfo_btn = document.querySelector('.user-info');
+const userInfo_btn = document.querySelector('.userInfo_btn');
 
 function showOrderList() {
   if (orderList.style.display !== 'none') {

@@ -1,5 +1,5 @@
 async function fetchData() {
-  const res = await fetch('../../db/mockUsers.js');
+  const res = await fetch('./data/data.json');
   const data = await res.json();
   console.log(data);
   return data;
@@ -13,13 +13,14 @@ function renderData(datas) {
 
 function htmlTemplate(datas) {
   return datas.map((data) => {
-    const { imgUrl, title, price } = data;
+    const { email, fullName, phoneNumber } = data;
 
     return `
-  <ul class="order">
-    <img src=${imgUrl} width="150"/>
-    <li class="title">${title}</li>
-    <li class="price">${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</li>
+  <ul class="user-info">
+    <li class="fullName">이름 &nbsp;${fullName}</li>
+    <li class="phoneNumber">휴대폰 번호 &nbsp;${phoneNumber}</li>
+    <li class="email">이메일 &nbsp;${email}</li>
+    <button class="password">비밀번호 변경하기</button>
   </ul>`;
   });
 }
