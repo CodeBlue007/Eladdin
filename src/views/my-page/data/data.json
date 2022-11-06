@@ -1,13 +1,17 @@
 [
   {
-    "imgUrl": "https://image.aladin.co.kr/product/844/69/cover500/8991268935_1.jpg",
-    "title": "UML, 실전에서는 이것만 쓴다 - Java 프로그래머를 위한",
-    "ISBN": 9788991268937,
-    "EBook": true,
-    "author": "로버트 C. 마틴",
-    "publisher": "인사이트",
-    "description": "UML을 공부하려는 사람이 아닌, UML을 사용하려는 사람을 위한 책. UML 지상주의에 빠지지 않고 실용적인 관점에서 다루는 방법을 제시한다.",
-    "price": 20000,
-    "publicationDate": "2010-01-04"
+    "email": "rabbit@gmail.com",
+    "fullName": "토끼",
+    "password": "asdf1",
+    "phoneNumber": "010-1111-1111",
+    "address": {
+      "postalCode": "111-111",
+      "address1": "경기도 토끼시 당근구 999번길",
+      "address2": "풀숲아파트 103동 205호"
+    },
+
+    "role": "basic-user",
+    "createdAt": "2022-11-03T14:02:04.292Z",
+    "updatedAt": "2022-11-03T14:02:04.292Z"
   }
 ]
