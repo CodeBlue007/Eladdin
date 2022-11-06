@@ -1,31 +1,22 @@
-import {getLocal} from "../../util/util.js";
-import * as Api from "../../../api.js";
+import { isValidInfo } from "./sendFormFn/isValidInfo.js";
+import { makeForm } from "./sendFormFn/makeForm.js";
 
 
 export async function sendForm(event){
 
-    try {
+    event.preventDefault();
 
-        event.preventDefault();
-        const local = getLocal("bookInfo");
-        const sendData = local?.filter(data => data.checked).map(checked=> ({            
-            'ISBN' : checked.ISBN ,
-            'volume' : checked.volume ,
-        }));
+    const nameInput = document.querySelector(".input.is-success.name");
+    const phoneInput = document.querySelector(".input.is-success.phone");
+    const addressInput = document.querySelector(".input.is-success.address");
 
-        console.log(sendData);
-    
-       await Api.post("https://eladin-lgurfdxfjq-du.a.run.app/api/order/", sendData);
+    const infoArray = [nameInput, phoneInput, addressInput].map(data=>data.value);
 
-    
-        alert(`주문이 정상적으로 처리되었습니다.`);
-    
-        // 주문완료 페이지 이동해야함
-        window.location.href = "/login";
-      } catch (err) {
-        console.error(err.stack);
-        alert(`문제가 발생하였습니다. 확인 후 다시 시도해 주세요: ${err.message}`);
-      }
+    if(!isValidInfo(infoArray)) return;
+
+    const formData = makeForm(infoArray)
+
+
 
 }
 

@@ -13,6 +13,7 @@ export function deleteOne(event) {
     const { id } = event.target.dataset;
     const local = getLocal("bookInfo");
     const filtered = local.filter(data => data.ISBN !== parseInt(id));
+    console.log(filtered);
     setLocal(filtered);
     renderData(filtered);
 }

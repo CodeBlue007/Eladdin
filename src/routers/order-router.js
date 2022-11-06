@@ -41,8 +41,8 @@ orderRouter.post("/", loginRequired, nextError(async (req, res, next) => {
   const userId = req.currentUserId
   const cartItems = req.body
   
-  await orderService.addOrder(cartItems, userId)
-  res.status(201).end()
+  const orders = await orderService.addOrder(cartItems, userId)
+  res.status(201).json(orders)
 }));
 
 //상세정보

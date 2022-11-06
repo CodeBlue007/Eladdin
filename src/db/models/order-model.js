@@ -1,4 +1,4 @@
-import { model, Schema } from "mongoose";
+import { model } from "mongoose";
 import { OrderSchema, ItemSchema } from "../schemas/order-schema.js";
 import { Book } from './book-model.js';
 

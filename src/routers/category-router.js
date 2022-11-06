@@ -16,7 +16,21 @@ categoryRouter.get("/:title", nextError(async (req, res, next) => {
     const category = await categoryService.findByTitle(title);
     res.json(category);
   }));
-
+  
+  categoryRouter.put("/:title", nextError(async (req, res, next) => {
+      const { title } = req.params;
+      const categoryInfo = req.body;
+      
+      await categoryService.update({title, categoryInfo})
+  
+      res.status(200).end()
+  }));
+  
+categoryRouter.delete("/:title", nextError(async (req, res, next) => {
+      const { title } = req.params;    
+      await categoryService.deleteByTitle(title);
+      res.status(204).end()
+  }));
 categoryRouter.get("/", nextError(async (req, res, next) => {
   const categories = await categoryService.findAll(); 
   res.json(categories);
@@ -29,20 +43,6 @@ categoryRouter.post("/", nextError(async (req, res, next) => {
   res.status(201).end()
 }));
 
-categoryRouter.put("/:title", nextError(async (req, res, next) => {
-    const { title } = req.params;
-    const categoryInfo = req.body;
-    
-    await categoryService.update({title, categoryInfo})
-
-    res.status(200).end()
-}));
-
-categoryRouter.delete("/:title", nextError(async (req, res, next) => {
-    const { title } = req.params;    
-    await categoryService.deleteByTitle(title);
-    res.status(204).end()
-}));
 
 
 export { categoryRouter };
