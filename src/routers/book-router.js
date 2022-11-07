@@ -1,7 +1,5 @@
 import { Router } from "express";
-import { adminRequired } from "../middlewares/admin-required.js";
-import { loginRequired } from "../middlewares/login-required.js";
-import { bookService } from "../services/index.js";
+import { bookService, categoryService } from "../services/index.js";
 
 
 const bookRouter = Router();
@@ -22,11 +20,24 @@ bookRouter.get("/:ISBN", nextError(async (req, res, next) => {
   res.json(book);
 }));
 
-
-//상품수정
-bookRouter.put("/:ISBN", loginRequired, adminRequired, nextError(async (req, res, next) => {
-  const ISBN = parseInt(req.params.ISBN)
-  const bookInfo = req.body
+// TODO: 로그인 기능 구현 시 middleware 추가
+bookRouter.post("/", nextError(async (req, res, next) => {
+  const category = req.body.category;
+  const newBook = req.body;
+  const { id } = await categoryService.findByTitle(category);
+  
+  await bookService.create({    
+    imgUrl: newBook.imgUrl,
+    title: newBook.title,
+    ISBN: newBook.ISBN,
+    EBook: newBook.EBook,
+    author: newBook.author,
+    publisher: newBook.publisher,
+    description: newBook.description,
+    price: newBook.price,
+    publicationDate: newBook.publicationDate,
+    category: id
+  });
   
   await bookService.update({ISBN, bookInfo})
   res.status(200).end(`해당 책이 수정되었습니다.`)
