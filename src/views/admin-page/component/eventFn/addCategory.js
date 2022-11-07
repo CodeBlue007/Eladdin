@@ -1,6 +1,6 @@
 import * as Api from "../../../api.js";
 import { randomId } from "../../../useful-functions.js";
-import { categoryRender } from "../../categoryRender.js";
+import { categoryRender } from "../categoryRender.js";
 
 export function addCategory() {
 
