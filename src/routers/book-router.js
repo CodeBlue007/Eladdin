@@ -52,4 +52,13 @@ bookRouter.post("/", loginRequired, adminRequired, nextError(async (req, res, ne
   
   res.status(201).end(`책이 추가되었습니다.`)
 }));
+
+// import { adminRequired } from "../middlewares/admin-required.js";
+// import { loginRequired } from "../middlewares/login-required.js";
+// import { bookService } from "../services/index.js";
+
+// bookRouter.put("/:ISBN", loginRequired, adminRequired, nextError(async (req, res, next) => {
+//   const ISBN = parseInt(req.params.ISBN)
+//   const bookInfo = req.body
+
 export { bookRouter };
