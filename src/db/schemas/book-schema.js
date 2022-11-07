@@ -39,13 +39,15 @@ const BookSchema = new Schema({
     type: Date,
     required: true,
   },
-  category: {
-    index: true,    
-    type: String,
+  category: {    
+    type: Schema.Types.ObjectId,
+    ref: 'categories',
     required: true,
   },
   // 추가기능
   // TODO 양탄자 배송 이름이 양탄자여야할까요?
 });
 
-export { BookSchema };
+const Book = model("books", BookSchema);
+
+export { BookSchema, Book };

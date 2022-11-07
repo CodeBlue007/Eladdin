@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { categoryService } from "../services/index.js";
+import { categoryService, bookService } from "../services/index.js";
 
 const categoryRouter = Router();
 
@@ -27,8 +27,14 @@ categoryRouter.get("/:title", nextError(async (req, res, next) => {
   }));
   
 categoryRouter.delete("/:title", nextError(async (req, res, next) => {
-      const { title } = req.params;    
+      const { title } = req.params;
+      const { id } = await categoryService.findByTitle(title);
+      // books 먼저 삭제
+      await bookService.deleteByCategory(id);
+
+      // 그 후에 category 삭제
       await categoryService.deleteByTitle(title);
+
       res.status(204).end()
 }));
 

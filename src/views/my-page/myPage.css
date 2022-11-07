@@ -38,6 +38,11 @@ header .wrapper {
   display: inline-block;
   width: 200px;
   cursor: pointer;
+  border: 10px solid black;
+}
+
+.order-list li{
+  border: 1px solid red;
 }
 
 .cart {
