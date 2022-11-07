@@ -1,4 +1,4 @@
-import { Schema } from 'mongoose';
+import { Schema, model } from 'mongoose';
 
 const BookSchema = new Schema({
   price: {
@@ -44,8 +44,7 @@ const BookSchema = new Schema({
     ref: 'categories',
     required: true,
   },
-  // 추가기능
-  // TODO 양탄자 배송 이름이 양탄자여야할까요?
+
 });
 
 const Book = model("books", BookSchema);

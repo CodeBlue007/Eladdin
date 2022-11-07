@@ -67,7 +67,7 @@ orderRouter.post("/", loginRequired, nextError(async (req, res, next) => {
   const cartItems = req.body
   
   const orders = await orderService.addOrder(cartItems, userId)
-  res.status(201).json(orders)
+  res.status(201).json(`주문이 추가되었습니다.`)
 }));
 
 

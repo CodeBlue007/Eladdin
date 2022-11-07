@@ -22,20 +22,30 @@ export class OrderModel {
     // https://mongoosejs.com/docs/api.html#model_Model-populate
     async getAllOrders(){
         const orders = await Order.find({})
-        await Order.populate(orders, ['items'])
-        return Order.populate(orders, ['items', 'book'])
+
+        // https://mongoosejs.com/docs/populate.html#deep-populate
+        await Order.populate(orders, { path: 'items', populate: { path: 'book' } })
+        await Order.populate(orders, { path: 'user', populate : { path: 'address' } })
+        
+        console.log(orders)
+        return orders;
     }
 
     async getOrderById(orderId) {
         const order = await Order.findById(orderId)
-        await Order.populate(order, ['items'])
-        return Order.populate(order, ['items', 'book'])
+        await Order.populate(order, { path: 'items', populate: { path: 'book' } })
+        await Order.populate(order, { path: 'user', populate : { path: 'address' } })
+        
+        return order
     }
     
     async getOrdersForUser(userId) {
         const orders = await Order.find({ user: { _id: userId } })
-        await Order.populate(orders, ['items'])
-        return Order.populate(orders, ['items', 'book'])
+        await Order.populate(orders, { path: 'items', populate: { path: 'book' } })
+        await Order.populate(orders, { path: 'user', populate : { path: 'address' } })
+
+        console.log(orders)
+        return orders;
     }
 
     /*
