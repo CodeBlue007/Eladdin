@@ -30,7 +30,8 @@ categoryRouter.delete("/:title", nextError(async (req, res, next) => {
       const { title } = req.params;    
       await categoryService.deleteByTitle(title);
       res.status(204).end()
-  }));
+}));
+
 categoryRouter.get("/", nextError(async (req, res, next) => {
   const categories = await categoryService.findAll(); 
   res.json(categories);

@@ -13,29 +13,54 @@ function nextError(callback){
       .catch(next)
   };
 }
-    // 주문조회 ㅇ
-    // 주문추가 ㅇ
-    // 주문수정 ㅇ
-    // 주문취소 ㅇ
-    // 전체주문조회 admin ㅇ
-    // 주문삭제 admin x ????
-    // 주문상태정보조회 ???? ㅇ
-    // 주문상태정보수정 admin ???? ㅇ
-
-//eladin.com/order/ ㅇ
-orderRouter.get("/", loginRequired, adminRequired, nextError(async (req, res, next) => {
-  const orders = await orderService.getAllOrders(); 
-  res.json(orders);
-}));
-
-// /api/order/my ㅇ
+//사용자 주문 내역 조회
 orderRouter.get("/my", loginRequired, nextError(async (req, res, next) => {
   const userId = req.currentUserId;
   const order = await orderService.getOrdersForUser(userId);
   res.json(order)
 }));
 
-// /api/order/my
+//관리자 배송정보 변경
+orderRouter.patch('/:orderId/shippingStatus', loginRequired, adminRequired, nextError(async (req, res, next)=> {
+  const { shippingStatus } = req.body;
+  const { orderId } = req.params;
+
+  await orderService.editShippingStatus({shippingStatus}, orderId)
+  res.status(200).end('배송정보가 변경되었습니다.')
+}))
+
+// //사용자 주문 상태 정보조회
+// orderRouter.get("/:orderId", loginRequired, nextError(async (req, res, next) => {
+//   const { orderId } = req.params
+//   const order = await orderService.getOrderById(orderId);
+//   res.json(order);
+// }));
+
+//사용자 주문 취소
+orderRouter.delete("/:orderId", loginRequired, nextError(async (req, res, next) => {
+  const orderId = req.params.orderId
+  await orderService.cancelOrderById(orderId)
+  res.status(204).end('주문이 취소되었습니다.')
+}));
+
+//관리자 주문 삭제
+orderRouter.delete("/", loginRequired, adminRequired, nextError(async (req, res, next) => {
+  const orderIdList = req.body
+  await orderService.cancelOrdersById(orderIdList)
+  res.status(204).end('주문을 취소하였습니다.')
+}));
+
+//TODO 주문수정
+
+
+//관리자 주문 조회
+orderRouter.get("/", loginRequired, adminRequired, nextError(async (req, res, next) => {
+  const orders = await orderService.getAllOrders(); 
+  res.json(orders);
+}));
+
+
+// 사용자 주문 추가
 // [{ "ISBN": 9788991268104, "volume": 2 }, {"ISBN": 9791185885247, "volume": 1}]
 orderRouter.post("/", loginRequired, nextError(async (req, res, next) => {
   const userId = req.currentUserId
@@ -45,33 +70,5 @@ orderRouter.post("/", loginRequired, nextError(async (req, res, next) => {
   res.status(201).json(orders)
 }));
 
-//상세정보
-orderRouter.get("/:orderId", loginRequired, nextError(async (req, res, next) => {
-  const { orderId } = req.params
-  const order = await orderService.getOrderById(orderId);
-  res.json(order);
-}));
-
-orderRouter.patch('/:orderId/shippingStatus', loginRequired, adminRequired, nextError(async (req, res, next)=> {
-  const { shippingStatus } = req.body;
-  const { orderId } = req.params;
-
-  await orderService.editShippingStatus({shippingStatus}, orderId)
-  res.status(200).end('배송정보가 변경되었습니다.')
-}))
-
-orderRouter.delete("/:orderId", loginRequired, nextError(async (req, res, next) => {
-  const orderId = req.params.orderId
-  await orderService.cancelOrderById(orderId)
-  res.status(204).end('주문이 취소되었습니다.')
-}));
-
-orderRouter.delete("/", loginRequired, adminRequired, nextError(async (req, res, next) => {
-  const orderIdList = req.body
-  await orderService.cancelOrdersById(orderIdList)
-  res.status(204).end('주문을 취소하였습니다.')
-}));
-
-//TODO 주문수정
 
 export { orderRouter };
