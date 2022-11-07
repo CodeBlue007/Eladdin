@@ -35,7 +35,7 @@ export class BookService {
   }
 
   async deleteByCategory(category) {        
-    await bookModel.deleteByCategory({ category });
+    await bookModel.deleteByCategory( category );
   }
 }
 
