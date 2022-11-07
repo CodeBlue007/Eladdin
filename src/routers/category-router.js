@@ -36,7 +36,7 @@ categoryRouter.delete("/:title", nextError(async (req, res, next) => {
       await categoryService.deleteByTitle(title);
 
       res.status(204).end()
-  }));
+}));
 
 categoryRouter.get("/", nextError(async (req, res, next) => {
   const categories = await categoryService.findAll(); 
