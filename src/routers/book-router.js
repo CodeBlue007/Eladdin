@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { bookService } from "../services/index.js";
+import { bookService, categoryService } from "../services/index.js";
 
 // let mockBookDB = books;
 
@@ -28,8 +28,22 @@ bookRouter.get("/:ISBN", nextError(async (req, res, next) => {
 
 // TODO: 로그인 기능 구현 시 middleware 추가
 bookRouter.post("/", nextError(async (req, res, next) => {
+  const category = req.body.category;
   const newBook = req.body;
-  await bookService.create(newBook)
+  const { id } = await categoryService.findByTitle(category);
+  
+  await bookService.create({    
+    imgUrl: newBook.imgUrl,
+    title: newBook.title,
+    ISBN: newBook.ISBN,
+    EBook: newBook.EBook,
+    author: newBook.author,
+    publisher: newBook.publisher,
+    description: newBook.description,
+    price: newBook.price,
+    publicationDate: newBook.publicationDate,
+    category: id
+  });
   
   res.status(201).end()
 }));
