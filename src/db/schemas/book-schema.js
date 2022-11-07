@@ -48,4 +48,6 @@ const BookSchema = new Schema({
   // TODO 양탄자 배송 이름이 양탄자여야할까요?
 });
 
-export { BookSchema };
+const Book = model("books", BookSchema);
+
+export { BookSchema, Book };

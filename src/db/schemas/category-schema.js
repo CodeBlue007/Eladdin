@@ -1,4 +1,4 @@
-import { Schema } from 'mongoose';
+import { Schema, model } from 'mongoose';
 
 const CategorySchema = new Schema({
   title: {
@@ -7,4 +7,6 @@ const CategorySchema = new Schema({
   },
 });
 
-export { CategorySchema };
+const Category = model("categories", CategorySchema);
+
+export { CategorySchema, Category };

@@ -1,5 +1,4 @@
-import { model } from "mongoose";
-import { BookSchema } from "../schemas/book-schema.js";
+import { Book } from "../schemas/book-schema.js";
 
 const Book = model("books", BookSchema);
 //TODO refactor : unique 검증 로직 추상화할 필요가 있나?
@@ -24,6 +23,7 @@ export class BookModel {
         if(await Book.exists({ISBN : bookInfo.ISBN}) !== null){
             throw new Error(`DB에 ${bookInfo.ISBN}는 존재합니다.`)
         }
+
         return Book.create(bookInfo);
     }
 

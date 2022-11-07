@@ -1,7 +1,6 @@
-import { model } from "mongoose";
-import { CategorySchema } from "../schemas/category-schema.js";
+import { Book } from "../schemas/book-schema.js";
+import { Category } from "../schemas/category-schema.js";
 
-const Category = model("categories", CategorySchema);
 
 export class CategoryModel {
 
