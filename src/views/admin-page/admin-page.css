@@ -1,3 +1,5 @@
+@import url("../reset.css");
+
 header {
   border-bottom: 1px solid grey;
   margin: 20px 0 20px 70px;
@@ -5,6 +7,11 @@ header {
   width: 90%;
   color: grey;
 }
+
+.link_add{
+  color:black;
+}
+
 
 /* 본문 */
 .contents {
