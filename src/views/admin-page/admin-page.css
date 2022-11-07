@@ -10,6 +10,16 @@ header {
   display: flex;
 }
 
+.box .category_input{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.box .input_container{
+  display: flex;
+  margin-top: 10px;
+}
+
 .category {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
