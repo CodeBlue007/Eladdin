@@ -39,9 +39,9 @@ const BookSchema = new Schema({
     type: Date,
     required: true,
   },
-  category: {
-    index: true,    
-    type: String,
+  category: {    
+    type: Schema.Types.ObjectId,
+    ref: 'categories',
     required: true,
   },
   // 추가기능

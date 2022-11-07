@@ -22,7 +22,11 @@ export class BookService {
   }
 
   async deleteByISBN(ISBN) {
-      await bookModel.deleteByISBN(ISBN)
+      await bookModel.deleteByISBN(ISBN);
+  }
+
+  async deleteByCategory(category) {        
+    await bookModel.deleteByCategory({ category });
   }
 }
 
