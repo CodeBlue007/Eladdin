@@ -28,7 +28,7 @@ export class OrderModel {
 
     async getOrderById(orderId) {
         const order = await Order.findById(orderId)
-        await Order.populate(orders, ['items'])
+        await Order.populate(order, ['items'])
         return Order.populate(order, ['items', 'book'])
     }
     
