@@ -7,6 +7,15 @@ export async function fetchData() {
   }
 
 
+  export async function fetchBooks() {
+    const data = await Api.get('https://eladin-lgurfdxfjq-du.a.run.app/api/books');
+    console.log(data);
+    return data;
+  }
+
+
+
+
 export async function fetchOrders() {
     const orders = await Api.get("https://eladin-lgurfdxfjq-du.a.run.app/api/order/");
     console.log(orders);
