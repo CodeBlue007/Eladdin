@@ -55,26 +55,28 @@
         <div class="order-products"></div>
         <button class="cart"><li>장바구니</li></button>
         <div class="cart-products"></div>
-        <a href="#pop1" class="userInfo_btn"><li>회원정보</li></a>
-        <div class="popup" id="pop1">
-          <a href="#a">닫기</a>
-          <div class="view-userInfo">
-            <span>회원정보를 조회하려면<br /></span>
-            <span>비밀번호를 입력하셔야 합니다.</span>
-            <label class="label" for="passwordInput">비밀번호</label>
-            <div class="control">
-              <input
-                class="input"
-                id="passwordInput"
-                type="password"
-                placeholder="********"
-                autocomplete="on"
-              />
+        <button class="userInfo_btn"><li>회원정보</li></button>
+        <div class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <div class="view-userInfo">
+              <span>회원정보를 조회하려면<br /></span>
+              <span>비밀번호를 입력하셔야 합니다.</span>
+              <label class="label" for="passwordInput">비밀번호</label>
+              <div class="control">
+                <input
+                  class="input"
+                  id="passwordInput"
+                  type="password"
+                  placeholder="********"
+                  autocomplete="on"
+                />
+              </div>
+              <a class="confirm-btn">확인</a>
             </div>
           </div>
-          <a class="confirm-btn">확인</a>
+          <button class="modal-close is-large" aria-label="close"></button>
         </div>
-        <div class="dim"></div>
         <div class="userInfo"></div>
         <button class="logout">로그아웃</button>
       </ul>
