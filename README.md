@@ -149,7 +149,7 @@ npm install
 
 ```bash
 MONGODB_URL=<몽고DB URL>
-PORT=5000
+PORT=8000
 JWT_SECERT_KEY=<랜덤 문자열>
 ```
 
@@ -165,7 +165,11 @@ JWT_SECERT_KEY=<랜덤 문자열>
 4. express 앱을 실행
 
 ```bash
-npm start
+"node index.js"
+```
+또는
+```bash
+"nodemon index.js --exec babel-node"
 ```
 
 <br>
