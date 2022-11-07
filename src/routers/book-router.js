@@ -26,6 +26,7 @@ bookRouter.get("/:ISBN", nextError(async (req, res, next) => {
 bookRouter.post("/", loginRequired, nextError(async (req, res, next) => {
   const category = req.body.category;
   const newBook = req.body;
+  
   const { id } = await categoryService.findByTitle(category);
   
   await bookService.create({    
@@ -33,8 +34,7 @@ bookRouter.post("/", loginRequired, nextError(async (req, res, next) => {
     category: id
   });
   
-  await bookService.update({ISBN, bookInfo})
-  res.status(200).end(`해당 책이 수정되었습니다.`)
+  res.status(200).end(`해당 책이 등록되었습니다.`)
 }));
 
 bookRouter.put("/:ISBN", loginRequired, adminRequired, nextError(async (req, res, next) => {
@@ -42,7 +42,7 @@ bookRouter.put("/:ISBN", loginRequired, adminRequired, nextError(async (req, res
   const bookInfo = req.body
 
     await bookService.update({ISBN, bookInfo})
-    res.status(200).end()
+    res.status(200).end(`${ISBN}에 해당하는 책이 수정되었습니다.`)
   
 }))
 

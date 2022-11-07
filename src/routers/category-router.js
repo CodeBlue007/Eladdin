@@ -2,7 +2,7 @@ import { Router } from "express";
 import { categoryService, bookService } from "../services/index.js";
 
 const categoryRouter = Router();
-
+// res.end()할 때 넣어주는 에러메세지를 변수로 빼는 것에 대해서(?)
 function nextError(callback){
   return async (req, res, next) => {
     await callback(req, res, next)
@@ -47,7 +47,7 @@ categoryRouter.post("/", nextError(async (req, res, next) => {
   const newCategory = req.body;
   await categoryService.create(newCategory);
   
-  res.status(201).end()
+  res.status(201).end(`주문이 완료되었습니다.`)
 }));
 
 

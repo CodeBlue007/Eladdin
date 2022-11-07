@@ -17,7 +17,7 @@ export class BookModel {
     }
 
     async findByISBN(ISBN) {
-        if(await Book.exists({ISBN}) == null){
+        if((await Book.exists({ISBN})) == null){
             throw new Error(`DB에 ${ISBN}는 존재하지 않습니다.`)
         }
         const book = await Book.findOne({ ISBN })
@@ -33,7 +33,7 @@ export class BookModel {
     // admin만 가능한 기능
     async create(bookInfo) { //Object
         // DB에 이미 존재하지 않으면
-        if(await Book.exists({ISBN : bookInfo.ISBN}) !== null){
+        if((await Book.exists({ISBN : bookInfo.ISBN})) !== null){
             throw new Error(`DB에 ${bookInfo.ISBN}는 존재합니다.`)
         }
 
@@ -50,7 +50,7 @@ export class BookModel {
     }
 
     async deleteByISBN(ISBN) {
-        if(await Book.exists({ISBN}) == null){
+        if((await Book.exists({ISBN})) == null){
             throw new Error(`DB에 ${ISBN}는 존재하지 않아 삭제할 수 없습니다.`)
         }
         await Book.deleteOne({ ISBN });
