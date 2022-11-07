@@ -27,7 +27,7 @@ db.on("connected", async () =>{
     const duplicated = []
     
     for (const book of mockBooks){
-        if(temp.some((item)=> item.ISBN == book.ISBN)){
+        if(temp.some((item)=> item.ISBN === book.ISBN)){
             duplicated.push(book)
         }
         temp.push(book)
