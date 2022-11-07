@@ -1,19 +1,15 @@
 .div-container {
+  margin-top: 100px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  flex-direction: column;
 }
 
-.landing {
+.go-shopping {
+  margin-top: 50px;
+  border: none;
+  font-size: xx-large;
+  background-color: lavender;
   cursor: pointer;
-  border: 1px solid red;
-  padding: 10px;
-}
-
-.greeting {
-  cursor: pointer;
-  border: 1px solid blue;
-  padding: 10px;
-  margin-left: 3rem;
 }
