@@ -16,9 +16,6 @@ const ItemSchema = new Schema({
     required: true,
     min: 0
   }
-},
-{
-    _id : true //이거 굳이?
 });
 
 const OrderSchema = new Schema(
@@ -37,7 +34,32 @@ const OrderSchema = new Schema(
     user: {
       type: Schema.Types.ObjectId,
       ref : 'users'
-    }
+    },
+    // receiver: {
+    //   type: new Schema({
+    //     fullName: {
+    //       type: String,
+    //       required: true,
+    //     },
+    //     phoneNumber: {
+    //       type: String,
+    //       required: true,
+    //     },
+    //     address: {
+    //       type: new Schema(
+    //         {
+    //           postalCode: String,
+    //           address1: String,
+    //           address2: String,
+    //         },
+    //         {
+    //           _id: false,
+    //         }
+    //       ),
+    //       required: true,
+    //     }
+    //   })
+    // }
   },
   { timestamp: true, _id : true }, //createdAt, updatedAt을 mock에 추가하기
 );

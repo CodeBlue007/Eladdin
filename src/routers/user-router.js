@@ -23,19 +23,8 @@ userRouter.post("/register", async (req, res, next) => {
       );
     }
 
-    // req (request)의 body 에서 데이터 가져오기
-    const fullName = req.body.fullName;
-    const email = req.body.email;
-    const password = req.body.password;
-    const role = req.body.role;
-
     // 위 데이터를 유저 db에 추가하기
-    const newUser = await userService.addUser({
-      fullName,
-      email,
-      password,
-      role,
-    });
+    const newUser = await userService.addUser(req.body);
 
     // 추가된 유저의 db 데이터를 프론트에 다시 보내줌
     // 물론 프론트에서 안 쓸 수도 있지만, 편의상 일단 보내 줌
