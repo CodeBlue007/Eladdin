@@ -29,15 +29,7 @@ bookRouter.post("/", loginRequired, nextError(async (req, res, next) => {
   const { id } = await categoryService.findByTitle(category);
   
   await bookService.create({    
-    imgUrl: newBook.imgUrl,
-    title: newBook.title,
-    ISBN: newBook.ISBN,
-    EBook: newBook.EBook,
-    author: newBook.author,
-    publisher: newBook.publisher,
-    description: newBook.description,
-    price: newBook.price,
-    publicationDate: newBook.publicationDate,
+    ...newBook,
     category: id
   });
   
