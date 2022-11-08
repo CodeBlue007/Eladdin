@@ -1,6 +1,4 @@
-
-
-function htmlTemplate(datas) {
+function bookTemplate(datas) {
     return datas.map((data) => {
         const { imgUrl, title, EBook, author, publisher, description, price, publicationDate } = data;
 
@@ -39,6 +37,6 @@ function htmlTemplate(datas) {
 
 function renderData(datas) {
     const bookInfo = document.querySelector('.product-detail');
-    const dataString = htmlTemplate(datas);
-    bookInfo.innerHTML += dataString;
+    const dataString = bookTemplate(datas);
+    bookInfo.innerHTML = dataString;
 }

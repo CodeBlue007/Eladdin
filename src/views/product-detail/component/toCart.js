@@ -9,11 +9,7 @@ function addEvent(data) {
   const cart_btn = document.querySelector('.cart');
   cart_btn.addEventListener('click', () => setData(data));
 }
-function setData(data) {
-  localStorage.setItem('bookInfo', JSON.stringify(data));
-  const localDatas = localStorage.getItem('bookInfo');
-  console.log(JSON.parse(localDatas));
-}
+
 
 function renderData() {
   const product_detail = document.querySelector('.product-detail');
@@ -31,4 +27,4 @@ async function App() {
   }
 }
 
-App();
+// App();
