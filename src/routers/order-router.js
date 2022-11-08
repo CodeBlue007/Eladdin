@@ -26,7 +26,7 @@ orderRouter.patch('/:orderId/shippingStatus', loginRequired, adminRequired, next
   const { orderId } = req.params;
 
   await orderService.editShippingStatus({shippingStatus}, orderId)
-  res.status(200).end('배송정보가 변경되었습니다.')
+  res.status(200).end()
 }))
 
 // //사용자 주문 상태 정보조회
@@ -40,14 +40,14 @@ orderRouter.patch('/:orderId/shippingStatus', loginRequired, adminRequired, next
 orderRouter.delete("/:orderId", loginRequired, nextError(async (req, res, next) => {
   const orderId = req.params.orderId
   await orderService.cancelOrderById(orderId)
-  res.status(204).end('주문이 취소되었습니다.')
+  res.status(204).end()
 }));
 
 //관리자 주문 삭제
 orderRouter.delete("/", loginRequired, adminRequired, nextError(async (req, res, next) => {
   const orderIdList = req.body
   await orderService.cancelOrdersById(orderIdList)
-  res.status(204).end('주문을 취소하였습니다.')
+  res.status(204).end()
 }));
 
 //TODO 주문수정
@@ -66,8 +66,8 @@ orderRouter.post("/", loginRequired, nextError(async (req, res, next) => {
   const userId = req.currentUserId
   const cartItems = req.body
   
-  const orders = await orderService.addOrder(cartItems, userId)
-  res.status(201).json(`주문이 추가되었습니다.`)
+  await orderService.addOrder(cartItems, userId)
+  res.status(201).end()
 }));
 
 
