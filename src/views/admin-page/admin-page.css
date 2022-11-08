@@ -72,8 +72,7 @@ header {
   align-items: center;
   border-bottom: 1px solid grey;
   background-color: bisque;
-  padding-left: 20px;
-}
+  }
 
 .bar .orderDate {
   flex-basis: 10%;
@@ -108,10 +107,14 @@ header {
 .order {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  height: 30px;
+  height: 80px;
+  align-items: center;
 }
 
+.order .orderDate {
+  flex-basis: 10%;
+  text-align: center;
+}
 .order .cancelOrder-btn {
   flex-basis: 10%;
   text-align: center;
@@ -119,28 +122,26 @@ header {
 
 .order .shipping_select {
   flex-basis: 10%;
+  width: 80%;
   text-align: center;
+  padding: 5px;
 }
 
-.order .bookTitle {
+.order .book_container {
   flex-basis: 50%;
   text-align: center;
 }
 
-.order .count {
+.order .count_container{
   flex-basis: 10%;
   text-align: center;
 }
 
-.order .price {
+.order .price_container {
   flex-basis: 10%;
   text-align: center;
 }
 
-.order .orderDate {
-  flex-basis: 10%;
-  text-align: right;
-}
 
 /* 카테고리 설정 */
 .view-category {
@@ -296,10 +297,6 @@ header {
   text-align: center;
 }
 
-.price {
-  flex-basis: 5%;
-  text-align: center;
-}
 
 .edit-btn {
   flex-basis: 10%;
