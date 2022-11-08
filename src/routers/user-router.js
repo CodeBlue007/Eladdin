@@ -131,9 +131,11 @@ userRouter.patch(
   }
 );
 
-userRouter.get('/:userId', loginRequired, nextError(async (req, res, next)=> {
-  const { userId } = req.params;
+userRouter.get('/my', loginRequired, nextError(async (req, res, next)=> {
+  
+  const userId = req.currentUserId
   const user = await userService.findUserById(userId)
+  
   res.json(user)
 
 }))
