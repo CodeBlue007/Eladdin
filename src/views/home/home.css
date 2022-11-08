@@ -8,6 +8,10 @@
   flex-direction: column;
 }
 
+img {
+  border-radius: 5px;
+}
+
 .go_shopping {
   margin-top: 50px;
   border: none;

@@ -20,36 +20,79 @@
     <!-- 헤더 -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
+
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href='../home/home.html'>
-            <img src="./image/Eladin_CI.png" width="200">
+          <a class="navbar-item" href="../home/home.html">
+            <img src="./image/Eladin_CI.png" width="200" />
           </a>
         </div>
-    
+
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a href="../my-page/myPage.html" class="button has-text-link-dark has-background-link-light">
+              <a
+                href="./category-booklist.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/store-solid.svg" width="20" />
+                </span>
+                <strong>Shop</strong>
+              </a>
+              <a
+                href="../my-page/myPage.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/user-solid.svg" width="15" />
+                </span>
                 <strong>My Page</strong>
               </a>
-              <a href="../register/register.html" class="button has-text-link-dark has-background-link-light">
+              <a
+                href="../register/register.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/pen-to-square-solid.svg" width="20" />
+                </span>
                 <strong>Sign up</strong>
               </a>
-              <a href="../login/login.html" class="button has-text-link-dark has-background-link-light">
+              <a
+                href="../login/login.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/unlock-solid.svg" width="15" />
+                </span>
                 <strong>Log in</strong>
               </a>
-              <a href="../cart/cart.html" class="button has-text-link-dark has-background-link-light">
+              <a
+                href="../cart/cart.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
                 <span class="icon">
                   <i class="fas fa-cart-shopping"></i>
                 </span>
                 <strong>Cart</strong>
+              </a>
+              <a href="../admin-page/admin-page.html" class="button has-background-danger-light">
+                <span class="icon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <strong>Admin Page</strong>
               </a>
             </div>
           </div>
@@ -71,17 +114,24 @@
               <span class="icon is-small" data-category="trip" ><i class="fas fa-music" aria-hidden="true"></i></span>
               <span data-category="trip">여행</span>
             </a>
-          </li >
+          </li>
           <li>
             <a data-category="develop">
               <span class="icon is-small" data-category="develop"><i class="fas fa-film" aria-hidden="true"></i></span>
               <span data-category="develop">자기계발</span>
             </a>
           </li>
+<<<<<<< HEAD
           <li >
             <a data-category="computer">
               <span class="icon is-small" data-category="computer"><i class="far fa-file-alt" aria-hidden="true"></i></span>
               <span data-category="computer">컴퓨터/모바일</span>
+=======
+          <li>
+            <a id="computer">
+              <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+              <span>컴퓨터/모바일</span>
+>>>>>>> feature-FE-nav
             </a>
           </li>
           <li>
@@ -93,8 +143,7 @@
         </ul>
       </div>
 
-      <div class="book_container">
-      </div>
+      <div class="book_container"></div>
     </div>
   </body>
 </html>
