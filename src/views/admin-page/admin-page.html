@@ -43,7 +43,12 @@
           <div class="box">
             <label for="add_category" class="category_input">카테고리를 적어주세요</label>
             <div class="input_container">
-              <input id="add_category" class="input is-info" type="text" placeholder="카테고리를 적어주세요" />
+              <input
+                id="add_category"
+                class="input is-info"
+                type="text"
+                placeholder="카테고리를 적어주세요"
+              />
               <button class="button is-info">추가</button>
             </div>
           </div>
@@ -67,28 +72,30 @@
             <div class="shipping">배송현황</div>
             <div class="cancelOrder">주문취소</div>
           </div>
-            
-          </div>
         </div>
 
-        <div class="view-category">
+        <div class="view-category hidden">
           <div class="bar_1">
             <div class="categoryName">카테고리명</div>
             <button class="addCategory">카테고리 추가하기</button>
           </div>
-          <div class="category_container"></div>
-        </div>
+          <div class="category_container">
 
-        <div class="view-product">
-          <div class="bar_2">
-            <div class="book-img">이미지</div>
-            <div class="book-title">책 제목</div>
-            <div class="book-ebook">eBook</div>
-            <div class="book-author">저자</div>
-            <div class="book-publisher">출판사</div>
-            <div class="book-price">가격</div>
-            <div class="book-publicationDate">출시일</div>
-            <button class="add-product"><a href="./pages/add-item/add-item.html" class="link_add">상품추가하기</a></button>
+          </div>
+          </div>
+          <div class="view-product hidden">
+            <div class="bar_2">
+              <div class="book-img">이미지</div>
+              <div class="book-title">책 제목</div>
+              <div class="book-ebook">eBook</div>
+              <div class="book-author">저자</div>
+              <div class="book-publisher">출판사</div>
+              <div class="book-price">가격</div>
+              <div class="book-publicationDate">출시일</div>
+              <button class="add-product">
+                <a href="./pages/add-item/add-item.html" class="link_add">상품추가하기</a>
+              </button>
+            </div>
           </div>
         </div>
       </div>

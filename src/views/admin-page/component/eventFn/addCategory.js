@@ -27,8 +27,6 @@ export function addCategory() {
         console.error(err.stack);
         alert(`문제가 발생하였습니다. 확인 후 다시 시도해 주세요: ${err.message}`);
     }
-
-
 }
 
 
