@@ -5,23 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>쇼핑-데모</title>
     <!-- 아이콘 -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/elice-rabbit-favicon.png"
-    />
+    <link rel="icon" type="image/png" sizes="16x16" href="/elice-rabbit-favicon.png" />
     <!-- bulma css 관련 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
     <!-- 폰트 어썸: 아이콘 -->
-    <script
-      defer
-      src="https://kit.fontawesome.com/9daa42bcef.js"
-      crossorigin="anonymous"
-    ></script>
+    <script defer src="https://kit.fontawesome.com/9daa42bcef.js" crossorigin="anonymous"></script>
 
     <!-- 커스텀 css, js -->
     <link rel="stylesheet" href="login.css" />
@@ -31,37 +19,76 @@
     <!-- 헤더 -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-    
+
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href='../home/home.html'>
-            <img src="./image/Eladin_CI.png" width="200">
+          <a class="navbar-item" href="../home/home.html">
+            <img src="./image/Eladin_CI.png" width="200" />
           </a>
         </div>
-    
+
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a href="../my-page/myPage.html" class="button has-text-link-dark has-background-link-light">
+              <a
+                href="./category-booklist.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/store-solid.svg" width="20" />
+                </span>
+                <strong>Shop</strong>
+              </a>
+              <a
+                href="../my-page/myPage.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/user-solid.svg" width="15" />
+                </span>
                 <strong>My Page</strong>
               </a>
-              <a href="../register/register.html" class="button has-text-link-dark has-background-link-light">
+              <a
+                href="../register/register.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/pen-to-square-solid.svg" width="20" />
+                </span>
                 <strong>Sign up</strong>
               </a>
-              <a href="../login/login.html" class="button has-text-link-dark has-background-link-light">
+              <a href="./login.html" class="button has-text-link-dark has-background-link-light">
+                <span class="icon">
+                  <img src="./image/unlock-solid.svg" width="15" />
+                </span>
                 <strong>Log in</strong>
               </a>
-              <a href="../cart/cart.html" class="button has-text-link-dark has-background-link-light">
+              <a
+                href="../cart/cart.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
                 <span class="icon">
                   <i class="fas fa-cart-shopping"></i>
                 </span>
                 <strong>Cart</strong>
+              </a>
+              <a href="../admin-page/admin-page.html" class="button has-background-danger-light">
+                <span class="icon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <strong>Admin Page</strong>
               </a>
             </div>
           </div>
@@ -99,9 +126,7 @@
           </div>
         </div>
 
-        <button class="button is-info is-fullwidth" id="submitButton">
-          로그인하기
-        </button>
+        <button class="button is-info is-fullwidth" id="submitButton">로그인하기</button>
       </form>
     </div>
   </body>
