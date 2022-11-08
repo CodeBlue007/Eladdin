@@ -17,7 +17,7 @@ function htmlTemplate(datas) {
 
     return `<img
         src=${imgUrl}
-        width="500"
+        width="500" 
       />
       <ul class="book">
         <li class="title">${title}</li>

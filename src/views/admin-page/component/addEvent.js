@@ -2,7 +2,7 @@ import { showCategory, showOrder, showProduct } from "./eventFn/renderItems.js";
 import { addCategory, closeModal } from "./eventFn/addCategory.js";
 import {deleteItem} from "./eventFn/deleteItem.js";
 import { editCategory } from "./eventFn/editCategory.js";
-import { deleteCategory } from "./eventFn/deleteCategory.js";
+import { deleteCategory } from "./eventFn/deleteCategory.js"; 
 
 export function addEvents() {
   const orderManagement_btn = document.querySelector('.orderManagement');
