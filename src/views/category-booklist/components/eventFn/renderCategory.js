@@ -1,7 +1,5 @@
-
 export function renderCategory(e) {
 
-    console.log(e.target);
     if (!e.target.id) return;
 
     const changeMap = {
