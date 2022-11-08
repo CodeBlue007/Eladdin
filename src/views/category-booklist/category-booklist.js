@@ -1,6 +1,6 @@
 import { addEvents } from "./components/addEvents.js";
 import { renderData } from "./components/renderData.js";
-import * as Api from "../../../api.js";
+import * as Api from "../api.js";
 
 
 

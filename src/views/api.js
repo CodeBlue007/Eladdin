@@ -50,9 +50,9 @@ async function post(endpoint, data) {
     throw new Error(reason);
   }
 
-  const result = await res?.json();
+  // const result = await res?.json();
 
-  return result;
+  return res;
 }
 
 // api 로 PATCH 요청 (/endpoint/params 로, JSON 데이터 형태로 요청함)
@@ -113,9 +113,9 @@ async function del(endpoint, params = "", data ={}) {
     throw new Error(reason);
   }
 
-  const result = await res?.json();
+  // const result = await res?.json();
 
-  return result;
+  // return result;
 }
 
 // 아래처럼 export하면, import * as Api 로 할 시 Api.get, Api.post 등으로 쓸 수 있음.

@@ -22,6 +22,7 @@ export function addCategory() {
             const data = [{title : category, "_id" : randomId()}];
             categoryRender(data);
         })
+        categoryInput.value ="";
 
     } catch (err) {
         console.error(err.stack);
