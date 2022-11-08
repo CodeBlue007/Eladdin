@@ -131,9 +131,9 @@ userRouter.patch(
   }
 );
 
-userRouter.get('/:userId', loginRequired, nextError(async (req, res, next)=> {
-  const { userId } = req.params;
-  const user = await userService.findUserById(userId)
+userRouter.get('/my', loginRequired, nextError(async (req, res, next)=> {
+  const userToken = req.headers["authorization"]?.split(" ")[1];
+  const user = await userService.findUserById(userToken)
   res.json(user)
 
 }))

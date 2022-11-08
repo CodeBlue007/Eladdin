@@ -23,7 +23,7 @@ bookRouter.get("/:ISBN", nextError(async (req, res, next) => {
 }));
 
 
-bookRouter.post("/", loginRequired, nextError(async (req, res, next) => {
+bookRouter.post("/", loginRequired, adminRequired, nextError(async (req, res, next) => {
   const category = req.body.category;
   const newBook = req.body;
   
@@ -34,7 +34,7 @@ bookRouter.post("/", loginRequired, nextError(async (req, res, next) => {
     category: id
   });
   
-  res.status(200).end(`해당 책이 등록되었습니다.`)
+  res.status(200).end()
 }));
 
 bookRouter.put("/:ISBN", loginRequired, adminRequired, nextError(async (req, res, next) => {
@@ -42,7 +42,7 @@ bookRouter.put("/:ISBN", loginRequired, adminRequired, nextError(async (req, res
   const bookInfo = req.body
 
     await bookService.update({ISBN, bookInfo})
-    res.status(200).end(`${ISBN}에 해당하는 책이 수정되었습니다.`)
+    res.status(200).end()
   
 }))
 
@@ -50,21 +50,13 @@ bookRouter.put("/:ISBN", loginRequired, adminRequired, nextError(async (req, res
 bookRouter.delete("/:ISBN", loginRequired, adminRequired, nextError(async (req, res, next) => {
   const ISBN = parseInt(req.params.ISBN)
   await bookService.deleteByISBN(ISBN)
-  res.status(204).end(`해당 책이 삭제되었습니다.`)
+  res.status(204).end()
 }));
 
 //상품전체조회
 bookRouter.get("/", nextError(async (req, res, next) => {
   const books = await bookService.findAll(); 
   res.json(books);
-}));
-
-//상품추가
-bookRouter.post("/", loginRequired, adminRequired, nextError(async (req, res, next) => {
-  const newBook = req.body;
-  await bookService.create(newBook)
-  
-  res.status(201).end(`책이 추가되었습니다.`)
 }));
 
 
