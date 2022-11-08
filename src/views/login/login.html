@@ -30,38 +30,40 @@
   <body>
     <!-- 헤더 -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container mt-3">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <span class="has-text-link">쇼핑-데모</span>
-          </a>
-
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href='../home/home.html'>
+            <img src="./image/Eladin_CI.png" width="200">
           </a>
         </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-end breadcrumb my-auto" aria-label="breadcrumbs">
-            <ul id="navbar">
-              <li><a href="/register">회원가입</a></li>
-              <li>
-                <a href="/cart" aria-current="page">
-                  <span class="icon">
-                    <i class="fas fa-cart-shopping"></i>
-                  </span>
-                  <span>카트</span>
-                </a>
-              </li>
-            </ul>
+    
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="../my-page/myPage.html" class="button has-text-link-dark has-background-link-light">
+                <strong>My Page</strong>
+              </a>
+              <a href="../register/register.html" class="button has-text-link-dark has-background-link-light">
+                <strong>Sign up</strong>
+              </a>
+              <a href="../login/login.html" class="button has-text-link-dark has-background-link-light">
+                <strong>Log in</strong>
+              </a>
+              <a href="../cart/cart.html" class="button has-text-link-dark has-background-link-light">
+                <span class="icon">
+                  <i class="fas fa-cart-shopping"></i>
+                </span>
+                <strong>Cart</strong>
+              </a>
+            </div>
           </div>
         </div>
       </div>
