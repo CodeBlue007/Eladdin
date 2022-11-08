@@ -1,6 +1,6 @@
 import cors from "cors";
 import express from "express";
-import { viewsRouter, userRouter, bookRouter, imgRouter, orderRouter, categoryRouter } from "./routers/index.js";
+import { viewsRouter, userRouter, bookRouter, orderRouter, categoryRouter } from "./routers/index.js";
 import { errorHandler } from "./middlewares/index.js";
 import morgan from 'morgan';
 
@@ -26,7 +26,6 @@ app.use(viewsRouter);
 // /api/login 으로 요청을 해야 하게 됨. 백엔드용 라우팅을 구분하기 위함임.
 
 app.use("/api/auth", userRouter);
-app.use("/api/loadimg", imgRouter);
 app.use("/api/books", bookRouter);
 app.use("/api/order", orderRouter);
 app.use("/api/category", categoryRouter)

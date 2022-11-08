@@ -2,9 +2,19 @@ import { Router } from "express";
 import { bookService, categoryService } from "../services/index.js";
 import { adminRequired } from "../middlewares/admin-required.js";
 import { loginRequired } from "../middlewares/login-required.js";
-
+import { Storage } from "@google-cloud/storage";
+import Multer from "multer";
 
 const bookRouter = Router();
+const storage = new Storage({keyFilename: 'key.json'});
+const bucketName = "eladin_img";
+
+const multer = Multer({
+    storage: Multer.memoryStorage(),
+      limits: {
+        fileSize: 2 * 1024 * 1024, // no larger than 2mb, you can change as needed.
+    },
+});
 
 function nextError(callback){
   return async (req, res, next) => {
@@ -22,18 +32,41 @@ bookRouter.get("/:ISBN", nextError(async (req, res, next) => {
   res.json(book);
 }));
 
-
-bookRouter.post("/", loginRequired, nextError(async (req, res, next) => {
+//상품추가
+bookRouter.post("/", loginRequired, adminRequired, multer.single("file"), nextError(async (req, res, next) => {
   const category = req.body.category;
-  const newBook = req.body;
-  
+  const newBook = req.body;  
   const { id } = await categoryService.findByTitle(category);
-  
-  await bookService.create({    
-    ...newBook,
-    category: id
+
+  /// img파일전송 코드 -- 시작
+  if (!req.file) {
+    res.status(400).send('No file uploaded.');
+    return;
+  }
+  // Create a new blob in the bucket and upload the file data.
+  const blob = storage.bucket(bucketName).file(req.file.originalname);
+  const blobStream = blob.createWriteStream();
+  let publicUrl = '';
+
+  blobStream.on('error', err => {
+    next(err);
   });
-  
+
+  // blobStream.on('finish', () => {
+  //   // The public URL can be used to directly access the file via HTTP.
+  //   // publicUrl = format(
+  //   //   `https://storage.googleapis.com/${bucketName}/${blob.name}`
+  //   // );
+  //   // res.status(200).send();
+  // });
+
+  blobStream.end(req.file.buffer);
+  /// img파일전송 코드 -- 끝
+  await bookService.create({    
+    imgUrl: `https://storage.googleapis.com/${bucketName}/${blob.name}`,
+    ...newBook,    
+    category: id
+  }); 
   res.status(200).end(`해당 책이 등록되었습니다.`)
 }));
 
@@ -60,12 +93,12 @@ bookRouter.get("/", nextError(async (req, res, next) => {
 }));
 
 //상품추가
-bookRouter.post("/", loginRequired, adminRequired, nextError(async (req, res, next) => {
-  const newBook = req.body;
-  await bookService.create(newBook)
+// bookRouter.post("/", loginRequired, adminRequired, nextError(async (req, res, next) => {
+//   const newBook = req.body;
+//   await bookService.create(newBook)
   
-  res.status(201).end(`책이 추가되었습니다.`)
-}));
+//   res.status(201).end(`책이 추가되었습니다.`)
+// }));
 
 
 export { bookRouter };
