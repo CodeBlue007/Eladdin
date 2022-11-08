@@ -9,8 +9,8 @@ export async function deleteCategory(e) {
         const categoryList = document.getElementById(id);
         const categoryName = categoryList.firstElementChild.textContent;
         console.log(categoryName);
-        const data={'title':categoryName};
-        await Api.delete(`https://eladin-lgurfdxfjq-du.a.run.app/api/category${categoryName}`,'',data);
+        
+        await Api.delete(`https://eladin-lgurfdxfjq-du.a.run.app/api/category/${categoryName}`);
 
     } catch (err) {
         console.error(err.stack);

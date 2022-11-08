@@ -1,11 +1,12 @@
 import { addEvents } from "./components/addEvents.js";
 import { renderData } from "./components/renderData.js";
+import * as Api from "../../../api.js";
 
 
 
 async function fetchData() {
-    const res = await fetch('../../db/mockBooks_1.json'); // ${하위 카테고리}.html에서 접근 시 ../../../
-    const data = await res.json();
+
+    const data = await Api.get("https://eladin-lgurfdxfjq-du.a.run.app/api/books");
     console.log(data);
     return data;
 }
