@@ -9,12 +9,12 @@ async function admin(){
 
     try{
         const datas = await fetchData();
-        // fetchBooks();
-        // const orders = await fetchOrders();
+        const books = await fetchBooks();
+        const orders = await fetchOrders();
         const categories = await fetchCategory();
 
-        orderRender(datas);
-        productRender(datas);
+        // orderRender(datas);
+        productRender(books);
         categoryRender(categories);
         addEvents();
 
