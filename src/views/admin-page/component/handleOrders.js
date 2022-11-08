@@ -15,10 +15,6 @@ export function handleData(orders){
         arr.push(orderArr);
         return arr;
     },[]);
-
-    console.log(bookInfo);
-
-
 } 
 
 
@@ -26,5 +22,5 @@ export function handleData(orders){
 
 
 export function renderByShipping(shippingStatus){
-
-}// 베송상태에 따라 rendering다르게;
+    if(shippingStatus = "")
+}

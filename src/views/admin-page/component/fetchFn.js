@@ -1,10 +1,10 @@
 import * as Api from "../../api.js";
 
-export async function fetchData() {
-    const res = await fetch('../../db/mockBooks_1.json');
-    const data = await res.json();
-    return data;
-  }
+// export async function fetchData() {
+//     const res = await fetch('../../db/mockBooks_1.json');
+//     const data = await res.json();
+//     return data;
+//   }
 
 
   export async function fetchBooks() {

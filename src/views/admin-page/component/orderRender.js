@@ -16,9 +16,9 @@ function orderTemplate(orders) {
         <li class="count">${volume}</li>
         <li class="price">${newPrice}원</li>
         <select class="shipping_select">
-          <option value="wrapping-product">상품 준비 중</option>
-          <option value="delivery-ready">배송 준비 중</option>
-          <option value="delivering">배송 중</option>
+          <option value="wrapping-product">배송준비중</option>
+          <option value="delivery-ready">배송중</option>
+          <option value="delivering">배송완료</option>
         </select>
         <button class="cancelOrder-btn" data-id=${id}>주문취소</button>
       </ul>
