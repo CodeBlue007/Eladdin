@@ -13,13 +13,44 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a>nav1</a>
-        <a>nav2</a>
-        <a>nav3</a>
-        <a>nav4</a>
-        <a>nav5</a>
-        <a>nav6</a>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href='./home.html'>
+              <img src="./image/Eladin_CI.png" width="200">
+            </a>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a href="../my-page/myPage.html" class="button has-text-link-dark has-background-link-light">
+                  <strong>My Page</strong>
+                </a>
+                <a href="../register/register.html" class="button has-text-link-dark has-background-link-light">
+                  <strong>Sign up</strong>
+                </a>
+                <a href="../login/login.html" class="button has-text-link-dark has-background-link-light">
+                  <strong>Log in</strong>
+                </a>
+                <a href="../cart/cart.html" class="button has-text-link-dark has-background-link-light">
+                  <span class="icon">
+                    <i class="fas fa-cart-shopping"></i>
+                  </span>
+                  <strong>Cart</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
       <h1 class="header">장바구니</h1>
     </header>
