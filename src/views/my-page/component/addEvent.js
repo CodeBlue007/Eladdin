@@ -1,20 +1,12 @@
-const orderList = document.querySelector('.order-products');
+// const orderList = document.querySelector('.order-products');
 const cartList = document.querySelector('.cart-products');
 const userInfo = document.querySelector('.userInfo');
 const modal = document.querySelector('.modal');
 const userInfo_btn = document.querySelector('.userInfo_btn');
-const orderList_btn = document.querySelector('.order-list');
+// const orderList_btn = document.querySelector('.order-list');
 const cartList_btn = document.querySelector('.cart');
 const confirm_btn = document.querySelector('.confirm-btn');
 const modal_x_btn = document.querySelector('.modal-close');
-
-function showOrderList() {
-  if (orderList.style.display !== 'none') {
-    orderList.style.display = 'none';
-  } else {
-    orderList.style.display = 'block';
-  }
-}
 
 function showCartList() {
   if (cartList.style.display !== 'none') {
@@ -37,7 +29,7 @@ function showUserInfo() {
   modal.classList.remove('is-active');
 }
 
-orderList_btn.addEventListener('click', showOrderList);
+// orderList_btn.addEventListener('click', showOrderList);
 cartList_btn.addEventListener('click', showCartList);
 userInfo_btn.addEventListener('click', showModal);
 confirm_btn.addEventListener('click', showUserInfo);
