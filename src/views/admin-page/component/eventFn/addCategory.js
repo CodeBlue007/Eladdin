@@ -15,11 +15,11 @@ export function addCategory() {
         addBtn.addEventListener("click", async () => {
             modal.classList.remove("is-active");
             const category = categoryInput.value;
-            const reqData = {title : categoryInput.value};
+            const reqData = {title : category};
             
             const result = await Api.post("https://eladin-lgurfdxfjq-du.a.run.app/api/category/",reqData);
             alert("category를 성공적으로 추가했습니다.");
-            const data = [{title : category, _id : randomId()}];
+            const data = [{title : category, "_id" : randomId()}];
             categoryRender(data);
         })
 

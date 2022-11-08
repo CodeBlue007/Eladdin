@@ -10,7 +10,7 @@ export async function fetchData() {
   export async function fetchBooks() {
     const data = await Api.get('https://eladin-lgurfdxfjq-du.a.run.app/api/books');
     console.log("books",data);
-    return data.slice(0,17);
+    return data;
   }
 
 
