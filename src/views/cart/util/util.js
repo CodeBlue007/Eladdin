@@ -1,7 +1,7 @@
 import { addCommas } from "../../useful-functions.js"
 
 
-export function setLocal(data = {}) {
+export function setLocal(data = []) {
   localStorage.setItem("bookInfo", JSON.stringify(data));
 }
 

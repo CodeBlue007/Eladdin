@@ -1,6 +1,34 @@
 import { validateData } from "./validateData.js";
-import * as Api from "../../api.js";
 
+async function post(endpoint, data) {
+    const apiUrl = endpoint;
+    // JSON.stringify 함수: Javascript 객체를 JSON 형태로 변환함.
+    // 예시: {name: "Kim"} => {"name": "Kim"}
+    const bodyData = JSON.stringify(data);
+    console.log(`%cPOST 요청: ${apiUrl}`, 'color: #296aba;');
+    console.log(`%cPOST 요청 데이터: ${bodyData}`, 'color: #296aba;');
+  
+    const res = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${sessionStorage.getItem('token')}`,
+      },
+      body: bodyData,
+    });
+  
+    // 응답 코드가 4XX 계열일 때 (400, 403 등)
+    if (!res.ok) {
+      const errorContent = await res.json();
+      const { reason } = errorContent;
+  
+      throw new Error(reason);
+    }
+  
+    const result = await res?.json();
+  
+    return result;
+  }
 
 export async function handleSubmit(event) {
 
@@ -17,7 +45,7 @@ export async function handleSubmit(event) {
     try {
         const data = { email, password };
 
-        const result = await Api.post("https://eladin-lgurfdxfjq-du.a.run.app/api/auth/login", data);
+        const result = await post("https://eladin-lgurfdxfjq-du.a.run.app/api/auth/login", data);
         const token = result.token;
 
         // 로그인 성공, 토큰을 세션 스토리지에 저장
