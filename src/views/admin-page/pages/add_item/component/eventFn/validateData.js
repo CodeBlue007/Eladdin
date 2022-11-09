@@ -1,7 +1,7 @@
 export function validateData(infoArray) {
     
     const [title, select, author, publish,
-        publishDate,ebookTrue,ebookFalse, description ,file]= infoArray;
+        publishDate,price,ebookTrue, description ,file]= infoArray;
 
     const publishRegex = /\d{4}-\d{2}-\d{2}/;
 

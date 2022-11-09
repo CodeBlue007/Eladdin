@@ -1,6 +1,6 @@
 
 
-export function changeFile(event){
+export function changeFileName(event){
     const fileName = document.querySelector(".file-name");
 
     const fileList = event.target.files;
@@ -10,6 +10,4 @@ export function changeFile(event){
     if(fileList.length>0){
         fileName.textContent = fileList[0].name;
     }
-
-
 }
