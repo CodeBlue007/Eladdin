@@ -1,9 +1,10 @@
-import { showCategory, showOrder, showProduct } from "./eventFn/renderItems.js";
-import { addCategory, closeModal } from "./eventFn/addCategory.js";
-import {deleteItem} from "./eventFn/deleteItem.js";
-import { editCategory } from "./eventFn/editCategory.js";
-import { deleteCategory } from "./eventFn/deleteCategory.js"; 
-import { changeShip } from "./eventFn/changeShip.js";
+import { showCategory, showOrder, showProduct } from "./eventFn/ItemFn/renderItems.js";
+import { addCategory, closeModal } from "./eventFn/categoryFn/addCategory.js";
+import {deleteItem} from "./eventFn/ItemFn/deleteItem.js";
+import { editCategory } from "./eventFn/categoryFn/editCategory.js";
+import { deleteCategory } from "./eventFn/categoryFn/deleteCategory.js"; 
+import { changeShip } from "./eventFn/orderFn/changeShip.js";
+import { deleteOrder } from "./eventFn/orderFn/deleteOrder.js";
 
 export function addEvents() {
   const orderManagement_btn = document.querySelector('.orderManagement');
@@ -15,6 +16,7 @@ export function addEvents() {
   const categoryDelBtns = document.querySelectorAll(".deleteCategory_btn");
   const categoryEditBtns = document.querySelectorAll(".editCategory_btn");
   const selectAll = document.querySelectorAll(".shipping_select");
+  const deleteOrderBtn = document.querySelectorAll(".cancelOrder-btn");
 
   
   
@@ -39,6 +41,10 @@ export function addEvents() {
   [...selectAll].forEach(select =>{
     select.addEventListener("change",changeShip);
   });
+
+  [...deleteOrderBtn].forEach(btn =>{
+    btn.addEventListener("click", deleteOrder);
+  })
 
 
 }

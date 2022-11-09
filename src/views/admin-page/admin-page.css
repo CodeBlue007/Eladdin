@@ -111,8 +111,9 @@ header {
 .order {
   display: flex;
   flex-direction: row;
-  height: 80px;
   align-items: center;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
 }
 
 .order .orderDate {
@@ -132,16 +133,25 @@ header {
 }
 
 .order .book_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex-basis: 50%;
   text-align: center;
 }
 
 .order .count_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex-basis: 10%;
   text-align: center;
 }
 
 .order .price_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   flex-basis: 10%;
   text-align: center;
 }

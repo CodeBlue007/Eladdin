@@ -3,7 +3,7 @@ export function handleData(orders){
         const orderArr = [];
         order.items.forEach(item=>{
             const bookobj = {};
-            bookobj["title"] = item.book?.title || "책 이름을 찾을 수 없습니다."
+            bookobj["title"] = item.book?.title || "더이상 판매하지 않는 책입니다."
             bookobj["ISBN"] = item.book?.ISBN || "ISBN을 찾을 수 없습니다."
             bookobj["price"] = item.totalPrice;
             bookobj["volume"] = item.volume;
