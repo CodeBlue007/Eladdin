@@ -10,7 +10,7 @@ export async function sendForm(event){
         event.preventDefault();
         const local = getLocal("bookInfo");
         const sendData = local?.filter(data => data.checked).map(checked=> ({            
-            'ISBN' : checked.ISBN ,
+            'ISBN' : checked.ISBN,
             'volume' : checked.volume ,
         }));
 

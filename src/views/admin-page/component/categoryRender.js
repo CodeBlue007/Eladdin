@@ -7,7 +7,7 @@ function categoryTemplate(datas){
         return (
         `<ul class="category-list" id =${id}>
         <li class="category-name">${category}</li>
-        <button class="editCategory_btn">수정</button>
+        <button class="editCategory_btn" data-id=${id}>수정</button>
         <button class="deleteCategory_btn" data-id=${id}>삭제</button>
         </ul>`)
         
