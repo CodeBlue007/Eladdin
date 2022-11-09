@@ -3,7 +3,7 @@ export function closeModal() {
 
   modal.classList.remove('is-active');
 
-  window.location.href = "src/views/category-booklist/category-booklist.html";
+  window.location.href = "../home/home.html";
 }
 
 

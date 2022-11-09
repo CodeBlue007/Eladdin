@@ -6,6 +6,6 @@ export function showDetail(e){
 
     localStorage.setItem("ISBN", JSON.stringify(id));
 
-    window.location.href = "/src/views/product-detail/product-detail.html";
+    window.location.href = "../product-detail/product-detail.html";
 
 }
