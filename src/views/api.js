@@ -81,9 +81,9 @@ async function patch(endpoint, params = '', data) {
     throw new Error(reason);
   }
 
-  const result = await res?.json();
+  // const result = await res?.json();
 
-  return result;
+  // return result;
 }
 
 // 아래 함수명에 관해, delete 단어는 자바스크립트의 reserved 단어이기에,

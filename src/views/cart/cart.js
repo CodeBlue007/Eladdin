@@ -1,6 +1,5 @@
 import { setLocal, getLocal } from "./util/util.js"
 import { renderData } from "./component/renderData.js"
-import {addEvents} from "./component/addEvents.js";
 
 
 

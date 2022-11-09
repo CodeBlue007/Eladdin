@@ -3,6 +3,7 @@ import { addCategory, closeModal } from "./eventFn/addCategory.js";
 import {deleteItem} from "./eventFn/deleteItem.js";
 import { editCategory } from "./eventFn/editCategory.js";
 import { deleteCategory } from "./eventFn/deleteCategory.js"; 
+import { changeShip } from "./eventFn/changeShip.js";
 
 export function addEvents() {
   const orderManagement_btn = document.querySelector('.orderManagement');
@@ -13,6 +14,8 @@ export function addEvents() {
   const itemDeleteBtns = document.querySelectorAll(".delete_btn");
   const categoryDelBtns = document.querySelectorAll(".deleteCategory_btn");
   const categoryEditBtns = document.querySelectorAll(".editCategory_btn");
+  const selectAll = document.querySelectorAll(".shipping_select");
+
   
   
   orderManagement_btn.addEventListener('click', showOrder);
@@ -31,7 +34,11 @@ export function addEvents() {
     
   [...categoryEditBtns].forEach(btn =>{
     btn.addEventListener("click", editCategory);
-  })
+  });
+
+  [...selectAll].forEach(select =>{
+    select.addEventListener("change",changeShip);
+  });
 
 
 }
