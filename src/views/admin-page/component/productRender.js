@@ -17,8 +17,8 @@ function productTemplate(datas) {
           <div class="intro">${description}</div>
           <div class="price">${newPrice}원</div>
           <div class="publicationDate">${publicationDate}</div>
-          <button class="edit-btn">수정</button>
-          <button class="delete-btn" data-id=${ISBN}>삭제</button>
+          <button class="edit_btn">수정</button>
+          <button class="delete_btn" data-id=${ISBN}>삭제</button>
         </div>
       `;
       })

@@ -1,6 +1,8 @@
 import { showCategory, showOrder, showProduct } from "./eventFn/renderItems.js";
 import { addCategory, closeModal } from "./eventFn/addCategory.js";
 import {deleteItem} from "./eventFn/deleteItem.js";
+import { editCategory } from "./eventFn/editCategory.js";
+import { deleteCategory } from "./eventFn/deleteCategory.js"; 
 
 export function addEvents() {
   const orderManagement_btn = document.querySelector('.orderManagement');
@@ -8,7 +10,10 @@ export function addEvents() {
   const productManagement_btn = document.querySelector('.productManegement');
   const categoryAddBtn = document.querySelector(".addCategory");
   const modalCloseBtn = document.querySelector(".modal-close");
-  const deleteBtns = document.querySelectorAll(".delete-btn");
+  const itemDeleteBtns = document.querySelectorAll(".delete_btn");
+  const categoryDelBtns = document.querySelectorAll(".deleteCategory_btn");
+  const categoryEditBtns = document.querySelectorAll(".editCategory_btn");
+  
   
   orderManagement_btn.addEventListener('click', showOrder);
   categoryManagement_btn.addEventListener('click', showCategory);
@@ -16,8 +21,17 @@ export function addEvents() {
   categoryAddBtn.addEventListener("click", addCategory);
   modalCloseBtn.addEventListener("click", closeModal);
 
-  [...deleteBtns].forEach(btn =>{
+  [...itemDeleteBtns].forEach(btn =>{
     btn.addEventListener("click", deleteItem);
+  });
+
+  [...categoryDelBtns].forEach(btn =>{
+    btn.addEventListener("click", deleteCategory);
+  });
+    
+  [...categoryEditBtns].forEach(btn =>{
+    btn.addEventListener("click", editCategory);
   })
+
 
 }

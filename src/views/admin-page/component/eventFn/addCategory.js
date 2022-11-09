@@ -22,13 +22,12 @@ export function addCategory() {
             const data = [{title : category, "_id" : randomId()}];
             categoryRender(data);
         })
+        categoryInput.value ="";
 
     } catch (err) {
         console.error(err.stack);
         alert(`문제가 발생하였습니다. 확인 후 다시 시도해 주세요: ${err.message}`);
     }
-
-
 }
 
 

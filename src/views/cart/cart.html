@@ -7,19 +7,88 @@
     <link rel="stylesheet" href="./cart.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <script src="./cart.js" defer type="module"></script>
-    <script src="../cart/component/modalEvent.js"></script>
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
     <title>cart</title>
   </head>
   <body>
     <header>
-      <nav>
-        <a>nav1</a>
-        <a>nav2</a>
-        <a>nav3</a>
-        <a>nav4</a>
-        <a>nav5</a>
-        <a>nav6</a>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="../home/home.html">
+              <img src="./image/Eladin_CI.png" width="200" />
+            </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a
+                  href="../category-booklist/category-booklist.html"
+                  class="button has-text-link-dark has-background-link-light"
+                >
+                  <span class="icon">
+                    <img src="./image/store-solid.svg" width="20" />
+                  </span>
+                  <strong>Shop</strong>
+                </a>
+                <a
+                  href="../my-page/myPage.html"
+                  class="button has-text-link-dark has-background-link-light"
+                >
+                  <span class="icon">
+                    <img src="./image/user-solid.svg" width="15" />
+                  </span>
+                  <strong>My Page</strong>
+                </a>
+                <a
+                  href="../register/register.html"
+                  class="button has-text-link-dark has-background-link-light"
+                >
+                  <span class="icon">
+                    <img src="./image/pen-to-square-solid.svg" width="20" />
+                  </span>
+                  <strong>Sign up</strong>
+                </a>
+                <a
+                  href="../login/login.html"
+                  class="button has-text-link-dark has-background-link-light"
+                >
+                  <span class="icon">
+                    <img src="./image/unlock-solid.svg" width="15" />
+                  </span>
+                  <strong>Log in</strong>
+                </a>
+                <a href="./cart.html" class="button has-text-link-dark has-background-link-light">
+                  <span class="icon">
+                    <i class="fas fa-cart-shopping"></i>
+                  </span>
+                  <strong>Cart</strong>
+                </a>
+                <a href="../admin-page/admin-page.html" class="button has-background-danger-light">
+                  <span class="icon">
+                    <i class="fa-solid fa-lock"></i>
+                  </span>
+                  <strong>Admin Page</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
       <h1 class="header">장바구니</h1>
     </header>
@@ -41,71 +110,13 @@
         <div class="priceTag">총금액 :</div>
         <button class="order_btn">주문하기</button>
       </section>
-      <section class="orderpage">
+      <section class="orderpage hidden">
         <form class="form_container">
           <div class="label_container">
             <span class="tag is-success">주문상세 페이지</span>
             <button class="button is-success is-focused">주문수정</button>
           </div>
           <div class="field">
-            <label class="label">수령자 이름</label>
-            <div class="control has-icons-left has-icons-right">
-              <input
-                class="input is-success name"
-                type="text"
-                placeholder="Write your Name"
-                value=""
-                maxlength="7"
-                required
-              />
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">연락처</label>
-            <div class="control has-icons-left has-icons-right">
-              <input
-                class="input is-success phone"
-                type="text"
-                placeholder="010-1234-5678"
-                value=""
-                maxlength="15"
-                required
-              />
-              <span class="icon is-small is-left">
-                <i class="fa-solid fa-phone"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">배송지 정보</label>
-            <div class="control has-icons-left has-icons-right">
-              <input
-                class="input is-success address"
-                type="address"
-                placeholder="주소를 적어주세요"
-                value=""
-                required
-              />
-              <span class="icon is-small is-left">
-                <i class="fa-sharp fa-solid fa-house"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-              </span>
-            </div>
-          </div>
-
           <label class="label">상품목록</label>
           <div class="orderItem_container"></div>
 

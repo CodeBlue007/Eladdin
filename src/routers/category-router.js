@@ -47,7 +47,7 @@ categoryRouter.post("/", nextError(async (req, res, next) => {
   const newCategory = req.body;
   await categoryService.create(newCategory);
   
-  res.status(201).end(`카테고리생성이 완료되었습니다.`)
+  res.status(201).end()
 }));
 
 

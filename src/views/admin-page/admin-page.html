@@ -12,27 +12,83 @@
   </head>
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container mt-3">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <img src="/" width="30" height="30" />
-            <span class="has-text-link"><a href="../home/home.html">엘라딘</a></span>
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="../home/home.html">
+            <img src="./image/Eladin_CI.png" width="200" />
           </a>
         </div>
-        <div class="navbar-end breadcrumb my-auto" aria-label="breadcrumbs">
-          <ul id="navbar">
-            <li><a href="../my-page/myPage.html">마이페이지</a></li>
-            <li><a href="../login/login.html">로그인</a></li>
-            <li><a href="../register/register.html">회원가입</a></li>
-            <li>
-              <a href="#cart" aria-current="page">
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a
+                href="../category-booklist/category-booklist.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/store-solid.svg" width="20" />
+                </span>
+                <strong>Shop</strong>
+              </a>
+              <a
+                href="../my-page/myPage.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/user-solid.svg" width="15" />
+                </span>
+                <strong>My Page</strong>
+              </a>
+              <a
+                href="../register/register.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/pen-to-square-solid.svg" width="20" />
+                </span>
+                <strong>Sign up</strong>
+              </a>
+              <a
+                href="../login/login.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/unlock-solid.svg" width="15" />
+                </span>
+                <strong>Log in</strong>
+              </a>
+              <a
+                href="../cart/cart.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
                 <span class="icon">
                   <i class="fas fa-cart-shopping"></i>
                 </span>
-                <span><a href="../cart/cart.html">장바구니</a></span>
+                <strong>Cart</strong>
               </a>
-            </li>
-          </ul>
+              <a href="./admin-page.html" class="button has-background-danger-light">
+                <span class="icon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <strong>Admin Page</strong>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -43,7 +99,12 @@
           <div class="box">
             <label for="add_category" class="category_input">카테고리를 적어주세요</label>
             <div class="input_container">
-              <input id="add_category" class="input is-info" type="text" placeholder="카테고리를 적어주세요" />
+              <input
+                id="add_category"
+                class="input is-info"
+                type="text"
+                placeholder="카테고리를 적어주세요"
+              />
               <button class="button is-info">추가</button>
             </div>
           </div>
@@ -67,28 +128,30 @@
             <div class="shipping">배송현황</div>
             <div class="cancelOrder">주문취소</div>
           </div>
-            
-          </div>
         </div>
 
-        <div class="view-category">
+        <div class="view-category hidden">
           <div class="bar_1">
             <div class="categoryName">카테고리명</div>
             <button class="addCategory">카테고리 추가하기</button>
           </div>
-          <div class="category_container"></div>
-        </div>
+          <div class="category_container">
 
-        <div class="view-product">
-          <div class="bar_2">
-            <div class="book-img">이미지</div>
-            <div class="book-title">책 제목</div>
-            <div class="book-ebook">eBook</div>
-            <div class="book-author">저자</div>
-            <div class="book-publisher">출판사</div>
-            <div class="book-price">가격</div>
-            <div class="book-publicationDate">출시일</div>
-            <button class="add-product"><a href="./pages/add-item/add-item.html" class="link_add">상품추가하기</a></button>
+          </div>
+          </div>
+          <div class="view-product hidden">
+            <div class="bar_2">
+              <div class="book-img">이미지</div>
+              <div class="book-title">책 제목</div>
+              <div class="book-ebook">eBook</div>
+              <div class="book-author">저자</div>
+              <div class="book-publisher">출판사</div>
+              <div class="book-price">가격</div>
+              <div class="book-publicationDate">출시일</div>
+              <button class="add-product">
+                <a href="./pages/add-item/add-item.html" class="link_add">상품추가하기</a>
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -3,12 +3,12 @@ import { addCommas } from "../../useful-functions.js";
 
 function addItems(datas) {
 
-    return datas.map(data => {
+  return datas.map(data => {
 
-        const { imgUrl, title, author, price, description, category } = data;
-        const newPrice = addCommas(price);
+    const { imgUrl, title, author, price, description, category, ISBN} = data;
+    const newPrice = addCommas(price);
 
-        return ` <div class="itemcontainer" data-category=${category}>
+    return ` <div class="itemcontainer" data-category=${category}>
         <div class="box">
             <article class="media">
               <div class="media-left">
@@ -26,28 +26,31 @@ function addItems(datas) {
                 </div>
               </div>
             </article>
+            <div class="show_detail">
+                <button class="button is-black" data-id=${ISBN}>상세정보보기</button>
+            </div>
           </div>
     </div>`
-    }).join('');
+  }).join('');
 }
 
 export function renderData(datas) {
-    const bookContainer = document.querySelector(".book_container");
+  const bookContainer = document.querySelector(".book_container");
 
-    const dataString = addItems(datas);
-    bookContainer.innerHTML = dataString;
+  const dataString = addItems(datas);
+  bookContainer.innerHTML = dataString;
 
-    const itemList = document.querySelectorAll(".itemcontainer");
+  const itemList = document.querySelectorAll(".itemcontainer");
 
-    [...itemList].forEach(item => {
-        const category = item.dataset.category;
-        if (category === "에세이") {
-            item.classList.remove("hidden");
-        }
-        else {
-            item.classList.add("hidden");
-        }
-    })
+  [...itemList].forEach(item => {
+    const category = item.dataset.category;
+    if (category === "에세이") {
+      item.classList.remove("hidden");
+    }
+    else {
+      item.classList.add("hidden");
+    }
+  })
 
 
 }

@@ -23,38 +23,79 @@
   <body>
     <!-- 헤더 -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container mt-3">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <span class="has-text-link">쇼핑-데모</span>
-          </a>
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="../home/home.html">
+            <img src="./image/Eladin_CI.png" width="200" />
           </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-end breadcrumb my-auto" aria-label="breadcrumbs">
-            <ul id="navbar">
-              <li><a href="/login">로그인</a></li>
-              <li>
-                <a href="/cart" aria-current="page">
-                  <span class="icon">
-                    <i class="fas fa-cart-shopping"></i>
-                  </span>
-                  <span>카트</span>
-                </a>
-              </li>
-            </ul>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a
+                href="../category-booklist/category-booklist.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/store-solid.svg" width="20" />
+                </span>
+                <strong>Shop</strong>
+              </a>
+              <a
+                href="../my-page/myPage.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/user-solid.svg" width="15" />
+                </span>
+                <strong>My Page</strong>
+              </a>
+              <a href="./register.html" class="button has-text-link-dark has-background-link-light">
+                <span class="icon">
+                  <img src="./image/pen-to-square-solid.svg" width="20" />
+                </span>
+                <strong>Sign up</strong>
+              </a>
+              <a
+                href="../login/login.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/unlock-solid.svg" width="15" />
+                </span>
+                <strong>Log in</strong>
+              </a>
+              <a
+                href="../cart/cart.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <i class="fas fa-cart-shopping"></i>
+                </span>
+                <strong>Cart</strong>
+              </a>
+              <a href="../admin-page/admin-page.html" class="button has-background-danger-light">
+                <span class="icon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <strong>Admin Page</strong>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -106,7 +147,7 @@
       </div>
 
       <div class="field">
-      <label class="label">주소</label>
+        <label class="label">주소</label>
         <div class="postal_container">
           <div class="control has-icons-left has-icons-right">
             <input

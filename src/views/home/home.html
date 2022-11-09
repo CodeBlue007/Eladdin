@@ -18,50 +18,95 @@
   <body>
     <!-- 헤더 -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container mt-3">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <span class="has-text-link">Eladin</span>
-          </a>
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./home.html">
+            <img src="./image/Eladin_CI.png" width="200" />
           </a>
         </div>
 
-        <div class="navbar-end breadcrumb my-auto" aria-label="breadcrumbs">
-          <ul id="navbar">
-            <li><a href="/login">로그인</a></li>
-            <li><a href="/register">회원가입</a></li>
-            <li>
-              <a href="#cart" aria-current="page">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a
+                href="../category-booklist/category-booklist.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/store-solid.svg" width="20" />
+                </span>
+                <strong>Shop</strong>
+              </a>
+              <a
+                href="../my-page/myPage.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/user-solid.svg" width="15" />
+                </span>
+                <strong>My Page</strong>
+              </a>
+              <a
+                href="../register/register.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/pen-to-square-solid.svg" width="20" />
+                </span>
+                <strong>Sign up</strong>
+              </a>
+              <a
+                href="../login/login.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/unlock-solid.svg" width="15" />
+                </span>
+                <strong>Log in</strong>
+              </a>
+              <a
+                href="../cart/cart.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
                 <span class="icon">
                   <i class="fas fa-cart-shopping"></i>
                 </span>
-                <span>카트</span>
+                <strong>Cart</strong>
               </a>
-            </li>
-          </ul>
+              <a href="../admin-page/admin-page.html" class="button has-background-danger-light">
+                <span class="icon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <strong>Admin Page</strong>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
 
-    <div class="div-container">
+    <div class="div_container">
       <div class="greeting title">Welcome to Eladin!</div>
       <img
         src="https://thumbs.gfycat.com/UncommonAstonishingGalapagoshawk-size_restricted.gif"
         width="1000"
       />
-      <button class="go-shopping">
-        <a href="../category-booklist/category-booklist.html">SHOP</a>
+      <button class="go_shopping">
+        <a href="../category-booklist/category-booklist.html"><strong>SHOP</strong></a>
       </button>
     </div>
   </body>

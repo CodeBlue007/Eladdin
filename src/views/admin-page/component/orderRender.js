@@ -27,7 +27,6 @@ function orderTemplate(orders) {
       priceString += priceTemplate(price)
     });
 
-    console.log(itemString, volumeString, priceString);
 
     orderString += 
     `<div class="book_container">${itemString}</div>

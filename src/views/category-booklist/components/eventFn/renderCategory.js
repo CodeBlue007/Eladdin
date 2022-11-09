@@ -1,6 +1,8 @@
 export function renderCategory(e) {
 
-    if (!e.target.id) return;
+    const {category:target} = e.target.dataset;
+
+    if(!target) return;
 
     const changeMap = {
         "에세이": "essay",
@@ -19,7 +21,7 @@ export function renderCategory(e) {
 
     [...itemList].forEach(item => {
         const category = item.dataset.category;
-        if (changeMap[category] === e.target.id) {
+        if (changeMap[category] === target) {
             item.classList.remove("hidden");
         }
         else {

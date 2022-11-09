@@ -6,7 +6,7 @@ function addItems(datas) {
 
   return datas?.map(data => {
 
-    const { imgUrl, title, author, price, ISBN } = data;
+    const { imgUrl, title, author, price, ISBN, volume} = data;
     const newPrice = addCommas(price);  
 
     return `<div class="itembox"> 
@@ -18,7 +18,7 @@ function addItems(datas) {
             <span>${title}/ ${author}</span>
             <div class="add_btn_container">
               <button class="plus_btn" data-id=${ISBN}>🔺</button>
-              <input class="add_btn_input" type="text" disabled value="1"/>
+              <input class="add_btn_input" type="text" disabled value=${volume}>
               <button class="minus_btn" data-id=${ISBN}>🔻</button>
             </div>
           </div>

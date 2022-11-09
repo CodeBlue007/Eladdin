@@ -48,6 +48,10 @@ header {
   position: relative;
 }
 
+.view-orders.hidden{
+  display: none;
+}
+
 .orderManagement {
   border: none;
   background-color: white;
@@ -145,6 +149,14 @@ header {
 
 /* 카테고리 설정 */
 .view-category {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-category.hidden{
   display: none;
 }
 
@@ -156,7 +168,6 @@ header {
   background-color: bisque;
   text-align: left;
   justify-content: space-between;
-  margin-left: 600px;
 }
 
 .categoryName {
@@ -172,8 +183,7 @@ header {
 .category-list {
   width: 400px;
   display: flex;
-  flex-direction: row;
-  margin: 0 0 10px 600px;
+  margin: 5px;  
 }
 
 .category-list .category-name {
@@ -181,12 +191,12 @@ header {
   text-align: center;
 }
 
-.category-list .editCategory-btn {
+.category-list .editCategory_btn {
   flex-basis: 25%;
   text-align: center;
 }
 
-.category-list .deleteCategory-btn {
+.category-list .deleteCategory_btn {
   flex-basis: 25%;
   text-align: center;
 }
@@ -198,7 +208,12 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
-  display: none;
+  display: flex;
+}
+
+
+.view-product.hidden {
+  display:none;
 }
 
 .bar_2 {
@@ -298,13 +313,13 @@ header {
 }
 
 
-.edit-btn {
+.edit_btn {
   flex-basis: 10%;
   height: 30px;
   align-items: center;
 }
 
-.delete-btn {
+.delete_btn {
   flex-basis: 10%;
   height: 30px;
 }

@@ -1,4 +1,6 @@
-.div-container {
+
+
+.div_container {
   margin-top: 100px;
   display: flex;
   justify-content: center;
@@ -6,7 +8,11 @@
   flex-direction: column;
 }
 
-.go-shopping {
+img {
+  border-radius: 5px;
+}
+
+.go_shopping {
   margin-top: 50px;
   border: none;
   font-size: xx-large;

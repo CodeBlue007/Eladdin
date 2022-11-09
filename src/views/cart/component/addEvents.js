@@ -1,8 +1,9 @@
 import { checkAll, checkToggleOne } from "./eventFn/checkFn.js";
 import { deleteAll, deleteOne } from "./eventFn/deleteFn.js";
 import { plusItem, minusItem } from "./eventFn/modifyItems.js";
-import { makeOrder, modifyOrder} from "./eventFn/orderFn.js";
-import {sendForm} from "./eventFn/sendForm.js";
+import { makeOrder, modifyOrder } from "./eventFn/orderFn.js";
+import { sendForm } from "./eventFn/sendForm.js";
+import {closeModal} from "./eventFn/modalEvent.js";
 
 export function addEvents() {
 
@@ -15,7 +16,9 @@ export function addEvents() {
     const orderBtn = document.querySelector(".orderbar .order_btn");
     const orderModifyBtn = document.querySelector(".label_container button");
     const sumbitBtn = document.querySelector(".button.is-link.submit");
-    
+    const confirm_btn = document.querySelector('.confirm-btn');
+    const close_btn = document.querySelector('.modal-close');
+
     deleteAllBtn.addEventListener("click", deleteAll);
 
     [...deleteEach].forEach(button => {
@@ -41,6 +44,9 @@ export function addEvents() {
     orderModifyBtn.addEventListener("click", modifyOrder);
 
     sumbitBtn.addEventListener("click", sendForm);
-    
+
+    confirm_btn.addEventListener('click', closeModal);
+
+    close_btn.addEventListener('click', closeModal);
 }
 
