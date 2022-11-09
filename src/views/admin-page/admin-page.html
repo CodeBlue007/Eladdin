@@ -9,6 +9,7 @@
     <script src="./admin.js" type="module" defer></script>
     <script src="../loginNeeded.js" type="module" defer></script>
     <script src="../adminLock.js" type="module" defer></script>
+    <script src="../logoutBtn.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
     <title>admin-page</title>
   </head>
@@ -45,7 +46,16 @@
                 <span class="icon">
                   <img src="./image/store-solid.svg" width="20" />
                 </span>
-                <strong>Shop</strong>
+                <strong>쇼핑하기</strong>
+              </a>
+              <a 
+                href="../login/login.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/unlock-solid.svg" width="15" />
+                </span>
+                <strong id="login_btn">로그인</strong>
               </a>
             </div>
           </div>

@@ -64,7 +64,7 @@ header .wrapper {
   border: 2px solid black;
 }
 
-.logout {
+#login_btn {
   margin-top: 50px;
   background-color: lavender;
   font-size: x-large;
