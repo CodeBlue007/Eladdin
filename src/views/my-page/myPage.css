@@ -73,6 +73,15 @@ header .wrapper {
   cursor: pointer;
 }
 
+.deleteAccount {
+  margin-top: 50px;
+  background-color: lavender;
+  font-size: x-large;
+  display: inline-block;
+  width: 200px;
+  cursor: pointer;
+}
+
 .cart-products {
   display: flex;
   flex-direction: column;
