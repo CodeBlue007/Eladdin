@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <script src="./product-detail.js" defer type="module"></script>
     <script src="../loginNeeded.js" type="module" defer></script>
+    <script src="../adminLock.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
     <title>product-detail</title>
   </head>
@@ -81,7 +82,7 @@
                 </span>
                 <strong>Cart</strong>
               </a>
-              <a href="../admin-page/admin-page.html" class="button has-background-danger-light">
+              <a id="adminPage_btn" class="button has-background-danger-light">
                 <span class="icon">
                   <i class="fa-solid fa-lock"></i>
                 </span>
