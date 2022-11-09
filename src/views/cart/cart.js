@@ -8,7 +8,6 @@ function App() {
     const key = "bookInfo";
     const data = getLocal(key);
     renderData(data);
-    addEvents();
 }
 
 App();

@@ -13,6 +13,8 @@ export function makeOrder(){
     const orderBar = document.querySelector(".orderbar");
     const orderContainer = document.querySelector(".orderItem_container");
     const orderPrice = document.querySelector(".order_result_container .box");
+    
+
 
     const local = getLocal("bookInfo");
     const dataString = renderOrder(local);
