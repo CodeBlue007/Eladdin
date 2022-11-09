@@ -48,35 +48,6 @@ main .product-detail {
   margin-top: 20px;
 }
 
-.add_btn_container {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  width: 80px;
-  text-align: cemter;
-  background-color: none;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 10px;
-  background-color: chartreuse;
-}
-
-.add_btn_container .add_btn_input {
-  width: 20px;
-  border: none;
-  background-color: chartreuse;
-  font-weight: bold;
-  padding: 0;
-  text-align: center;
-}
-
-.add_btn {
-  border: none;
-  background-color: chartreuse;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 .cart {
   display: block;
   width: 300px;
@@ -84,76 +55,33 @@ main .product-detail {
   margin-top: 200px;
   background-color: chartreuse;
   border-radius: 50px;
+  cursor: pointer;
 }
 
-.popup {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 5;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 300px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  box-sizing: border-box;
-  opacity: 0;
-  transition: all 0.5s;
-  text-align: right;
+
+.modal-content{
   display: flex;
   flex-direction: column;
-}
-
-.popup a {
-  color: grey;
-  text-decoration: none;
-  text-align: right;
-  padding: 0;
-}
-
-.next_move {
-  text-align: center;
-  margin-bottom: 60px;
+  align-items: center;
   justify-content: space-around;
+  width: 500px;
+  height: 500px;
+  background-color: bisque;
+  opacity: 0.6;
+  transition: 0.5;
+  border-radius: 10px;
 }
 
-.popup b {
-  color: grey;
-  text-decoration: none;
-}
 
-.confirm {
-  color: grey;
-  text-decoration: none;
-  margin-left: 20px;
-}
+.modal-content .tag.is-success.is-light{
+  font-size: 30px;
+  border-radius: 10px;
+  margin-top: 50px;
 
-.move_to_cart {
-  margin: auto;
-  font-weight: 800;
-  font-size: 1.5rem;
-  text-align: center;
 }
-
-.popup:target {
-  opacity: 1;
-}
-
-.popup:target + dim {
-  opacity: 1;
-  z-index: 2;
-}
-
-.dim {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 1);
-  opacity: 0;
-  transition: all 0.5s;
+.modal-content .btn_container{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-around;
 }

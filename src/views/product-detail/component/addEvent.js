@@ -1,29 +1,28 @@
-import { getLocal, setLocal } from "../util/util.js";
-
-const key ="bookInfo";
-
-function sendData(bookData){
-  console.log(bookData);
-  const local = getLocal(key);
-  const filtered = local.filter(data => data._id === bookData._id);
-  if(filtered.length > 0){
-    alert('이미 장바구니에 담긴 상품입니다');
-  }
-  else{
-  local.push(bookData);
-  }
-
-  return updateLocal(local);
-}
-
-function updateLocal(local){
-  const localUpdate = local.map(data =>({...data, 'checked':true, 'volume': 1}));
-  setLocal(key, localUpdate);
-}
-
+import {sendData} from "./eventFn/sendData.js";
 
 
 export function addEvent(bookData) {
   const cart_btn = document.querySelector('.cart');
+  const toCartBtn = document.querySelector(".button.is-success.is-light.confirm")
+  const notToCartBtn = document.querySelector(".button.is-success.is-light.del")
+
+  console.log(toCartBtn,notToCartBtn);
+
   cart_btn.addEventListener('click',()=>sendData(bookData));
+  toCartBtn.addEventListener("click", moveToCart);
+  notToCartBtn.addEventListener("click", closeModal);
+
+}
+
+function moveToCart(){
+  const modal = document.querySelector(".modal");
+
+  modal.classList.remove("is-active");
+
+  window.location.href= "../cart/cart.html";
+}
+
+function closeModal(){
+  const modal = document.querySelector(".modal");
+  modal.classList.remove("is-active");
 }

@@ -18,18 +18,7 @@ function bookTemplate(data) {
           <li class="description">책 소개글 &nbsp;&nbsp;&nbsp;${description}</li>
           <li class="price">가격 &nbsp;&nbsp;&nbsp;${newPrice}원</li>
           <li class="publicationDate">출시일 &nbsp;&nbsp;&nbsp;${date}</li>
-          <a href="#pop1" class="cart">장바구니</a>
-          <div class="popup" id="pop1">
-            <a href="./product-detail.html">닫기</a>
-            <div class="move_to_cart">
-              <span>장바구니로 이동하시겠습니까?</span>
-            </div>
-            <div class="next_move">
-              <a href="#b">취소</a>
-                <a href="../cart/cart.html" class="confirm">확인</a>
-            </div>
-          </div>
-          <div class="dim"></div>
+          <button" class="cart">장바구니</button>
         </ul>
     </div>
         `;

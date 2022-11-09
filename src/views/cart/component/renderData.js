@@ -2,8 +2,8 @@ import { addCommas } from "../../useful-functions.js"
 import { setTotalPrice } from "../util/util.js"
 import { addEvents } from "./addEvents.js";
 
-function addItems(datas) {
-
+function addItems(datas=[]) {
+  
   return datas?.map(data => {
 
     const { imgUrl, title, author, price, ISBN, volume} = data;
