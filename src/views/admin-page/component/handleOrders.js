@@ -3,8 +3,8 @@ export function handleData(orders){
         const orderArr = [];
         order.items.forEach(item=>{
             const bookobj = {};
-            bookobj["title"] = item.book.title;
-            bookobj["ISBN"] = item.book.ISBN;
+            bookobj["title"] = item.book?.title || "책 이름을 찾을 수 없습니다."
+            bookobj["ISBN"] = item.book?.ISBN || "ISBN을 찾을 수 없습니다."
             bookobj["price"] = item.totalPrice;
             bookobj["volume"] = item.volume;
             bookobj["orderId"] = order._id;
