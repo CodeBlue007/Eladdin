@@ -9,9 +9,11 @@ async function admin(){
 
     try{
         // const datas = await fetchData();
-        const books = await fetchBooks();
-        const orders = await fetchOrders();
-        const categories = await fetchCategory();
+        const [books, orders, categories] = await Promise.all([fetchBooks(),fetchOrders(),fetchCategory()]);
+
+        console.log("books", books);
+        console.log("orders",orders);
+        console.log("category",categories);
 
         orderRender(orders);
         productRender(books);

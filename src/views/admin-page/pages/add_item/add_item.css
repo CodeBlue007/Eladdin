@@ -1,7 +1,6 @@
 .item_container{
     margin: 100px auto;
     display: flex;
-    border: 1px solid black;
     flex-direction: column;
     width: 60%;
     align-items: center;

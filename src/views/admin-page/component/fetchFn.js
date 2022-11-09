@@ -7,24 +7,19 @@ export async function fetchData() {
   }
 
 
-  export async function fetchBooks() {
-    const data = await Api.get('https://eladin-lgurfdxfjq-du.a.run.app/api/books');
-    console.log("books",data);
-    return data;
+  export function fetchBooks() {
+    return Api.get('https://eladin-lgurfdxfjq-du.a.run.app/api/books');
+    
   }
 
 
 
 
-export async function fetchOrders() {
-    const orders = await Api.get("https://eladin-lgurfdxfjq-du.a.run.app/api/order/");    
-    console.log("orders",orders);
-    return orders;
+export function fetchOrders() {
+    return Api.get("https://eladin-lgurfdxfjq-du.a.run.app/api/order/");    
 }
 
 
-export async function fetchCategory() {
-    const categories = await Api.get("https://eladin-lgurfdxfjq-du.a.run.app/api/category");
-    console.log("categories", categories);
-    return categories;
+export function fetchCategory() {
+    return Api.get("https://eladin-lgurfdxfjq-du.a.run.app/api/category");
 }
