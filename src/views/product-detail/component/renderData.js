@@ -20,7 +20,7 @@ function bookTemplate(data) {
           <li class="publicationDate">출시일 &nbsp;&nbsp;&nbsp;${date}</li>
           <a href="#pop1" class="cart">장바구니</a>
           <div class="popup" id="pop1">
-            <a href="#a">닫기</a>
+            <a href="./product-detail.html">닫기</a>
             <div class="move_to_cart">
               <span>장바구니로 이동하시겠습니까?</span>
             </div>
