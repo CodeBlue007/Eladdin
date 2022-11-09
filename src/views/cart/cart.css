@@ -8,7 +8,7 @@ nav {
 .container {
   width: 100%;
   margin: auto;
-  border: 1px solid green;
+  border: 1px solid black;
 }
 
 .header {
@@ -24,7 +24,6 @@ nav {
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
 }
 
 .select_container .select_box {

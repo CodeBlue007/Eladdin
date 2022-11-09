@@ -22,7 +22,6 @@ function bookTemplate(data) {
           <div class="popup" id="pop1">
             <a href="#a">닫기</a>
             <div class="move_to_cart">
-              <span>장바구니에 추가되었습니다.<br></span>
               <span>장바구니로 이동하시겠습니까?</span>
             </div>
             <div class="next_move">

@@ -1,10 +1,9 @@
-import { check } from "prettier";
 import { getLocal, setLocal } from "../util/util.js";
 
+const key ="bookInfo";
 
 function sendData(bookData){
   console.log(bookData);
-  const key ="bookInfo";
   const local = getLocal(key);
   const filtered = local.filter(data => data._id === bookData._id);
   if(filtered.length > 0){
@@ -14,11 +13,12 @@ function sendData(bookData){
   local.push(bookData);
   }
 
-  return local;
+  return updateLocal(local);
 }
 
 function updateLocal(local){
-  const localUp= local.map(data => ({...data, 'checked':true, 'volume': 1}))
+  const localUpdate = local.map(data =>({...data, 'checked':true, 'volume': 1}));
+  setLocal(key, localUpdate);
 }
 
 
