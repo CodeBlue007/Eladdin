@@ -3,8 +3,6 @@ import * as Api from "../../../views/api.js";
 const nameArea=document.querySelector('.greeting');
 
 async function changeName() {
-
-
   try{  
     const data = await Api.get('https://eladin-lgurfdxfjq-du.a.run.app/api/auth/my');
     console.log("userInfo",data);
