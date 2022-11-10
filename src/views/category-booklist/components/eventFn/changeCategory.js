@@ -1,16 +1,8 @@
-export function renderCategory(e) {
+export function changeCategory(e) {
 
     const {category:target} = e.target.dataset;
 
     if(!target) return;
-
-    const changeMap = {
-        "에세이": "essay",
-        "여행": "trip",
-        "자기계발": "develop",
-        "컴퓨터/모바일": "computer",
-        "추리소설": "detective",
-    };
 
     const itemList = document.querySelectorAll(".itemcontainer");
     const liList = document.querySelectorAll(".tab_container li");
@@ -21,7 +13,7 @@ export function renderCategory(e) {
 
     [...itemList].forEach(item => {
         const category = item.dataset.category;
-        if (changeMap[category] === target) {
+        if (category === target) {
             item.classList.remove("hidden");
         }
         else {

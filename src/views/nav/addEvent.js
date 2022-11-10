@@ -14,6 +14,7 @@ export function addEvent(){
     const login_btn=document.querySelector('#login_btn') || undefined;
     const myPage_btn=document.querySelector('#myPage_btn') || undefined;
     const adminPage_btn=document.querySelector('#adminPage_btn') || undefined;
+    
     const token=sessionStorage.getItem('token');
     
     

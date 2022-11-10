@@ -1,4 +1,4 @@
-import { renderCategory } from "./eventFn/renderCategory.js";
+import { changeCategory } from "./eventFn/changeCategory.js";
 import { showDetail } from "./eventFn/showDetail.js";
 
 export function addEvents() {
@@ -8,7 +8,7 @@ export function addEvents() {
     [...detailBtn].forEach(btn =>{
         btn.addEventListener("click", showDetail);
     })
-    tabContainer.addEventListener("click", renderCategory);
+    tabContainer.addEventListener("click", changeCategory);
 
    
 }

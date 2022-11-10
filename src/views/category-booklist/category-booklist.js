@@ -1,21 +1,17 @@
 import { addEvents } from "./components/addEvents.js";
 import { renderData } from "./components/renderData.js";
-import * as Api from "../api.js";
-
-
-
-async function fetchData() {
-
-    const data = await Api.get("https://eladin-lgurfdxfjq-du.a.run.app/api/books");
-    console.log(data);
-    return data;
-}
+import {fetchBooks, fetchCategory} from "./components/fetchFn.js"
+import { categoryRender } from "./components/categoryRender.js";
 
 
 async function App() {
     try {
-        const data = await fetchData();
-        renderData(data);
+        const [books, categories] = await Promise.all([fetchBooks(),fetchCategory()]);
+
+        console.log("books",books);
+        console.log("categories",categories);
+        categoryRender(categories);
+        renderData(books);
         addEvents();
 
     } catch (err) {

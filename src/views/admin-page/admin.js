@@ -8,7 +8,6 @@ import { fetchOrders, fetchCategory,fetchBooks} from "./component/fetchFn.js";
 async function admin(){
 
     try{
-        // const datas = await fetchData();
         const [books, orders, categories] = await Promise.all([fetchBooks(),fetchOrders(),fetchCategory()]);
 
         console.log("books", books);
