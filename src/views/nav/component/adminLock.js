@@ -1,13 +1,8 @@
-import * as Api from "./api.js";
+import * as Api from "../../api.js";
 
-function adminLock(){
-  const adminPage_btn=document.querySelector('#adminPage_btn');
-  adminPage_btn.addEventListener('click', verifyRole);
-}
 
-adminLock();
 
-async function verifyRole() {
+export async function verifyRole() {
   const token = sessionStorage.getItem('token');
   const data = await Api.get('https://eladin-lgurfdxfjq-du.a.run.app/api/auth/my');
   console.log('userInfo', data);

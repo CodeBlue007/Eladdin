@@ -1,6 +1,7 @@
-const myPage_btn=document.querySelector('#myPage_btn')
 
-function loginNeeded(){
+
+
+export function loginNeeded(){
  const token = sessionStorage.getItem('token');
 
   if (!token) {
@@ -12,4 +13,3 @@ function loginNeeded(){
   }
 }
 
-myPage_btn.addEventListener('click', loginNeeded);
