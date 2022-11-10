@@ -66,7 +66,7 @@ const OrderSchema = new Schema(
     //   })
     // }
   },
-  { timestamp: true, _id : true }, //createdAt, updatedAt을 mock에 추가하기
+  { timestamps: true }, //createdAt, updatedAt을 mock에 추가하기
 );
 
 export { OrderSchema, ItemSchema };
