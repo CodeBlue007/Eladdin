@@ -1,10 +1,11 @@
 import { setLocal, getLocal, setTotalPrice} from "../../util/util.js";
 
 export function plusItem(event) {
-    const input = event.target.nextElementSibling;
+    console.log(event.target);
+    const { id } = event.target.dataset;
+    const input = document.getElementById(id);
     const inputValue = parseInt(input.value);
 
-    const { id } = event.target.dataset;
     const local = getLocal("bookInfo");
     const targetIdx = local.findIndex(data => data.ISBN === parseInt(id));
     local[targetIdx].volume += 1;
@@ -15,11 +16,13 @@ export function plusItem(event) {
 
 
 export function minusItem(event) {
-    const input = event.target.previousElementSibling;
+    console.log(event.target);
+    
+    const { id } = event.target.dataset;
+    const input = document.getElementById(id);
     const inputValue = parseInt(input.value);
     if (inputValue === 1) return;
     
-    const { id } = event.target.dataset;
     const local = getLocal("bookInfo");
     const targetIdx = local.findIndex(data => data.ISBN === parseInt(id));
     local[targetIdx].volume -= 1;

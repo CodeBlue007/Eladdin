@@ -14,6 +14,8 @@ async function myPage() {
         
         localStorage.setItem("email", JSON.stringify(userInfo.email));
 
+        console.log("order", orderList);
+
         changeName(userInfo);
         renderOrder(orderList);  
         addEvent();

@@ -1,5 +1,38 @@
 @import url("../reset.css");
 
+* {
+  font-family: 'Elice Digital Baeum', sans-serif;
+}
+
+#navbarBasicExample {
+  display: flex;
+  align-items: center;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a {
+  background-color: #ffffff;
+  border: none;
+  color: #5865ff;
+  font-family: 'Elice Digital Baeum';
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a > span > img {
+  filter: invert(33%) sepia(55%) saturate(2251%) hue-rotate(222deg) brightness(104%) contrast(100%);
+}
+
+#navbarBasicExample > div.navbar-start > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#navbarBasicExample > div.navbar-start > a > img {
+  width: 250px;
+  height: 50px;
+  object-fit: cover;
+}
+
 header {
   text-align: center;
   margin-top: 80px;
@@ -120,74 +153,53 @@ header .wrapper {
   height: 30px;
 }
 
-.order-products {
+.order-products{
+  margin : 30px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.order-products.hidden{
+  display:none;
+}
+
+.box.orderItem_container {
+  display: flex;
+  justify-content: space-around;
   width: 800px;
-  border: 1px solid grey;
+}
+
+.orderItem_container .content_contianer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  margin-top: 30px;
+  font-size: 20px;
 }
 
-.order {
+.box.img_container {
+  width: 180px;
+  height: 240px;
+}
+
+.img_container img{
+  width: inherit;
+  height: inherit;
+}
+
+
+
+.control{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  border-bottom: 1px solid lightblue;
-}
-
-.order .title {
-  flex-basis: 30%;
-  font-size: large;
-  margin: 0 50px 0 50px;
-}
-
-.order .price {
-  font-size: large;
-  margin-bottom: 25px;
-}
-
-.order .cancel-order {
-  margin-left: 50px;
-  height: 30px;
-}
-
-.userInfo {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
   align-items: center;
-  justify-content: center;
-  margin-top: 30px;
-  display: none;
-  border: 1px solid grey;
+  justify-content: space-evenly;
 }
 
-.view-userInfo {
-  margin: auto;
-  font-weight: 800;
-  font-size: 1.5rem;
-  background-color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+.control .tags.has-addons{
+  height: 10px;
+
 }
 
-tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
-  margin-bottom: 20px;
-}
-
-.user-info tbody tr th {
-  width: 200px;
-  border-left: 1px solid #ddd;
-  padding-bottom: 30px;
-}
-
-.label {
-  margin-top: 20px;
-}
