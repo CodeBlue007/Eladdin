@@ -46,6 +46,10 @@ export class BookModel {
         if((await Book.exists({ISBN})) == null){
             throw new Error(`DB에 ${ISBN}에 해당하는 Book이 존재하지 않습니다`)
         }
+        //ISBN 값이 중복된다면?
+        if((await Book.findOne({ISBN}) !== null)){
+            throw new Error(`해당하는 ISBN이 존재합니다. 고유한 값을 입력해주세요.`)
+        }
         await Book.findOneAndUpdate({ ISBN }, bookInfo, { returnOriginal: false });
     }
 
