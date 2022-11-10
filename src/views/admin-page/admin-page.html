@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="./admin-page.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <script src="./admin.js" type="module" defer></script>
-    <script src="../loginNeeded.js" type="module" defer></script>
-    <script src="../adminLock.js" type="module" defer></script>
+    <script src="../nav/nav.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
     <title>admin-page</title>
   </head>
@@ -45,48 +44,16 @@
                 <span class="icon">
                   <img src="./image/store-solid.svg" width="20" />
                 </span>
-                <strong>Shop</strong>
+                <strong>쇼핑하기</strong>
               </a>
-              <a id="myPage_btn"
-                class="button has-text-link-dark has-background-link-light"
-              >
-                <span class="icon">
-                  <img src="./image/user-solid.svg" width="15" />
-                </span>
-                <strong>My Page</strong>
-              </a>
-              <a
-                href="../register/register.html"
-                class="button has-text-link-dark has-background-link-light"
-              >
-                <span class="icon">
-                  <img src="./image/pen-to-square-solid.svg" width="20" />
-                </span>
-                <strong>Sign up</strong>
-              </a>
-              <a
+              <a 
                 href="../login/login.html"
                 class="button has-text-link-dark has-background-link-light"
               >
                 <span class="icon">
                   <img src="./image/unlock-solid.svg" width="15" />
                 </span>
-                <strong>Log in</strong>
-              </a>
-              <a
-                href="../cart/cart.html"
-                class="button has-text-link-dark has-background-link-light"
-              >
-                <span class="icon">
-                  <i class="fas fa-cart-shopping"></i>
-                </span>
-                <strong>Cart</strong>
-              </a>
-              <a id="adminPage_btn" class="button has-background-danger-light">
-                <span class="icon">
-                  <i class="fa-solid fa-lock"></i>
-                </span>
-                <strong>Admin Page</strong>
+                <strong id="login_btn">로그인</strong>
               </a>
             </div>
           </div>
@@ -106,7 +73,7 @@
                 type="text"
                 placeholder="카테고리를 적어주세요"
               />
-              <button class="button is-info">추가</button>
+              <button class="button is-info">확인</button>
             </div>
           </div>
         </div>
@@ -151,7 +118,7 @@
               <div class="book-price">가격</div>
               <div class="book-publicationDate">출시일</div>
               <button class="add-product">
-                <a href="./pages/add-item/add-item.html" class="link_add">상품추가하기</a>
+                <a href="./pages/add_item/add_item.html" class="link_add">상품추가하기</a>
               </button>
             </div>
           </div>

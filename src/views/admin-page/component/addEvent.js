@@ -5,6 +5,7 @@ import { editCategory } from "./eventFn/categoryFn/editCategory.js";
 import { deleteCategory } from "./eventFn/categoryFn/deleteCategory.js"; 
 import { changeShip } from "./eventFn/orderFn/changeShip.js";
 import { deleteOrder } from "./eventFn/orderFn/deleteOrder.js";
+import { modifyItem } from "./eventFn/ItemFn/modifyItem.js";
 
 export function addEvents() {
   const orderManagement_btn = document.querySelector('.orderManagement');
@@ -17,6 +18,7 @@ export function addEvents() {
   const categoryEditBtns = document.querySelectorAll(".editCategory_btn");
   const selectAll = document.querySelectorAll(".shipping_select");
   const deleteOrderBtn = document.querySelectorAll(".cancelOrder-btn");
+  const modifyItemBtns = document.querySelectorAll(".edit_btn");
 
   
   
@@ -44,6 +46,10 @@ export function addEvents() {
 
   [...deleteOrderBtn].forEach(btn =>{
     btn.addEventListener("click", deleteOrder);
+  });
+
+  [...modifyItemBtns].forEach(btn =>{
+    btn.addEventListener("click", modifyItem);
   })
 
 

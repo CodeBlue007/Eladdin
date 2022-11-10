@@ -17,7 +17,7 @@ function productTemplate(datas) {
           <div class="intro">${description}</div>
           <div class="price">${newPrice}원</div>
           <div class="publicationDate">${publicationDate.substr(0,10)}</div>
-          <button class="edit_btn">수정</button>
+          <button class="edit_btn" data-id=${ISBN}>수정</button>
           <button class="delete_btn" data-id=${ISBN}>삭제</button>
         </div>
       `;

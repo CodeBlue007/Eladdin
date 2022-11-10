@@ -1,7 +1,6 @@
 .item_container{
     margin: 100px auto;
     display: flex;
-    border: 1px solid black;
     flex-direction: column;
     width: 60%;
     align-items: center;
@@ -21,7 +20,7 @@
     margin: 15px;
 }
 
-.tag.is-black.is-medium{
+.tag.is-warning.is-medium{
     width: 100px;
     height: 30px;
     margin-right: 10px;
@@ -63,6 +62,6 @@
     margin-top: 10px;
 }
 
-.button.is-black{
+.button.is-warning{
     margin-top: 20px;
 }

@@ -10,8 +10,9 @@
     <script src="./myPage-order.js" defer type="module"></script>
     <script src="./myPage-userInfo.js" defer type="module"></script>
     <script src="./component/addEvent.js" defer type="module"></script>
-    <script src="../loginNeeded.js" type="module" defer></script>
-    <script src="../adminLock.js" type="module" defer></script>
+    <script src="../nav/nav.js" type="module" defer></script>
+    <script src="../my-page/component/logout.js" type="module" defer></script>
+    <script src="../my-page/component/changeName.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
     <title>my-page</title>
   </head>
@@ -48,31 +49,7 @@
                 <span class="icon">
                   <img src="./image/store-solid.svg" width="20" />
                 </span>
-                <strong>Shop</strong>
-              </a>
-              <a id="myPage_btn" class="button has-text-link-dark has-background-link-light">
-                <span class="icon">
-                  <img src="./image/user-solid.svg" width="15" />
-                </span>
-                <strong>My Page</strong>
-              </a>
-              <a
-                href="../register/register.html"
-                class="button has-text-link-dark has-background-link-light"
-              >
-                <span class="icon">
-                  <img src="./image/pen-to-square-solid.svg" width="20" />
-                </span>
-                <strong>Sign up</strong>
-              </a>
-              <a
-                href="../login/login.html"
-                class="button has-text-link-dark has-background-link-light"
-              >
-                <span class="icon">
-                  <img src="./image/unlock-solid.svg" width="15" />
-                </span>
-                <strong>Log in</strong>
+                <strong>쇼핑하기</strong>
               </a>
               <a
                 href="../cart/cart.html"
@@ -81,13 +58,13 @@
                 <span class="icon">
                   <i class="fas fa-cart-shopping"></i>
                 </span>
-                <strong>Cart</strong>
+                <strong>장바구니</strong>
               </a>
               <a id="adminPage_btn" class="button has-background-danger-light">
                 <span class="icon">
                   <i class="fa-solid fa-lock"></i>
                 </span>
-                <strong>Admin Page</strong>
+                <strong>관리자 페이지</strong>
               </a>
             </div>
           </div>
@@ -99,7 +76,7 @@
         <div class="wrapper">
           <img class="profile-picture" src="../my-page/image/eladin.png" />
           <div class="text-area">
-            <h1>Hi, 토끼 님!</h1>
+            <h1 class="greeting">Hi, </h1>
             <div class="welcome">마이페이지에 오신 걸 환영합니다!</div>
           </div>
         </div>
@@ -136,8 +113,9 @@
           <button class="modal-close is-large" aria-label="close"></button>
         </div>
         <div class="userInfo"></div>
-        <button class="logout">로그아웃</button>
-      </div>
+        <button id="login_btn">로그아웃</button>
+        <button class="deleteAccount">회원탈퇴</button>
+      </ul>
     </main>
   </body>
 </html>
