@@ -10,11 +10,9 @@
     <script src="./myPage-order.js" defer type="module"></script>
     <script src="./myPage-userInfo.js" defer type="module"></script>
     <script src="./component/addEvent.js" defer type="module"></script>
-    <script src="../loginNeeded.js" type="module" defer></script>
-    <script src="../adminLock.js" type="module" defer></script>
-    <script src="../my-page/component/logout.js" type="module" defer></script>
-    <script src="../my-page/component/changeName.js" type="module" defer></script>
-    <script src="../logoutBtn.js" type="module" defer></script>
+    <script src="../nav/nav.js" type="module" defer></script>
+    <!-- <script src="./component/logout.js" type="module" defer></script> -->
+    <!-- <script src="./component/changeName.js" type="module" defer></script> -->
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
     <title>my-page</title>
   </head>
@@ -84,11 +82,17 @@
         </div>
       </header>
 
-      <ul class="list">
-        <button class="order-list">주문 조회</button>
-        <div class="order-products"></div>
-        <button class="cart"><li>장바구니</li></button>
-        <div class="cart-products"></div>
+      <div class="list">
+        
+        <!-- myPage-order.js -->
+        <button id="order-button" class="order-list">
+          주문 조회
+        </button>
+        <ul class="order-products">
+        </ul>
+
+        <!-- <button class="cart"><li>장바구니</li></button>
+        <div class="cart-products"></div> -->
         <button class="userInfo_btn"><li>회원정보</li></button>
         <div class="modal">
           <div class="modal-background"></div>

@@ -82,12 +82,17 @@ export class OrderModel {
 
         // book은 가져오고, 가져온 book 정보로 totalPrice를 계산해야 함
         const ISBNList = cartItems.map(item => item.ISBN)
+        
+        const books = await Promise.all(ISBNList.map(ISBN => Book.findOne({ ISBN }).exec())) 
         console.log({
             cartItems,
             ISBNList,
+            books
         })
-        const books = await Promise.all(ISBNList.map(ISBN => Book.findOne({ ISBN }).exec())) 
 
+        if (books.some(books => !books)){
+            throw Error('존재하지 않는 ISBN이 포함되어 있습니다')
+        }
         const items = books.map((book, i) =>{
             const volume = cartItems[i].volume;
 
@@ -118,6 +123,10 @@ export class OrderModel {
     }
     
     async cancelOrderById(orderId) {
+        const targetOrder = await Order.findById({_id : orderId}).exec();
+        if(targetOrder.shippingStatus !== '배송준비중'){
+            throw new Error(`배송준비중인 주문만 취소가 가능합니다.`)    
+        }
         await Order.deleteOne({ _id : orderId })
     }
     

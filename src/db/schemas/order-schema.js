@@ -35,6 +35,11 @@ const OrderSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref : 'users'
     },
+    totalPrice: {
+      type: Number,
+      required: true,
+      min: 0
+    }
     // receiver: {
     //   type: new Schema({
     //     fullName: {
