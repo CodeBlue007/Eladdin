@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: 71vh;
 }
 
 .login-form-box {
@@ -49,8 +49,35 @@
   font-weight: bold;
 }
 
+.label {
+  font-size: large;
+}
+#loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#loginForm > p {
+  text-align: center;
+  margin: 50px;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: black;
+}
+
 #submitButton {
   background-color: #e7b526;
+  color: #ffffff;
+  font-size: large;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  align-items: center;
+}
+
+#emailInput:focus,
+#passwordInput:focus {
+  border-color: #3e56c4;
 }
 
 footer {
