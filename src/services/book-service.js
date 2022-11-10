@@ -22,12 +22,12 @@ export class BookService {
     await bookModel.create(bookInfo);
   }
 
-  async update({ ISBN, bookInfo }) {
+  async update(ISBN, {bookInfo}, category) {
     // if((await categoryModel.existByTitle(bookInfo.category)) === false){
     //     throw Error('존재하지 않는 카테고리!')
     // }
     //DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르면
-    await bookModel.update({ ISBN, bookInfo });
+    await bookModel.update(ISBN, {bookInfo}, category);
   }
 
   async deleteByISBN(ISBN) {
