@@ -46,7 +46,7 @@ export class BookModel {
         return Book.create(bookInfo);
     }
 
-    async update({ ISBN, bookInfo }) {
+    async update(ISBN, {bookInfo}, categoryId) {
         // DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르면
         //이미 존재하지 않으면
         if(await this.existsByISBN(ISBN)){

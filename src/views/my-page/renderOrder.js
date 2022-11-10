@@ -1,14 +1,27 @@
 import * as Api from "../api.js";
 
-async function fetchData() {
-  const orderList = await Api.get(
-    "https://eladin-lgurfdxfjq-du.a.run.app/api/order/my",
-  );
-  console.log(orderList);
-  renderData(orderList);
+function OrderListTemplate(orderList) {
+  return orderList.map(({ _id, items, shippingStatus, user, totalPrice }) => {
+
+    if(!totalPrice){
+      totalPrice = items.reduce((acc, item) => acc + item.totalPrice, 0)
+    }
+
+    return `
+  <li class="order">
+    <span>${user.fullName}</span>
+    ${ItemListTemplate(items)}
+    <p>${shippingStatus}</p>
+    <p>총 주문 금액 :${totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</p>
+    <button class="cancel-order"  data-order-id="${_id}" data-shipping-status="${shippingStatus}">
+      주문취소
+    </button>
+  </li>`;
+  }).join("\n");
 }
 
-function renderData(orderList) {
+
+export function renderOrder(orderList) {
   const bookInfo = document.querySelector(".order-products");
   bookInfo.innerHTML = OrderListTemplate(orderList);
 
@@ -32,25 +45,7 @@ function renderData(orderList) {
   })
 }
 
-function OrderListTemplate(orderList) {
-  return orderList.map(({ _id, items, shippingStatus, user, totalPrice }) => {
 
-    if(!totalPrice){
-      totalPrice = items.reduce((acc, item) => acc + item.totalPrice, 0)
-    }
-
-    return `
-  <li class="order">
-    <span>${user.fullName}</span>
-    ${ItemListTemplate(items)}
-    <p>${shippingStatus}</p>
-    <p>총 주문 금액 :${totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</p>
-    <button class="cancel-order"  data-order-id="${_id}" data-shipping-status="${shippingStatus}">
-      주문취소
-    </button>
-  </li>`;
-  }).join("\n");
-}
 
 function ItemListTemplate(items) {
   return `
@@ -65,9 +60,6 @@ function ItemListTemplate(items) {
   </ul>`
 }
 
-const orderButton = document.getElementById("order-button")
-
-orderButton.onclick = fetchData;
 // [{
 //   "_id": "636c97167956c5faa23a371c",
 //   "items": [

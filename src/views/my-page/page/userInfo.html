@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>쇼핑-데모</title>
+    <!-- 아이콘 -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/elice-rabbit-favicon.png" />
+    <!-- bulma css 관련 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <!-- 폰트 어썸: 아이콘 -->
+    <script defer src="https://kit.fontawesome.com/9daa42bcef.js" crossorigin="anonymous"></script>
+    <!-- 구글 OAuth -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- 카카오 OAuth -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <!--다음 주소-->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <!-- 커스텀 css, js -->
+    <link rel="stylesheet" href="./userInfo.css" />
+    <script src="./userInfo.js" type="module" defer></script>
+    <script src="../../nav/nav.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="../home/home.html">
+            <img src="./image/Eladin_CI.png" width="200" />
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a
+                href="../category-booklist/category-booklist.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/store-solid.svg" width="20" />
+                </span>
+                <strong>쇼핑하기</strong>
+              </a>
+              <a id="myPage_btn"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/user-solid.svg" width="15" />
+                </span>
+                <strong>마이페이지</strong>
+              </a>
+              <a
+                href="../login/login.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="./image/unlock-solid.svg" width="15" />
+                </span>
+                <strong>로그인</strong>
+              </a>
+              <a
+                href="../cart/cart.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <i class="fas fa-cart-shopping"></i>
+                </span>
+                <strong>장바구니</strong>
+              </a>
+              <a id="adminPage_btn" class="button has-background-danger-light">
+                <span class="icon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <strong>관리자 페이지</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 회원가입 폼(Form) -->
+    <form class="form_container">
+      <div class="label_container">
+        <span class="tag is-link is-light">회원정보 수정페이지 </span>
+      </div>
+      <div class="field">
+        <label class="label">이름</label>
+        <div class="control has-icons-left has-icons-right">
+          <input
+            class="input is-link is-light name"
+            type="text"
+            placeholder="Write your Name"
+            value=""
+            maxlength="7"
+            required
+          />
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">연락처</label>
+        <div class="control has-icons-left has-icons-right">
+          <input
+            class="input is-link is-light phone"
+            type="text"
+            placeholder="010-1234-5678"
+            value=""
+            maxlength="15"
+            required
+          />
+          <span class="icon is-small is-left">
+            <i class="fa-solid fa-phone"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">주소</label>
+        <div class="postal_container">
+          <div class="control has-icons-left has-icons-right">
+            <input
+              class="input is-link is-light post_code"
+              type="address"
+              placeholder="우편번호"
+              value=""
+              required
+            />
+            <span class="icon is-small is-left">
+              <i class="fa-sharp fa-solid fa-house"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+          <button class="button is-link is-light" id="addressButton">우편번호 찾기</button>
+        </div>
+
+        <div class="control has-icons-left has-icons-right">
+          <input
+            class="input is-link is-light address"
+            type="address"
+            placeholder="주소"
+            value=""
+            required
+          />
+          <span class="icon is-small is-left">
+            <i class="fa-sharp fa-solid fa-house"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+
+        <div class="control has-icons-left has-icons-right">
+          <input
+            class="input is-link is-light add_detail"
+            type="address"
+            placeholder="상세주소"
+            value=""
+            required
+          />
+          <span class="icon is-small is-left">
+            <i class="fa-sharp fa-solid fa-house"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">현재비밀번호</label>
+        <div class="control has-icons-left has-icons-right">
+          <input
+            class="input is-link is-light cur_password"
+            type="password"
+            placeholder="현재 비밀번호를 적어주세요"
+            value=""
+            required
+          />
+          <span class="icon is-small is-left">
+            <i class="fa-solid fa-key"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">새로운 비밀번호(8자리이상)</label>
+        <div class="control has-icons-left has-icons-right">
+          <input
+            class="input is-link is-light password"
+            type="password"
+            placeholder="비밀번호를 적어주세요"
+            value=""
+            required
+          />
+          <span class="icon is-small is-left">
+            <i class="fa-solid fa-key"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">비밀번호 확인</label>
+        <div class="control has-icons-left has-icons-right">
+          <input
+            class="input is-link is-light pass_confirm"
+            type="password"
+            placeholder="비밀번호를 한번 더 적어주세요"
+            value=""
+            required
+          />
+          <span class="icon is-small is-left">
+            <i class="fa-solid fa-lock"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+      </div>
+      <button class="button is-link is-light" id="submitButton">회원정보수정</button>
+    </form>
+  </body>
+</html>

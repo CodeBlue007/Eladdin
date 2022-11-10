@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./myPage.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <script src="./myPage-cart.js" defer type="module"></script>
-    <script src="./myPage-order.js" defer type="module"></script>
-    <script src="./myPage-userInfo.js" defer type="module"></script>
-    <script src="./component/addEvent.js" defer type="module"></script>
+    <script src="./myPage.js" defer type="module"></script>
     <script src="../nav/nav.js" type="module" defer></script>
     <!-- <script src="./component/logout.js" type="module" defer></script> -->
-    <!-- <script src="./component/changeName.js" type="module" defer></script> -->
     <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
     <title>my-page</title>
   </head>
@@ -91,9 +87,7 @@
         <ul class="order-products">
         </ul>
 
-        <!-- <button class="cart"><li>장바구니</li></button>
-        <div class="cart-products"></div> -->
-        <button class="userInfo_btn"><li>회원정보</li></button>
+        <button class="userInfo_btn"><span>회원정보</span></button>
         <div class="modal">
           <div class="modal-background"></div>
           <div class="modal-content">
@@ -110,7 +104,7 @@
                   autocomplete="on"
                 />
               </div>
-              <a class="confirm-btn">확인</a>
+              <button class="confirm-btn">확인</button>
             </div>
           </div>
           <button class="modal-close is-large" aria-label="close"></button>

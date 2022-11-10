@@ -1,3 +1,5 @@
+@import url("../reset.css");
+
 header {
   text-align: center;
   margin-top: 80px;
@@ -62,6 +64,7 @@ header .wrapper {
   width: 200px;
   color: black;
   border: 2px solid black;
+  cursor: pointer;
 }
 
 #login_btn {
