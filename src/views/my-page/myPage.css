@@ -127,13 +127,14 @@ header .wrapper {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  display: none;
 }
 
 .order {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid lightblue;
 }
 
 .order .title {
