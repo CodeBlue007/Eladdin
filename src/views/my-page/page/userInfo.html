@@ -17,10 +17,9 @@
     <!--다음 주소-->
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <!-- 커스텀 css, js -->
-    <link rel="stylesheet" href="register.css" />
-    <script src="register.js" type="module" defer></script>
-    <script src="../loginNeeded.js" type="module" defer></script>
-    <script src="../adminLock.js" type="module" defer></script>
+    <link rel="stylesheet" href="./userInfo.css" />
+    <script src="./userInfo.js" type="module" defer></script>
+    <script src="../../nav/nav.js" type="module" defer></script>
   </head>
   <body>
     <!-- 헤더 -->
@@ -99,13 +98,13 @@
     <!-- 회원가입 폼(Form) -->
     <form class="form_container">
       <div class="label_container">
-        <span class="tag is-success">회원가입 페이지 </span>
+        <span class="tag is-link is-light">회원정보 수정페이지 </span>
       </div>
       <div class="field">
         <label class="label">이름</label>
         <div class="control has-icons-left has-icons-right">
           <input
-            class="input is-success name"
+            class="input is-link is-light name"
             type="text"
             placeholder="Write your Name"
             value=""
@@ -125,7 +124,7 @@
         <label class="label">연락처</label>
         <div class="control has-icons-left has-icons-right">
           <input
-            class="input is-success phone"
+            class="input is-link is-light phone"
             type="text"
             placeholder="010-1234-5678"
             value=""
@@ -146,7 +145,7 @@
         <div class="postal_container">
           <div class="control has-icons-left has-icons-right">
             <input
-              class="input is-success post_code"
+              class="input is-link is-light post_code"
               type="address"
               placeholder="우편번호"
               value=""
@@ -159,12 +158,12 @@
               <i class="fas fa-check"></i>
             </span>
           </div>
-          <button class="button is-primary" id="addressButton">우편번호 찾기</button>
+          <button class="button is-link is-light" id="addressButton">우편번호 찾기</button>
         </div>
 
         <div class="control has-icons-left has-icons-right">
           <input
-            class="input is-success address"
+            class="input is-link is-light address"
             type="address"
             placeholder="주소"
             value=""
@@ -180,7 +179,7 @@
 
         <div class="control has-icons-left has-icons-right">
           <input
-            class="input is-success add_detail"
+            class="input is-link is-light add_detail"
             type="address"
             placeholder="상세주소"
             value=""
@@ -196,17 +195,17 @@
       </div>
 
       <div class="field">
-        <label class="label">이메일</label>
+        <label class="label">현재비밀번호</label>
         <div class="control has-icons-left has-icons-right">
           <input
-            class="input is-success email"
-            type="email"
-            placeholder="이메일를 적어주세요"
+            class="input is-link is-light cur_password"
+            type="password"
+            placeholder="현재 비밀번호를 적어주세요"
             value=""
             required
           />
           <span class="icon is-small is-left">
-            <i class="fa-regular fa-envelope"></i>
+            <i class="fa-solid fa-key"></i>
           </span>
           <span class="icon is-small is-right">
             <i class="fas fa-check"></i>
@@ -215,10 +214,10 @@
       </div>
 
       <div class="field">
-        <label class="label">비밀번호(8자리이상)</label>
+        <label class="label">새로운 비밀번호(8자리이상)</label>
         <div class="control has-icons-left has-icons-right">
           <input
-            class="input is-success password"
+            class="input is-link is-light password"
             type="password"
             placeholder="비밀번호를 적어주세요"
             value=""
@@ -237,7 +236,7 @@
         <label class="label">비밀번호 확인</label>
         <div class="control has-icons-left has-icons-right">
           <input
-            class="input is-success pass_confirm"
+            class="input is-link is-light pass_confirm"
             type="password"
             placeholder="비밀번호를 한번 더 적어주세요"
             value=""
@@ -251,7 +250,7 @@
           </span>
         </div>
       </div>
-      <button class="button is-primary" id="submitButton">회원가입하기</button>
+      <button class="button is-link is-light" id="submitButton">회원정보수정</button>
     </form>
   </body>
 </html>

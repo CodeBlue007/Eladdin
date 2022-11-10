@@ -1,8 +1,7 @@
-import { validateEmail } from "../../../useful-functions.js";
 
 export function validateData(infoArray) {
     
-    const [userName, phone, postCode, address,add_detail,email, password, passConfirm]
+    const [userName, phone, postalCode, address, add_detail, curPw, password, passConfirm]
         = infoArray;
 
     console.log(infoArray);
@@ -22,8 +21,8 @@ export function validateData(infoArray) {
         alert("주소를 입력해주세요.");
         return false;
     }
-    else if (!email) {
-        alert("이메일을 입력해주세요.");
+    else if (!curPw) {
+        alert("현재 비밀번호를 입력해주세요.");
         return false;
     }
     else if (!password) {
@@ -44,10 +43,6 @@ export function validateData(infoArray) {
     }
     else if (addressRegex.test(address)) {
         alert("주소에 특수문자가 포함되어 있습니다.");
-        return false;
-    }
-    else if(!validateEmail(email)){
-        alert("유효한 이메일 형식이 아닙니다.");
         return false;
     }
     else if(password.length <8){

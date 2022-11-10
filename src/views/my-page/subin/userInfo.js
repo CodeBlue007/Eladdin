@@ -1,6 +1,5 @@
 import * as Api from "../../api.js";
-import {moveToUserPage} from "./moveToUserPage.js";
-
+import {openModal} from "./openModal.js";
 
 async function fetchUserInfo() {
     const userInfo = await Api.get(
@@ -15,7 +14,7 @@ async function userInfo(){
     const userInfo = await fetchUserInfo();
     const userInfobtn = document.querySelector("#userInfo_btn");
 
-    userInfobtn.addEventListener("click",()=> moveToUserPage(userInfo));
+    userInfobtn.addEventListener("click",()=> openModal(userInfo));
 
 }
 

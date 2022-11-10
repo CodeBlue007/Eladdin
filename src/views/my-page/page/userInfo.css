@@ -47,11 +47,11 @@
   align-items: center;
 }
 
-.tag.is-success{
+.tag.is-link{
   font-size: 20px;
 }
 
-.button.is-primary{
+.button.is-link.is-light{
   width : 130px;
   margin : 0 20px 20px 20px;
 }

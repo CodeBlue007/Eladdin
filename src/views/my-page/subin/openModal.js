@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from 'bcrypt';
 
 export async function openModal(userInfo){
 
@@ -32,7 +32,7 @@ async function moveToUserPage(userInfo){
         return;
       }
       else{
-        window.location.href = "../page/page.html";
+        window.location.href = "../page/userInfo.html";
       }
   
 }
