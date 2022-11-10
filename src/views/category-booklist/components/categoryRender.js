@@ -5,7 +5,7 @@ function categoryTemplate(datas) {
     return datas.map((data) => {
         const { title: category, _id: id } = data;
         return (
-            `<li>
+            `<li id=${category}>
         <a data-category=${category}>
           <span class="icon is-small" data-category=${category}
             >✔</span>
