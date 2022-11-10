@@ -159,16 +159,35 @@ body > main > div.product-detail > div > img {
   justify-content: space-around;
   width: 500px;
   height: 500px;
-  background-color: bisque;
-  opacity: 0.6;
+  background-color: #f5f5f5;
+  opacity: 0.8;
   transition: 0.5;
   border-radius: 10px;
+}
+
+.modal-content > span {
+  color: #3e56c4;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.modal-content > div > button.button.is-light.confirm {
+  background: #3e56c4;
+  color: #ffffff;
+  font-size: large;
 }
 
 .modal-content .tag.is-success.is-light {
   font-size: 30px;
   border-radius: 10px;
   margin-top: 50px;
+}
+
+.modal-content > div > button.button.is-light.del {
+  background: #3e56c4;
+  color: #ffffff;
+  font-size: large;
+  opacity: 80%;
 }
 
 .modal-content .btn_container {
