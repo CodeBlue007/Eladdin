@@ -143,8 +143,8 @@ userRouter.get('/my', loginRequired, nextError(async (req, res, next)=> {
 
 userRouter.delete('/my', loginRequired, nextError(async (req,res,next)=> {
   const userId = req.currentUserId
-  userService.deleteUser(userId)
+  await userService.deleteUser(userId)
 
-  res.status(204).end(`${userId}는 삭제되었습니다.`)
+  res.status(204).end()
 }))
 export { userRouter };
