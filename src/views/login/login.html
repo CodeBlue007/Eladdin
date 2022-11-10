@@ -1,127 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>쇼핑-데모</title>
-    <!-- 아이콘 -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/elice-rabbit-favicon.png" />
-    <!-- bulma css 관련 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
-    <!-- 폰트 어썸: 아이콘 -->
-    <script defer src="https://kit.fontawesome.com/9daa42bcef.js" crossorigin="anonymous"></script>
 
-    <!-- 커스텀 css, js -->
-    <link rel="stylesheet" href="login.css" />
-    <script src="login.js" type="module" defer></script>
-    <script src="../nav/nav.js" type="module" defer></script>
-  </head>
-  <body>
-    <!-- 헤더 -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>로그인</title>
+  <!-- 아이콘 -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/elice-rabbit-favicon.png" />
+  <!-- bulma css 관련 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <!-- 폰트 어썸: 아이콘 -->
+  <script defer src="https://kit.fontawesome.com/9daa42bcef.js" crossorigin="anonymous"></script>
+  <!-- 커스텀 css, js -->
+  <link rel="stylesheet" href="login.css" />
+  <script src="login.js" type="module" defer></script>
+  <script src="../nav/nav.js" type="module" defer></script>
+  <!-- 폰트 -->
+  <link href="https://font.elice.io/EliceDigitalBaeum.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- 헤더 -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="./home.html">
+          <img src="./image/Eladin_CI.png" alt="eladin_logo" />
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="../home/home.html">
-            <img src="./image/Eladin_CI.png" width="200" />
-          </a>
-        </div>
-
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a
-                href="../category-booklist/category-booklist.html"
-                class="button has-text-link-dark has-background-link-light"
-              >
-                <span class="icon">
-                  <img src="./image/store-solid.svg" width="20" />
-                </span>
-                <strong>쇼핑하기</strong>
-              </a>
-              <a id="myPage_btn"
-                class="button has-text-link-dark has-background-link-light"
-              >
-                <span class="icon">
-                  <img src="./image/user-solid.svg" width="15" />
-                </span>
-                <strong>마이페이지</strong>
-              </a>
-              <a
-                href="../register/register.html"
-                class="button has-text-link-dark has-background-link-light"
-              >
-                <span class="icon">
-                  <img src="./image/pen-to-square-solid.svg" width="20" />
-                </span>
-                <strong>회원가입</strong>
-              </a>
-              <a
-                href="../cart/cart.html"
-                class="button has-text-link-dark has-background-link-light"
-              >
-                <span class="icon">
-                  <i class="fas fa-cart-shopping"></i>
-                </span>
-                <strong>장바구니</strong>
-              </a>
-              <a id="adminPage_btn" class="button has-background-danger-light">
-                <span class="icon">
-                  <i class="fa-solid fa-lock"></i>
-                </span>
-                <strong>관리자 페이지</strong>
-              </a>
-            </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="../category-booklist/category-booklist.html" class="button ">
+              <span class="icon">
+                <img src="./image/store-solid.svg" width="20" />
+              </span>
+              <strong>Shop</strong>
+            </a>
+            <a id="myPage_btn" class="button ">
+              <span class="icon">
+                <img src="./image/user-solid.svg" width="15" />
+              </span>
+              <strong>My Page</strong>
+            </a>
+            <a href="../register/register.html" class="button ">
+              <span class="icon">
+                <img src="./image/pen-to-square-solid.svg" width="20" />
+              </span>
+              <strong>Sign Up</strong>
+            </a>
+            <a href="../login/login.html" class="button ">
+              <span class="icon">
+                <img src="./image/unlock-solid.svg" width="15" />
+              </span>
+              <strong id="login_btn">Log In</strong>
+            </a>
+            <a href="../cart/cart.html" class="button ">
+              <span class="icon">
+                <i class="fas fa-cart-shopping"></i>
+              </span>
+              <strong>Cart</strong>
+            </a>
+            <a id="adminPage_btn" class="button">
+              <span class="icon">
+                <i class="fa-solid fa-lock"></i>
+              </span>
+              <strong>Admin Page</strong>
+            </a>
           </div>
         </div>
       </div>
-    </nav>
-
-    <!-- 로그인 폼(Form) -->
-    <div class="login-form-container">
-      <form class="box login-form-box" id="loginForm">
-        <p class="title is-5 has-text-info">어서오세요!</p>
-        <div class="field">
-          <label class="label" for="emailInput">이메일</label>
-          <div class="control">
-            <input
-              class="input"
-              id="emailInput"
-              type="email"
-              placeholder="abc@example.com"
-              autocomplete="on"
-            />
-          </div>
-        </div>
-
-        <div class="field mb-5">
-          <label class="label" for="passwordInput">비밀번호</label>
-          <div class="control">
-            <input
-              class="input"
-              id="passwordInput"
-              type="password"
-              placeholder="********"
-              autocomplete="on"
-            />
-          </div>
-        </div>
-
-        <button class="button is-info is-fullwidth" id="submitButton">로그인하기</button>
-      </form>
     </div>
-  </body>
+  </nav>
+
+  <!-- 로그인 폼(Form) -->
+  <div class="login-form-container">
+    <form class="box login-form-box" id="loginForm">
+      <p class="title is-5 has-text-info">다시 오셨군요!</p>
+      <div class="field">
+        <label class="label" for="emailInput">이메일</label>
+        <div class="control">
+          <input class="input" id="emailInput" type="email" placeholder="abc@example.com" autocomplete="on" />
+        </div>
+      </div>
+
+      <div class="field mb-5">
+        <label class="label" for="passwordInput">비밀번호</label>
+        <div class="control">
+          <input class="input" id="passwordInput" type="password" placeholder="********" autocomplete="on" />
+        </div>
+      </div>
+
+      <button class="button is-info is-fullwidth" id="submitButton">로그인</button>
+    </form>
+  </div>
+
+  <!-- 푸터 -->
+  <hr />
+  <footer>
+    <div>
+      <p>Eladin - Online Bookstore</p>
+      <img src="./image/Eladin_CI.png" />
+    </div>
+    <p>ⓒ 2022 Cozyma</p>
+  </footer>
+</body>
+
 </html>
