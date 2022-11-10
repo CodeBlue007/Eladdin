@@ -10,7 +10,10 @@ function changeName(userInfo) {
 
 async function myPage() {
     try {
-        const [orderList, userInfo] = await Promise.all([fetchOrder(), fetchUser()]); 
+        const [orderList, userInfo] = await Promise.all([fetchOrder(), fetchUser()]);
+        
+        localStorage.setItem("email", JSON.stringify(userInfo.email));
+        
         changeName(userInfo);
         renderOrder(orderList);
         addEvent();
