@@ -1,5 +1,3 @@
-import bcrypt from 'bcrypt';
-
 export async function openModal(userInfo){
 
     const modal = document.querySelector(".modal");

@@ -12,8 +12,6 @@ async function fetchUserInfo() {
 
 export async function renderUser(){
 
-    const setLocal = (key, item) => localStorage.setItem(key, JSON.stringify(item)); 
-
     const userInfo = await fetchUserInfo();
 
     const nameInput = document.querySelector(".input.is-link.is-light.name");
@@ -24,9 +22,7 @@ export async function renderUser(){
 
     const {_id,address, fullName, phoneNumber, password} = userInfo;
     const {address1, address2, postalCode} = address;
-
-    setLocal("userId", _id);
-    setLocal("curPw", password);
+    
 
     nameInput.value = fullName;
     phoneInput.value = phoneNumber;

@@ -5,9 +5,8 @@ import { validateData } from "./validateData.js";
 
 export async function registerForm(event) {
 
-  const getLocal = (key) => JSON.parse(localStorage.getItem(key));
-
   event.preventDefault();
+
   const nameInput = document.querySelector(".input.is-link.is-light.name");
   const phoneInput = document.querySelector(".input.is-link.is-light.phone");
   const postalCodeInput = document.querySelector(".input.is-link.is-light.post_code");
@@ -31,13 +30,10 @@ export async function registerForm(event) {
 
   try {
 
-    const userId = getLocal("userId");
-    const currentPassword = getLocal("curPw");
-
     const data = {
       "fullName": userName,
       password,
-      currentPassword,
+      currentPassword : curPw,
       "address": {
         "postalCode": postalCode,
         "address1": address,
@@ -48,9 +44,9 @@ export async function registerForm(event) {
     }
 
 
-    await Api.patch(`https://eladin-lgurfdxfjq-du.a.run.app/api/auth/users/${userId}`,'', data);
+    await Api.patch(`https://eladin-lgurfdxfjq-du.a.run.app/api/auth/my`,'', data);
 
-    alert(`정상적으로 회원가입되었습니다.`);
+    alert(`정상적으로 유저정보를 수정했습니다.`);
 
     // // 로그인 페이지 이동
     window.location.href = "../myPage.html";
