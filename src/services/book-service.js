@@ -1,4 +1,5 @@
 import { bookModel } from '../db/models/book-model.js'
+import { categoryModel } from '../db/models/category-model.js'
 
 
 export class BookService {
@@ -13,22 +14,24 @@ export class BookService {
 
   // admin만 가능한 기능
   async create(bookInfo) { //Object
-    // if((await categoryModel.existByTitle(bookInfo.category)) === false){
-    //     throw Error('존재하지 않는 카테고리!')
-    // }
+    if((await categoryModel.existByTitle(bookInfo.category)) === false){
+        throw Error('존재하지 않는 카테고리입니다.')
+    }
 
-    // const category = await CategoryModel.find({ title: bookInfo.category })
+    const category = await categoryModel.findByTitle(bookInfo.category)
 
-    await bookModel.create(bookInfo);
+    await bookModel.create({...bookInfo, category});
   }
 
   async update({ ISBN, bookInfo }) {
-    // if((await categoryModel.existByTitle(bookInfo.category)) === false){
-    //     throw Error('존재하지 않는 카테고리!')
-    // }
-    //DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르면
-    await bookModel.update({ ISBN, bookInfo });
-  }
+    if((await categoryModel.existByTitle(bookInfo.category)) === false){
+        throw Error('존재하지 않는 카테고리입니다.')
+    }
+    //DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르
+
+      await bookModel.update({ ISBN, bookInfo });
+
+    }
 
   async deleteByISBN(ISBN) {
     await bookModel.deleteByISBN(ISBN)
