@@ -6,7 +6,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js --exec babel-node",
+    "start:dev": "nodemon index.js --exec babel-node",
     "start": "node index.js"
   },
   "dependencies": {

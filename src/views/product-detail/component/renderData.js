@@ -12,13 +12,13 @@ function bookTemplate(data) {
      <img src=${imgUrl} alt="책이미지"/>
      </div>
      <ul class="book">
-          <li class="title">${title}</li>
-          <li class="author">저자 &nbsp;&nbsp;&nbsp;${author}</li>
-          <li class="publisher">출판사 &nbsp;&nbsp;&nbsp;${publisher}</li>
-          <li class="description">책 소개글 &nbsp;&nbsp;&nbsp;${description}</li>
-          <li class="price">가격 &nbsp;&nbsp;&nbsp;${newPrice}원</li>
-          <li class="publicationDate">출시일 &nbsp;&nbsp;&nbsp;${date}</li>
-          <button" class="cart">장바구니</button>
+          <li id="title">${title}</li>
+          <li id="description">"${description}"</li>
+          <li id="author">저자 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${author}</li>
+          <li id="publisher">출판사 &nbsp;&nbsp;&nbsp;${publisher}</li>
+          <li id="price">가격 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${newPrice}원</li>
+          <li id="publicationDate">출시일 &nbsp;&nbsp;&nbsp;${date}</li>
+          <button id="cart">장바구니 추가</button>
         </ul>
     </div>
         `;

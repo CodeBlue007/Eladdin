@@ -1,118 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./cart.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <script src="./cart.js" defer type="module"></script>
-    <script src="../loginNeeded.js" type="module" defer></script>
-    <script src="../adminLock.js" type="module" defer></script>
-    <script src="../logoutBtn.js" type="module" defer></script>
-    <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
-    <title>cart</title>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="./cart.css" />
+  <script src="./cart.js" defer type="module"></script>
+  <script src="../loginNeeded.js" type="module" defer></script>
+  <script src="../adminLock.js" type="module" defer></script>
+  <script src="../logoutBtn.js" type="module" defer></script>
+  <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
+  <!-- 폰트 -->
+  <link href="https://font.elice.io/EliceDigitalBaeum.css" rel="stylesheet">
+  <title>cart</title>
+</head>
+
+<body>
+  <header>
+    <!-- 헤더 -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="./home.html">
+            <img src="./image/Eladin_CI.png" alt="eladin_logo" />
           </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="../home/home.html">
-              <img src="./image/Eladin_CI.png" width="200" />
-            </a>
-          </div>
-
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a
-                  href="../category-booklist/category-booklist.html"
-                  class="button has-text-link-dark has-background-link-light"
-                >
-                  <span class="icon">
-                    <img src="./image/store-solid.svg" width="20" />
-                  </span>
-                  <strong>쇼핑하기</strong>
-                </a>
-                <a id="myPage_btn"
-                  class="button has-text-link-dark has-background-link-light"
-                >
-                  <span class="icon">
-                    <img src="./image/user-solid.svg" width="15" />
-                  </span>
-                  <strong>마이페이지</strong>
-                </a>
-                <a
-                  href="../register/register.html"
-                  class="button has-text-link-dark has-background-link-light"
-                >
-                  <span class="icon">
-                    <img src="./image/pen-to-square-solid.svg" width="20" />
-                  </span>
-                  <strong>회원가입</strong>
-                </a>
-                <a
-                  href="../login/login.html"
-                  class="button has-text-link-dark has-background-link-light"
-                >
-                  <span class="icon">
-                    <img src="./image/unlock-solid.svg" width="15" />
-                  </span>
-                  <strong id="login_btn">로그인</strong>
-                </a>
-                <a id="adminPage_btn" class="button has-background-danger-light">
-                  <span class="icon">
-                    <i class="fa-solid fa-lock"></i>
-                  </span>
-                  <strong>관리자 페이지</strong>
-                </a>
-              </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="../category-booklist/category-booklist.html" class="button ">
+                <span class="icon">
+                  <img src="./image/store-solid.svg" width="20" />
+                </span>
+                <strong>Shop</strong>
+              </a>
+              <a id="myPage_btn" class="button ">
+                <span class="icon">
+                  <img src="./image/user-solid.svg" width="15" />
+                </span>
+                <strong>My Page</strong>
+              </a>
+              <a href="../register/register.html" class="button ">
+                <span class="icon">
+                  <img src="./image/pen-to-square-solid.svg" width="20" />
+                </span>
+                <strong>Sign Up</strong>
+              </a>
+              <a href="../login/login.html" class="button ">
+                <span class="icon">
+                  <img src="./image/unlock-solid.svg" width="15" />
+                </span>
+                <strong id="login_btn">Log In</strong>
+              </a>
+              <a href="../cart/cart.html" class="button ">
+                <span class="icon">
+                  <i class="fas fa-cart-shopping"></i>
+                </span>
+                <strong>Cart</strong>
+              </a>
+              <a id="adminPage_btn" class="button">
+                <span class="icon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <strong>Admin Page</strong>
+              </a>
             </div>
           </div>
         </div>
-      </nav>
-      <h1 class="header">장바구니</h1>
-    </header>
-    <main>
-      <section class="container">
-        <div class="select_container">
-          <div class="select_box">
-            <button id="selectAll_btn" class="select_btn checked"></button>
-            <label for="selectAll_btn">전체선택</label>
-          </div>
-          <div class="delete_box">
-            <label for="delete_btn">전체삭제</label>
-            <button id="deleteall_btn">❌</button>
-          </div>
+      </div>
+    </nav>
+    <h1 class="header">장바구니</h1>
+  </header>
+  <main>
+    <section class="container">
+      <div class="select_container">
+        <div class="select_box">
+          <button id="selectAll_btn" class="select_btn checked"></button>
+          <label for="selectAll_btn">전체선택</label>
         </div>
-        <div class="item-container"></div>
-      </section>
-      <section class="orderbar">
-        <div class="priceTag">총금액 :</div>
-        <button class="order_btn">주문하기</button>
-      </section>
-      <section class="orderpage hidden">
-        <form class="form_container">
-          <div class="label_container">
-            <span class="tag is-success">주문상세 페이지</span>
-            <button class="button is-success is-focused">주문수정</button>
-          </div>
-          <div class="field">
+        <div class="delete_box">
+          <label for="delete_btn">전체삭제</label>
+          <button id="deleteall_btn">❌</button>
+        </div>
+      </div>
+      <div class="item-container"></div>
+    </section>
+    <section class="orderbar">
+      <div class="priceTag">총금액 :</div>
+      <button class="order_btn">주문하기</button>
+    </section>
+    <section class="orderpage hidden">
+      <form class="form_container">
+        <div class="label_container">
+          <span class="tag is-success">주문상세 페이지</span>
+          <button class="button is-success is-focused">주문수정</button>
+        </div>
+        <div class="field">
           <label class="label">상품목록</label>
           <div class="orderItem_container"></div>
 
@@ -124,23 +110,30 @@
               <button class="button is-link submit">주문하기</button>
             </div>
           </div>
-        </form>
-      </section>
-      <div class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <div class="order-complete">
-            <img class="eladin-img" src="./image/eladin.png" width="100" /><br />
-            <span>주문이 완료 되었습니다! <br /></span>
-            <span>구매해주셔서 감사합니다 😊 <br /></span>
-            <button class="confirm-btn">확인</button>
-          </div>
+      </form>
+    </section>
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="order-complete">
+          <img class="eladin-img" src="./image/eladin.png" width="100" /><br />
+          <span>주문이 완료 되었습니다! <br /></span>
+          <span>구매해주셔서 감사합니다 😊 <br /></span>
+          <button class="confirm-btn">확인</button>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
       </div>
-    </main>
-    <footer>
-      <div class="footer">copyRight by : 코지마</div>
-    </footer>
-  </body>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+  </main>
+  <!-- 푸터 -->
+  <hr />
+  <footer>
+    <div>
+      <p>Eladin - Online Bookstore</p>
+      <img src="./image/Eladin_CI.png" />
+    </div>
+    <p>ⓒ 2022 Cozyma</p>
+  </footer>
+</body>
+
 </html>
