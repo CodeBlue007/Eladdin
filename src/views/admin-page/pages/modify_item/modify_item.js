@@ -7,7 +7,7 @@ import { renderInfo } from "./component/itemRender.js";
 function modifyItem(){
     categoryRender();
     renderInfo();
-    // addEvents();
+    addEvents();
 }
 
 modifyItem();

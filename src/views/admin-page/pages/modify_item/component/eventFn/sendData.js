@@ -2,16 +2,27 @@ import * as Api from "../../../../../api.js";
 
 export async function sendData(InfoArray) {
 
-  const formData = new FormData();
+  const ISBN = JSON.parse(localStorage.getItem("ISBN"));
+  const Ebooktrue = document.querySelector("#Ebooktrue");
 
-  console.log(InfoArray);
-  makeFormData(formData, InfoArray);
-  console.log(formData);
+  const [title, select, author, publisher,
+    publicationDate, price, Ebook, description] = InfoArray;   
+
+    const newData = {
+      title,
+      Ebook : Ebooktrue.checked,
+      author,
+      publisher,
+      description,
+      category : select,
+      price,
+      publicationDate,
+    }
 
   try {
-    await Api.formPost("https://eladin-lgurfdxfjq-du.a.run.app/api/books",formData);
+    await Api.put(`https://eladin-lgurfdxfjq-du.a.run.app/api/books/${ISBN}`,'',newData);
 
-    alert(`상품추가를 완료했습니다.`);
+    alert(`상품수정을 완료했씁니다.`);
 
     window.location.href = "../../admin-page.html";
   } catch (err) {
@@ -20,24 +31,3 @@ export async function sendData(InfoArray) {
   }
 }
 
-function makeFormData(formData, InfoArray){
-
-  const makeISBN = () => Number(Math.random().toString().substring(2,15));
-
-  const [title, select, author, publisher,
-    publicationDate, price, Ebook, description, filename] = InfoArray;   
-
-  const fileInput = document.querySelector("#file");
-  const EbookTrueInput = document.querySelector("#Ebooktrue");
-
-  formData.append("file", fileInput.files[0],filename);
-  formData.append("title", title);
-  formData.append("ISBN", makeISBN());
-  formData.append("EBook", EbookTrueInput.checked);
-  formData.append("author", author);
-  formData.append("publisher", publisher);
-  formData.append("description", description);
-  formData.append("price", price);
-  formData.append("publicationDate", publicationDate);
-  formData.append("category", select);
-}

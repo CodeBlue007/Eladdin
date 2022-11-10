@@ -13,8 +13,6 @@ export async function fetchData() {
   }
 
 
-
-
 export function fetchOrders() {
     return Api.get("https://eladin-lgurfdxfjq-du.a.run.app/api/order/");    
 }
