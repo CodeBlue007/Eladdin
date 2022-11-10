@@ -1,8 +1,8 @@
 
 
-export function showDetail(e){
-    
-    const {id} = e.target.dataset;
+export function showDetail(e) {
+
+    const { id } = e.target.dataset;
 
     localStorage.setItem("ISBN", JSON.stringify(id));
 

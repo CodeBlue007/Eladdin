@@ -72,12 +72,14 @@ bookRouter.post("/", loginRequired, adminRequired, multer.single("file"), nextEr
 }));
 
 bookRouter.put("/:ISBN", loginRequired, adminRequired, nextError(async (req, res, next) => {
-  const ISBN = parseInt(req.params.ISBN)
-  const bookInfo = req.body
+  const ISBN = parseInt(req.params.ISBN);
+  const bookInfo = req.body;
+  const category = req.body.category;
+  const { id } = await categoryService.findByTitle(category);
 
-    await bookService.update({ISBN, bookInfo})
-    res.status(200).end()
-  
+  await bookService.update(ISBN, {bookInfo}, id);
+
+  res.status(200).end();
 }))
 
 //상품삭제

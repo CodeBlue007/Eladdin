@@ -75,7 +75,7 @@ userRouter.get("/userlist", loginRequired, adminRequired, async function (req, r
 // 사용자 정보 수정
 // (예를 들어 /api/users/abc12345 로 요청하면 req.params.userId는 'abc12345' 문자열로 됨)
 userRouter.patch(
-  "/users/:userId",
+  "/my",
   loginRequired,
   async function (req, res, next) {
     try {
@@ -87,8 +87,8 @@ userRouter.patch(
         );
       }
 
-      // params로부터 id를 가져옴
-      const userId = req.params.userId;
+      // token으로부터 id를 가져옴
+      const userId = req.currentUserId;
 
       // body data 로부터 업데이트할 사용자 정보를 추출함.
       const fullName = req.body.fullName;
@@ -117,7 +117,8 @@ userRouter.patch(
         ...(role && { role }),
       };
 
-      // 사용자 정보를 업데이트함.
+      // 사용자 정보를 업데이트함. 
+
       const updatedUserInfo = await userService.setUser(
         userInfoRequired,
         toUpdate
@@ -140,10 +141,10 @@ userRouter.get('/my', loginRequired, nextError(async (req, res, next)=> {
 
 }))
 
-userRouter.delete('/:userId', loginRequired, nextError(async (req,res,next)=> {
-  const {userId} = req.params
-  userService.deleteUser(userId)
+userRouter.delete('/my', loginRequired, nextError(async (req,res,next)=> {
+  const userId = req.currentUserId
+  await userService.deleteUser(userId)
 
-  res.status(204).end(`${userId}는 삭제되었습니다.`)
+  res.status(204).end()
 }))
 export { userRouter };
