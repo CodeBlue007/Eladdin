@@ -66,6 +66,7 @@
   border: none;
   background-color: white;
   font-size: medium;
+  cursor: pointer;
 }
 
 .container .select_btn {
@@ -134,6 +135,7 @@
   background-color: white;
   border: none;
   font-size: medium;
+  cursor: pointer;
 }
 
 .item-container .itembox .priceBox .newPrice {
@@ -170,6 +172,9 @@
   color: #6700E6;
 }
 
+.fa-solid.fa-caret-up{
+  z-index: -1;
+}
 .orderbar {
   display: flex;
   justify-content: flex-end;

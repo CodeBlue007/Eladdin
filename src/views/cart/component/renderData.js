@@ -17,9 +17,9 @@ function addItems(datas=[]) {
           <div class="infoBox">
             <span>${title}/ ${author}</span>
             <div class="add_btn_container">
-              <button class="plus_btn" data-id=${ISBN}><i class="fa-solid fa-caret-up"></i></button>
-              <input class="add_btn_input" type="text" disabled value=${volume}>
-              <button class="minus_btn" data-id=${ISBN}><i class="fa-solid fa-caret-down"></i></button>
+              <button class="plus_btn" data-id=${ISBN}><i class="fa-solid fa-caret-up" data-id=${ISBN}></i></button>
+              <input class="add_btn_input" type="text" id=${ISBN} disabled value=${volume}>
+              <button class="minus_btn" data-id=${ISBN}><i data-id=${ISBN} class="fa-solid fa-caret-down"></i></button>
             </div>
           </div>
           <div class="priceBox">

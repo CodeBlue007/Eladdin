@@ -1,5 +1,5 @@
 import { addCommas } from "../../useful-functions.js";
-import { handleData, renderByShipping } from "./handleOrders.js";
+import { renderByShipping } from "./handleOrders.js";
 
 function orderTemplate(orders) {
   let orderString = '';
