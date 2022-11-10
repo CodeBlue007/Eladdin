@@ -1,8 +1,8 @@
 export function changeCategory(e) {
 
-    const {category:target} = e.target.dataset;
+    const { category: target } = e.target.dataset;
 
-    if(!target) return;
+    if (!target) return;
 
     const itemList = document.querySelectorAll(".itemcontainer");
     const liList = document.querySelectorAll(".tab_container li");

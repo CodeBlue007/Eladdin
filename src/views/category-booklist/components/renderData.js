@@ -5,7 +5,7 @@ function addItems(datas) {
 
   return datas.map(data => {
 
-    const { imgUrl, title, author, price, description, category, ISBN} = data;
+    const { imgUrl, title, author, price, description, category, ISBN } = data;
     const newPrice = addCommas(price);
 
     return ` <div class="itemcontainer" data-category=${category}>
@@ -18,16 +18,15 @@ function addItems(datas) {
               </div>
               <div class="media-content">
                 <div class="content">
-                    <div>${title}</div>
-                    <div>${author}</div>
-                    <div>${description}</div>
-                    <div>${newPrice}</div>
-                    <div>${category}</div>
+                    <div id="title">${title}</div>
+                    <div id="author">${author}</div>
+                    <div id="desc">"${description}"</div>
+                    <div id="price">${newPrice}원</div>
                 </div>
               </div>
             </article>
             <div class="show_detail">
-                <button class="button is-black" data-id=${ISBN}>상세정보보기</button>
+                <button class="button" data-id=${ISBN}>상세정보 보기</button>
             </div>
           </div>
     </div>`

@@ -5,10 +5,10 @@ export function addEvents() {
     const tabContainer = document.querySelector(".tab_container");
     const detailBtn = document.querySelectorAll(".box .show_detail button");
 
-    [...detailBtn].forEach(btn =>{
+    [...detailBtn].forEach(btn => {
         btn.addEventListener("click", showDetail);
     })
     tabContainer.addEventListener("click", changeCategory);
 
-   
+
 }
