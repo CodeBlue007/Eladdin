@@ -2,7 +2,7 @@ import {sendData} from "./eventFn/sendData.js";
 
 
 export function addEvent(bookData) {
-  const cart_btn = document.querySelector('.cart');
+  const cart_btn = document.querySelector('#cart');
   const toCartBtn = document.querySelector(".button.is-success.is-light.confirm")
   const notToCartBtn = document.querySelector(".button.is-success.is-light.del")
 

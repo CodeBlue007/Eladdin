@@ -1,4 +1,4 @@
-import { renderOrder } from "./renderOrder.js";
+import { renderOrder } from "./component/renderOrder.js";
 import {fetchOrder, fetchUser} from "./fetchFn.js";
 import {addEvent} from "./component/addEvent.js"; 
 
@@ -13,9 +13,9 @@ async function myPage() {
         const [orderList, userInfo] = await Promise.all([fetchOrder(), fetchUser()]);
         
         localStorage.setItem("email", JSON.stringify(userInfo.email));
-        
+
         changeName(userInfo);
-        renderOrder(orderList);
+        renderOrder(orderList);  
         addEvent();
     }
 

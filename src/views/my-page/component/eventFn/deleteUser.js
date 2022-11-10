@@ -7,10 +7,10 @@ export async function deleteUser(){
     return;
 
     try {
-        await Api.delete("https://eladin-lgurfdxfjq-du.a.run.app/api/auth/my");
+        await Api.delete("https://eladin-lgurfdxfjq-du.a.run.app/api/auth/my"); 
 
         alert(`회원을 탈퇴하셨습니다.`);
-        sessionStorage.removeItem("token");
+        sessionStorage.removeItem("token"); 
 
         // 기본 페이지로 이동
         window.location.href = "../home/home.html";
