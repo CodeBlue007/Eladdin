@@ -24,8 +24,8 @@ return datas?.map(data => {
               <strong>${title}</strong>
               <br/>
               <small>${author}</small>
-              <div>수량 : ${volume}</div>
-              <div>상품가격 : ${newPrice}</div>
+              <div>quantity : ${volume}</div>
+              <div>price : ${newPrice}</div>
             </p>
           </div>
         </div>
