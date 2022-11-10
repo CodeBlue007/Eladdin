@@ -21,7 +21,7 @@ export function makeOrder(){
     const totalPrice = getTotalPrice(local);
 
     orderContainer.innerHTML = dataString;
-    orderPrice.innerText = `총가격 : ${totalPrice}`;
+    orderPrice.innerText = `Total Price: ${totalPrice}`;
     orderPage.classList.remove("hidden");
     orderBar.classList.add("hidden");
 }

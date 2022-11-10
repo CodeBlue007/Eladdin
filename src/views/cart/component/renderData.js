@@ -17,14 +17,14 @@ function addItems(datas=[]) {
           <div class="infoBox">
             <span>${title}/ ${author}</span>
             <div class="add_btn_container">
-              <button class="plus_btn" data-id=${ISBN}>🔺</button>
+              <button class="plus_btn" data-id=${ISBN}><i class="fa-solid fa-caret-up"></i></button>
               <input class="add_btn_input" type="text" disabled value=${volume}>
-              <button class="minus_btn" data-id=${ISBN}>🔻</button>
+              <button class="minus_btn" data-id=${ISBN}><i class="fa-solid fa-caret-down"></i></button>
             </div>
           </div>
           <div class="priceBox">
-            <button class="delete_btn" data-id=${ISBN}>❌</button>
-            <div>금액</div>
+            <button class="delete_btn" data-id=${ISBN}>X</button>
+            <div class="newPrice">price</div>
             <div>${newPrice}</div>
           </div>
           </div>`
