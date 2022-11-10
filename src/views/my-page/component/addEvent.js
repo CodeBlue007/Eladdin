@@ -4,7 +4,7 @@ const userInfo = document.querySelector('.userInfo');
 const modal = document.querySelector('.modal');
 const userInfo_btn = document.querySelector('.userInfo_btn');
 // const orderList_btn = document.querySelector('.order-list');
-const cartList_btn = document.querySelector('.cart');
+// const cartList_btn = document.querySelector('.cart');
 const confirm_btn = document.querySelector('.confirm-btn');
 const modal_x_btn = document.querySelector('.modal-close');
 
@@ -30,7 +30,7 @@ function showUserInfo() {
 }
 
 // orderList_btn.addEventListener('click', showOrderList);
-cartList_btn.addEventListener('click', showCartList);
+// cartList_btn.addEventListener('click', showCartList);
 userInfo_btn.addEventListener('click', showModal);
 confirm_btn.addEventListener('click', showUserInfo);
 modal_x_btn.addEventListener('click', closeModal);
