@@ -24,70 +24,54 @@
   <body>
     <!-- 헤더 -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="../home/home.html">
-            <img src="./image/Eladin_CI.png" width="200" />
+          <a href="../../home/home.html">
+            <img src="../image/Eladin_CI.png" alt="eladin_logo" />
           </a>
         </div>
-
+  
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a
-                href="../category-booklist/category-booklist.html"
-                class="button has-text-link-dark has-background-link-light"
-              >
+              <a href="../../category-booklist/category-booklist.html" class="button ">
                 <span class="icon">
-                  <img src="./image/store-solid.svg" width="20" />
+                  <img src="../image/store-solid.svg" width="20" />
                 </span>
-                <strong>쇼핑하기</strong>
+                <strong>Shop</strong>
               </a>
               <a id="myPage_btn"
-                class="button has-text-link-dark has-background-link-light"
+                href="../../my-page/myPage.html"
+                class="button "
               >
                 <span class="icon">
-                  <img src="./image/user-solid.svg" width="15" />
+                  <img src="../image/user-solid.svg" width="15" />
                 </span>
-                <strong>마이페이지</strong>
+                <strong>My Page</strong>
               </a>
               <a
-                href="../login/login.html"
-                class="button has-text-link-dark has-background-link-light"
+                href="../../login/login.html"
+                class="button "
               >
                 <span class="icon">
-                  <img src="./image/unlock-solid.svg" width="15" />
+                  <img src="../image/unlock-solid.svg" width="15" />
                 </span>
-                <strong>로그인</strong>
+                <strong>Log in</strong>
               </a>
               <a
-                href="../cart/cart.html"
-                class="button has-text-link-dark has-background-link-light"
+                href="../../cart/cart.html"
+                class="button "
               >
                 <span class="icon">
                   <i class="fas fa-cart-shopping"></i>
                 </span>
-                <strong>장바구니</strong>
+                <strong>Cart</strong>
               </a>
-              <a id="adminPage_btn" class="button has-background-danger-light">
+              <a href="../../admin-page/admin-page.html" id="adminPage_btn" class="button ">
                 <span class="icon">
                   <i class="fa-solid fa-lock"></i>
                 </span>
-                <strong>관리자 페이지</strong>
+                <strong>Admin Page</strong>
               </a>
             </div>
           </div>
@@ -253,4 +237,13 @@
       <button class="button is-link is-light" id="submitButton">회원정보수정</button>
     </form>
   </body>
+
+  <hr />
+  <footer>
+    <div>
+      <p>Eladin - Online Bookstore</p>
+      <img src="../image/Eladin_CI.png" />
+    </div>
+    <p>ⓒ 2022 Cozyma</p>
+  </footer>
 </html>
