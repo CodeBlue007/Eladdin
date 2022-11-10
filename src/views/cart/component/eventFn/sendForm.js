@@ -19,6 +19,7 @@ export async function sendForm(event){
        await Api.post("https://eladin-lgurfdxfjq-du.a.run.app/api/order/", sendData);
        
        modal.classList.add('is-active');
+       localStorage.removeItem("bookInfo");
               
       } catch (err) {
         console.error(err.stack);
