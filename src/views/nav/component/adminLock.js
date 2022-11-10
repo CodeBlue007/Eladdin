@@ -11,7 +11,6 @@ export async function verifyRole() {
 
     if (!token || data.role == "basic-user") {
       alert('관리자 계정으로 로그인 해주세요.');
-      window.location.href = "../login/login.html";
       return;
     } else {
       window.location.href = "../admin-page/admin-page.html";
