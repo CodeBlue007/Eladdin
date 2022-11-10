@@ -1,24 +1,10 @@
 
 
 
-function showCartList() {
-    
-    const cartList = document.querySelector('.cart-products');
+export function showOrder() {
+  const orderContainer = document.querySelector(".order-products");
 
-    if (cartList.style.display !== 'none') {
-      cartList.style.display = 'none';
-    } else {
-      cartList.style.display = 'block';
-    }
-  }
+  orderContainer.classList.toggle("hidden");
+}
   
-  
-  function showUserInfo() {
-    
-    const modal = document.querySelector('.modal');
-
-    userInfo.style.display = 'block';
-    modal.classList.remove('is-active');
-  }
-  
-  
+ 
