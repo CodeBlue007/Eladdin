@@ -123,6 +123,10 @@ export class OrderModel {
     }
     
     async cancelOrderById(orderId) {
+        const targetOrder = await Order.findById({_id : orderId}).exec();
+        if(targetOrder.shippingStatus !== '배송준비중'){
+            throw new Error(`배송준비중인 주문만 취소가 가능합니다.`)    
+        }
         await Order.deleteOne({ _id : orderId })
     }
     

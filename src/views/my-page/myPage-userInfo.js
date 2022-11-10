@@ -1,4 +1,4 @@
-//fetch 해주는 부분은 myPage-userInfo.js에 있어서 주석처리하였습니다.
+//fetch 해주는 부분은 myPage-order.js에 있어서 주석처리하였습니다.
 // async function fetchData() {
 //   const res = await fetch('./data/data.json');
 //   const data = await res.json();
