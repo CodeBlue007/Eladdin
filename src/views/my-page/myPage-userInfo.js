@@ -1,10 +1,3 @@
-async function fetchData() {
-  const res = await fetch('./data/data.json');
-  const data = await res.json();
-  console.log(data);
-  return data;
-}
-
 function renderData(datas) {
   const userInfo = document.querySelector('.userInfo');
   const dataString = htmlTemplate(datas);
@@ -67,4 +60,3 @@ function htmlTemplate(datas) {
   });
 }
 
-fetchData().then((data) => renderData(data));
