@@ -1,4 +1,5 @@
 @import url('../reset.css');
+
 * {
   font-family: 'Elice Digital Baeum', sans-serif;
 }
@@ -40,9 +41,10 @@
 .header {
   text-align: center;
   margin: 50px;
-  font-size: 50px;
+  font-size: 45px;
   font-family: 'Elice Digital Baeum';
   font-weight: 700;
+  letter-spacing: 4px;
 }
 
 .select_container {
@@ -169,7 +171,7 @@
   background-color: white;
   font-weight: bold;
   cursor: pointer;
-  color: #6700E6;
+  color: #6700e6;
 }
 
 .fa-solid.fa-caret-up{
@@ -199,7 +201,7 @@
   border-radius: 5px;
   padding: 5px;
   cursor: pointer;
-  background-color: #6700E6;
+  background-color: #6700e6;
   color: white;
   padding: 10px;
   font-family: 'Elice Digital Baeum';

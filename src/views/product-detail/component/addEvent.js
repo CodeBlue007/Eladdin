@@ -1,28 +1,28 @@
-import {sendData} from "./eventFn/sendData.js";
+import { sendData } from "./eventFn/sendData.js";
 
 
 export function addEvent(bookData) {
   const cart_btn = document.querySelector('#cart');
-  const toCartBtn = document.querySelector(".button.is-success.is-light.confirm")
-  const notToCartBtn = document.querySelector(".button.is-success.is-light.del")
+  const toCartBtn = document.querySelector(".button.is-light.confirm")
+  const notToCartBtn = document.querySelector(".button.is-light.del")
 
-  console.log(toCartBtn,notToCartBtn);
+  console.log(toCartBtn, notToCartBtn);
 
-  cart_btn.addEventListener('click',()=>sendData(bookData));
+  cart_btn.addEventListener('click', () => sendData(bookData));
   toCartBtn.addEventListener("click", moveToCart);
   notToCartBtn.addEventListener("click", closeModal);
 
 }
 
-function moveToCart(){
+function moveToCart() {
   const modal = document.querySelector(".modal");
 
   modal.classList.remove("is-active");
 
-  window.location.href= "../cart/cart.html";
+  window.location.href = "../cart/cart.html";
 }
 
-function closeModal(){
+function closeModal() {
   const modal = document.querySelector(".modal");
   modal.classList.remove("is-active");
 }
