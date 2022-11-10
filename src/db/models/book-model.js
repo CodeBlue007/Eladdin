@@ -16,8 +16,14 @@ export class BookModel {
         return books;
     }
 
+    async existsByISBN(ISBN){
+        // https://mongoosejs.com/docs/api/model.html#model_Model-exists
+        const book = await Book.exists({ISBN}).exec();
+        return book !== null
+    }
+
     async findByISBN(ISBN) {
-        if((await Book.exists({ISBN})) == null){
+        if(! (await this.existsByISBN(ISBN))){
             throw new Error(`DB에 ${ISBN}는 존재하지 않습니다.`)
         }
         const book = await Book.findOne({ ISBN })
@@ -33,7 +39,7 @@ export class BookModel {
     // admin만 가능한 기능
     async create(bookInfo) { //Object
         // DB에 이미 존재하지 않으면
-        if((await Book.exists({ISBN : bookInfo.ISBN})) !== null){
+        if(await this.existsByISBN(bookInfo.ISBN)){
             throw new Error(`DB에 ${bookInfo.ISBN}는 존재합니다.`)
         }
 
@@ -43,16 +49,18 @@ export class BookModel {
     async update(ISBN, {bookInfo}, categoryId) {
         // DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르면
         //이미 존재하지 않으면
-        if((await Book.exists({ISBN})) == null){
+        if(await this.existsByISBN(ISBN)){
             throw new Error(`DB에 ${ISBN}에 해당하는 Book이 존재하지 않습니다`)
         }
-        
-        console.log(categoryId);
-        await Book.findOneAndUpdate({ ISBN }, {...bookInfo, category: categoryId }, { returnOriginal: false });
+        //ISBN 값이 중복된다면?
+        if(await this.existsByISBN(bookInfo.ISBN)){
+            throw new Error(`해당하는 ISBN이 존재합니다. 고유한 값을 입력해주세요.`)
+        }
+        await Book.findOneAndUpdate({ ISBN }, bookInfo, { returnOriginal: false });
     }
 
     async deleteByISBN(ISBN) {
-        if((await Book.exists({ISBN})) == null){
+        if(await this.existsByISBN(ISBN)){
             throw new Error(`DB에 ${ISBN}는 존재하지 않아 삭제할 수 없습니다.`)
         }
         await Book.deleteOne({ ISBN });
