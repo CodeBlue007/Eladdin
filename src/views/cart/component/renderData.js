@@ -2,12 +2,12 @@ import { addCommas } from "../../useful-functions.js"
 import { setTotalPrice } from "../util/util.js"
 import { addEvents } from "./addEvents.js";
 
-function addItems(datas=[]) {
-  
+function addItems(datas = []) {
+
   return datas?.map(data => {
 
-    const { imgUrl, title, author, price, ISBN, volume} = data;
-    const newPrice = addCommas(price);  
+    const { imgUrl, title, author, price, ISBN, volume } = data;
+    const newPrice = addCommas(price);
 
     return `<div class="itembox" data-id=${ISBN}> 
           <div class="imgbox">
@@ -15,7 +15,7 @@ function addItems(datas=[]) {
             <img class="bookImg" src=${imgUrl} alt="book"></img>
           </div>
           <div class="infoBox">
-            <span>${title}/ ${author}</span>
+            <span>${title} / ${author}</span>
             <div class="add_btn_container">
               <button class="plus_btn" data-id=${ISBN}><i class="fa-solid fa-caret-up" data-id=${ISBN}></i></button>
               <input class="add_btn_input" type="text" id=${ISBN} disabled value=${volume}>
@@ -24,8 +24,9 @@ function addItems(datas=[]) {
           </div>
           <div class="priceBox">
             <button class="delete_btn" data-id=${ISBN}>X</button>
-            <div class="newPrice">price</div>
-            <div>${newPrice}</div>
+            <div class="newPrice">
+              <div>${newPrice}원</div>
+            </div>
           </div>
           </div>`
   }).join('');

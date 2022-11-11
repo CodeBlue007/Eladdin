@@ -27,7 +27,7 @@ export function getTotalPrice(datas) {
 export function setTotalPrice(datas) {
   const priceTag = document.querySelector(".priceTag");
   const totalPrice = getTotalPrice(datas);
-  priceTag.innerText = `Total Price: ${totalPrice}`
+  priceTag.innerText = `총 가격: ${totalPrice}원`
 }
 
 export function getFullDate() {
