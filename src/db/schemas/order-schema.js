@@ -1,4 +1,5 @@
 import { Schema } from 'mongoose';
+import timestamps from 'mongoose-timestamp';
 
 const ItemSchema = new Schema({
   book: {
@@ -15,7 +16,7 @@ const ItemSchema = new Schema({
     type: Number,
     required: true,
     min: 0
-  }
+  }  
 });
 
 const OrderSchema = new Schema(
@@ -39,7 +40,7 @@ const OrderSchema = new Schema(
       type: Number,
       required: true,
       min: 0
-    }
+    },
     // receiver: {
     //   type: new Schema({
     //     fullName: {
@@ -65,8 +66,9 @@ const OrderSchema = new Schema(
     //     }
     //   })
     // }
-  },
-  { timestamps: true }, //createdAt, updatedAt을 mock에 추가하기
+  }  
 );
+
+OrderSchema.plugin(timestamps);
 
 export { OrderSchema, ItemSchema };

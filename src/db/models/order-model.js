@@ -109,9 +109,10 @@ export class OrderModel {
             items,
             totalPrice,
             shippingStatus: '배송준비중', // 처음에는 준비중
-            user: userId
-        })
-        await order.save()
+            user: userId            
+        });                
+        await order.save();
+        
     }
     //????
     // async editOrderInfo({ }, orderId) { //Object
@@ -139,6 +140,11 @@ export class OrderModel {
     async dangerousDeleteAll() {
         await Order.deleteMany({});
     }
+
+    // async findOne(id) {
+    //     const orderOne = await Order.findById(id);
+    //     console.log(orderOne);
+    // }
 }
 
 const orderModel = new OrderModel();
