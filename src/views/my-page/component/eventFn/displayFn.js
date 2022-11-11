@@ -1,6 +1,4 @@
 
-
-
 export function showOrder() {
   const orderContainer = document.querySelector(".order-products");
 

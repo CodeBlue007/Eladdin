@@ -1,4 +1,35 @@
 @import url("../reset.css");
+* {
+  font-family: 'Elice Digital Baeum', sans-serif;
+}
+
+#navbarBasicExample {
+  display: flex;
+  align-items: center;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a {
+  background-color: #ffffff;
+  border: none;
+  color: #5865ff;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a > span > img {
+  filter: invert(33%) sepia(55%) saturate(2251%) hue-rotate(222deg) brightness(104%) contrast(100%);
+}
+
+#navbarBasicExample > div.navbar-start > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#navbarBasicExample > div.navbar-start > a > img {
+  width: 250px;
+  height: 50px;
+  object-fit: cover;
+}
 
 header {
   border-bottom: 1px solid grey;
@@ -345,4 +376,62 @@ header {
 .product-list .delete_btn {
   flex-basis: 5%;
   height: 30px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+hr {
+  border: 1px solid rgba(103, 0, 230, 0.1);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer > div > p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 28px;
+
+  display: flex;
+  align-items: center;
+  font-feature-settings: 'liga' off;
+
+  color: #6b7280;
+  letter-spacing: 1.5px;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+footer > div > img {
+  width: 150px;
+  height: 30px;
+  object-fit: cover;
+  margin-left: 500px;
+}
+
+footer > p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+
+  font-feature-settings: 'liga' off;
+
+  margin-left: 100px;
+  margin-right: 100px;
+
+  color: #6b7280;
+  letter-spacing: 1.5px;
 }

@@ -19,7 +19,7 @@ export function addEvent(){
     
     
     if(token){
-      login_btn && (login_btn.textContent ='로그아웃');
+      login_btn && (login_btn.textContent ='Log out');
       login_btn && (login_btn.addEventListener('click', logout));
     }
 
