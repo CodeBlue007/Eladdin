@@ -12,7 +12,7 @@ export function getLocal(key) {
   return localDatas ? JSON.parse(localDatas) : [];
 }
 
-export function getTotalPrice(datas) {
+export function getTotalPrice(datas =[]) {
   const totalPrice = datas ? datas.reduce((acc, cur) => {
     if (cur.checked) {
       const price = Number(cur.price) * (cur.volume);

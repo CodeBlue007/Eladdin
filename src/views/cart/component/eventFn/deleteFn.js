@@ -1,4 +1,5 @@
 import { setLocal, getLocal } from "../../util/util.js";
+import { setTotalPrice } from "../../util/util.js";
 
 export function deleteAll() {
     const selectAllBtn = document.querySelector('#selectAll_btn');
@@ -6,6 +7,7 @@ export function deleteAll() {
     selectAllBtn.classList.remove("checked");
     itemContainer.innerHTML = '';
     setLocal();
+    setTotalPrice();
 }
 
 
@@ -17,4 +19,5 @@ export function deleteOne(event) {
     console.log(filtered);
     targetbox.remove();
     setLocal(filtered);
+    setTotalPrice(filtered);
 }
