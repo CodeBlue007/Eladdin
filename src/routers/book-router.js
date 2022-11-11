@@ -34,9 +34,7 @@ bookRouter.get("/:ISBN", nextError(async (req, res, next) => {
 
 //상품추가
 bookRouter.post("/", loginRequired, adminRequired, multer.single("file"), nextError(async (req, res, next) => {
-  const category = req.body.category;
-  const newBook = req.body;  
-  const { id } = await categoryService.findByTitle(category);
+  const newBook = req.body;
 
   /// img파일전송 코드 -- 시작
   if (!req.file) {
@@ -64,8 +62,7 @@ bookRouter.post("/", loginRequired, adminRequired, multer.single("file"), nextEr
   /// img파일전송 코드 -- 끝
   await bookService.create({    
     imgUrl: `https://storage.googleapis.com/${bucketName}/${blob.name}`,
-    ...newBook,    
-    category: id
+    ...newBook
   });
   
   res.status(200).end()
@@ -73,11 +70,9 @@ bookRouter.post("/", loginRequired, adminRequired, multer.single("file"), nextEr
 
 bookRouter.put("/:ISBN", loginRequired, adminRequired, nextError(async (req, res, next) => {
   const ISBN = parseInt(req.params.ISBN);
-  const bookInfo = req.body;
-  const category = req.body.category;
-  const { id } = await categoryService.findByTitle(category);
+  const bookInfo = req.body;  
 
-  await bookService.update(ISBN, {bookInfo}, id);
+  await bookService.update(ISBN, {bookInfo});
 
   res.status(200).end();
 }))

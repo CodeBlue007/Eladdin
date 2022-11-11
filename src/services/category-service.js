@@ -26,6 +26,11 @@ export class CategoryService {
 
       await categoryModel.deleteByTitle(title);
   }
+
+//   async existByTitle(title) {
+//       await categoryModel.existByTitle(title);
+//   }
+// }
 }
 
 const categoryService = new CategoryService();
