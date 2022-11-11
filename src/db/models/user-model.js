@@ -1,5 +1,5 @@
 import { model } from "mongoose";
-import { UserSchema } from "../schemas/user-schema";
+import { UserSchema } from "../schemas/user-schema.js";
 
 const User = model("users", UserSchema);
 
@@ -9,8 +9,12 @@ export class UserModel {
     return user;
   }
 
-  async findById(userId) {
+  async findUserById(userId) {
     const user = await User.findOne({ _id: userId });
+    if((await User.exists({_id : userId})) == null){
+      throw new Error(`DB에 ${userId}는 존재하지 않습니다.`)
+    }
+
     return user;
   }
 
@@ -31,6 +35,20 @@ export class UserModel {
     const updatedUser = await User.findOneAndUpdate(filter, update, option);
     return updatedUser;
   }
+
+  async deleteUser(userId){
+    const targetUser = await User.findOne({_id: userId})
+    
+    if((await User.exists({_id: userId})) == null){
+      throw new Error(`DB에 ${targetUser.userId}는 존재하지 않습니다.`)  
+    }
+    await User.deleteOne(targetUser)
+  }
+
+//   async dangerousDeleteAll() {
+    
+//     await User.deleteMany({});
+// }
 }
 
 const userModel = new UserModel();

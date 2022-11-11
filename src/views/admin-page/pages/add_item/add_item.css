@@ -1,0 +1,67 @@
+.item_container{
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+}
+
+.item_container .header{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item_container .item_box{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 15px;
+}
+
+.tag.is-black.is-medium{
+    width: 100px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+.tag.header{
+    width: 30%;
+    margin:20px;
+    border: 1px solid yellow;
+}
+
+.input.is-info{
+    height: 30px;
+    width: 80%;
+}
+
+.select{
+    height: 0px;
+}
+
+.control{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item_box.explain{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item_box.explain .textarea{
+    margin-top: 20px;
+    height: 150px;
+}
+
+.file.has-name{
+    margin-top: 10px;
+}
+
+.button.is-black{
+    margin-top: 20px;
+}

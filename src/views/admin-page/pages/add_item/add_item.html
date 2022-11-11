@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>쇼핑-데모</title>
+    <!-- 아이콘 -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/elice-rabbit-favicon.png" />
+    <!-- bulma css 관련 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <!-- 폰트 어썸: 아이콘 -->
+    <script defer src="https://kit.fontawesome.com/9daa42bcef.js" crossorigin="anonymous"></script>
+    <!-- 커스텀 css, js -->
+    <link rel="stylesheet" href="add_item.css" />
+    <script src="add_item.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="../../../home/home.html">
+            <img src="../../image/Eladin_CI.png" width="200" />
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a
+                href="../../../category-booklist/category-booklist.html"
+                class="button has-text-link-dark has-background-link-light"
+              >
+                <span class="icon">
+                  <img src="../../image/store-solid.svg" width="20" />
+                </span>
+                <strong>Shop</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <form class="item_container">
+        <div class="header">
+          <span class="tag is-black is-large header">상품추가페이지</span>
+        </div>
+        <div class="item_box">
+          <span class="tag is-black is-medium">책제목</span>
+          <input id="title" class="input is-info" type="text" placeholder="제목" />
+        </div>
+        <div class="item_box">
+          <span class="tag is-black is-medium">카테고리</span>
+          <div class="select category">
+            <select id="category_select">
+            </select>
+          </div>
+        </div>
+        <div class="item_box">
+          <span class="tag is-black is-medium">저자</span>
+          <input id="author" class="input is-info" type="text" placeholder="저자" />
+        </div>
+        <div class="item_box">
+          <span class="tag is-black is-medium">출판사</span>
+          <input id="publisher" class="input is-info" type="text" placeholder="출판사" />
+        </div>
+        <div class="item_box">
+            <span class="tag is-black is-medium">출판일자</span>
+            <input id="publishDate" class="input is-info" type="text" placeholder="2019-03-07" />
+        </div>
+        <div class="item_box">
+            <span class="tag is-black is-medium">가격</span>
+            <input id="price" class="input is-info" type="text" placeholder="15000" />
+        </div>
+        <div class="item_box">
+            <span class="tag is-black is-medium">Ebook</span>
+            <div class="control">
+                <label class="radio">
+                  <input id="Ebooktrue"type="radio" name="ebook" checked>
+                  Yes
+                </label>
+                <label class="radio">
+                  <input id="Ebookfalse" type="radio" name="ebook">
+                  No
+                </label>
+              </div>
+          </div>
+        <div class="item_box explain">
+            <span class="tag is-black is-medium">설명</span>
+            <textarea id="description" class="textarea" placeholder="설명을 작성해주세요" rows="10"></textarea>
+        </div>
+        <div class="file has-name">
+          <label class="file-label">
+            <input id="file" class="file-input" type="file" name="resume"
+            accept="image/png, image/jpeg" />
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <span class="file-label"> 이미지업로드 </span>
+            </span>
+            <span class="file-name"> Screen Shot 2017-07-29 at 15.54.25.png </span>
+          </label>
+        </div>
+        <button class="button is-black">상품추가</button>
+    </form>
+    </main>
+  </body>
+</html>

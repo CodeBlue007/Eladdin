@@ -1,0 +1,395 @@
+@import url('../reset.css');
+
+* {
+  font-family: 'Elice Digital Baeum', sans-serif;
+}
+
+#navbarBasicExample {
+  display: flex;
+  align-items: center;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a {
+  background-color: #ffffff;
+  border: none;
+  color: #5865ff;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a > span > img {
+  filter: invert(33%) sepia(55%) saturate(2251%) hue-rotate(222deg) brightness(104%) contrast(100%);
+}
+
+#navbarBasicExample > div.navbar-start > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#navbarBasicExample > div.navbar-start > a > img {
+  width: 250px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.header {
+  text-align: center;
+  margin: 50px;
+  font-size: 45px;
+  font-family: 'Elice Digital Baeum';
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.select_container {
+  display: flex;
+  height: 35px;
+  width: inherit;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select_container .select_box {
+  height: inherit;
+}
+.select_container .delete_box {
+  height: inherit;
+}
+
+.container #deleteall_btn {
+  margin: 5px;
+  border: none;
+  background-color: white;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.container .select_btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.container .select_btn.checked {
+  background-color: black;
+}
+
+.item-container {
+  width: inherit;
+  position: relative;
+  margin: auto;
+}
+
+.item-container .itembox {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.item-container .itembox .imgbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  border: 1px solid black;
+  width: 200px;
+}
+
+.item-container .itembox .imgbox .bookImg {
+  width: 150px;
+  height: 200px;
+  margin: auto;
+}
+
+.item-container .itembox .infoBox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  flex-basis: 400px;
+  flex-grow: 2;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item-container .itembox .priceBox {
+  display: flex;
+  flex-basis: 200px;
+  flex-direction: column;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.item-container .itembox .priceBox .delete_btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.item-container .itembox .priceBox .newPrice {
+  margin-bottom: 10px;
+}
+
+.add_btn_container {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  text-align: cemter;
+  background-color: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.add_btn_container .add_btn_input {
+  width: 20px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+}
+
+.plus_btn,
+.minus_btn {
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+  color: #6700e6;
+}
+
+.fa-solid.fa-caret-up{
+  z-index: -1;
+}
+.orderbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
+  height: 10vh;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3000;
+  background-color: blanchedalmond;
+}
+
+.orderbar.hidden {
+  display: none;
+}
+
+.orderbar .order_btn {
+  margin: 0 20px 0 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #6700e6;
+  color: white;
+  padding: 10px;
+  font-family: 'Elice Digital Baeum';
+  font-weight: 700;
+}
+
+.orderbar .priceTag {
+  padding: 10px;
+  font-family: 'Elice Digital Baeum';
+}
+
+.orderpage {
+  width: 70%;
+  margin: 50px auto;
+  border-top: 2px solid black;
+}
+
+.orderpage.hidden {
+  display: none;
+}
+
+.orderpage .form_container {
+  width: inherit;
+  margin: 20px auto;
+}
+
+.orderpage .form_container .label_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.label_container .tag.is-success {
+  width: 150px;
+  font-size: 15px;
+  height: 30px;
+  font-family: 'Elice Digital Baeum';
+  font-weight: 700;
+}
+
+.label_container .button.is-success.is-focused {
+  height: 30px;
+  font-family: 'Elice Digital Baeum';
+  font-weight: 700;
+}
+
+.orderItem_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  width: inherit;
+}
+
+.orderItem .box {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.control .button.is-link.submit {
+  font-family: 'Elice Digital Baeum';
+  font-weight: 700;
+}
+
+.orderItem .image.is-64x64 {
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.orderItem .image.is-64x64 img {
+  width: inherit;
+  height: inherit;
+}
+
+.orderItem .content {
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.order_result_container {
+  display: flex;
+  align-items: center;
+}
+
+.order_result_container .box {
+  height: 40px;
+  text-align: center;
+  line-height: 0;
+  font-weight: bold;
+}
+
+.order_result_container .button.is-link {
+  margin: 20px;
+  height: 40px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+hr {
+  border: 1px solid rgba(103, 0, 230, 0.1);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer > div > p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 28px;
+
+  display: flex;
+  align-items: center;
+  font-feature-settings: 'liga' off;
+
+  color: #6b7280;
+  letter-spacing: 1.5px;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+footer > div > img {
+  width: 150px;
+  height: 30px;
+  object-fit: cover;
+  margin-left: 500px;
+}
+
+footer > p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+
+  font-feature-settings: 'liga' off;
+
+  margin-left: 100px;
+  margin-right: 100px;
+
+  color: #6b7280;
+  letter-spacing: 1.5px;
+}
+
+.modal-content {
+  margin: auto;
+  font-weight: 800;
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.order-complete {
+  flex-direction: column;
+}
+
+.eladin-img {
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.confirm-btn {
+  margin-top: 20px;
+  width: 50px;
+}

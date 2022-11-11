@@ -1,0 +1,437 @@
+@import url("../reset.css");
+* {
+  font-family: 'Elice Digital Baeum', sans-serif;
+}
+
+#navbarBasicExample {
+  display: flex;
+  align-items: center;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a {
+  background-color: #ffffff;
+  border: none;
+  color: #5865ff;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a > span > img {
+  filter: invert(33%) sepia(55%) saturate(2251%) hue-rotate(222deg) brightness(104%) contrast(100%);
+}
+
+#navbarBasicExample > div.navbar-start > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#navbarBasicExample > div.navbar-start > a > img {
+  width: 250px;
+  height: 50px;
+  object-fit: cover;
+}
+
+header {
+  border-bottom: 1px solid grey;
+  margin: 20px 0 20px 70px;
+  padding-bottom: 20px;
+  width: 90%;
+  color: grey;
+}
+
+.link_add{
+  color:black;
+}
+
+
+/* 본문 */
+.contents {
+  display: flex;
+}
+
+.box .category_input{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.box .input_container{
+  display: flex;
+  margin-top: 10px;
+}
+
+.admin-category {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 120px;
+  height: 200px;
+  margin: 0 10px 0 80px;
+  padding: 30px 0 30px 0;
+  align-items: center;
+}
+
+/* 주문관리 */
+.view-orders {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.view-orders.hidden{
+  display: none;
+}
+
+.orderManagement {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  width: 80px;
+}
+
+.categoryManagement {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.productManegement {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  background-color: bisque;
+  }
+
+.bar .orderDate {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar .bookTitle {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.bar .count {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar .price {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar .shipping {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar .cancelOrder {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+}
+
+.order .orderDate {
+  flex-basis: 10%;
+  text-align: center;
+}
+.order .cancelOrder-btn {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.order .shipping_select {
+  flex-basis: 10%;
+  width: 80%;
+  text-align: center;
+  padding: 5px;
+}
+
+.order .book_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.order .count_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.order .price_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-basis: 10%;
+  text-align: center;
+}
+
+
+/* 카테고리 설정 */
+.view-category {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-category.hidden{
+  display: none;
+}
+
+.bar_1 {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  padding-left: 30px;
+  background-color: bisque;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.categoryName {
+  margin-left: 30px;
+  text-align: center;
+}
+
+.addCategory {
+  margin-right: 50px;
+  text-align: center;
+}
+
+.category-list {
+  width: 400px;
+  display: flex;
+  margin: 5px;  
+}
+
+.category-list .category-name {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.category-list .editCategory_btn {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.category-list .deleteCategory_btn {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+/* 제품 설정 */
+
+.view-product {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  display: flex;
+}
+
+
+.view-product.hidden {
+  display:none;
+}
+
+.bar_2 {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  background-color: bisque;
+  font-size: medium;
+}
+
+.bar_2 .book-img {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar_2 .book-title {
+  flex-basis: 18%;
+  text-align: center;
+}
+
+.bar_2 .book-ebook {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.bar_2 .book-author {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.bar_2 .book-publisher {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.bar_2 .book-description {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.bar_2 .book-price {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar_2 .book-publicationDate {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.bar_2 .add-product {
+  flex-basis: 11%;
+  text-align: center;
+  margin-left: 10px;
+}
+
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  font-size: medium;
+  border-bottom: 1px solid black;
+  align-items: center;
+  padding : 10px 0 10px 0;
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+}
+
+.product-list .book-img {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.product-list .book-title {
+  flex-basis: 18%;
+  text-align: center;
+}
+
+.product-list .EBook {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.product-list .author {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.product-list .publisher {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.product-list .intro {
+  flex-basis: 28%;
+  text-align: center;
+}
+
+.product-list .price {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+.product-list .publicationDate {
+  flex-basis: 15%;
+  text-align: center;
+}
+
+
+.product-list .edit_btn {
+  flex-basis: 5%;
+  height: 30px;
+  align-items: center;
+}
+
+.product-list .delete_btn {
+  flex-basis: 5%;
+  height: 30px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+hr {
+  border: 1px solid rgba(103, 0, 230, 0.1);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer > div > p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 28px;
+
+  display: flex;
+  align-items: center;
+  font-feature-settings: 'liga' off;
+
+  color: #6b7280;
+  letter-spacing: 1.5px;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+footer > div > img {
+  width: 150px;
+  height: 30px;
+  object-fit: cover;
+  margin-left: 500px;
+}
+
+footer > p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+
+  font-feature-settings: 'liga' off;
+
+  margin-left: 100px;
+  margin-right: 100px;
+
+  color: #6b7280;
+  letter-spacing: 1.5px;
+}

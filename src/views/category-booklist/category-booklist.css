@@ -1,0 +1,206 @@
+* {
+  font-family: 'Elice Digital Baeum', sans-serif;
+}
+
+#navbarBasicExample {
+  display: flex;
+  align-items: center;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a {
+  background-color: #ffffff;
+  border: none;
+  color: #5865ff;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a > span > img {
+  filter: invert(33%) sepia(55%) saturate(2251%) hue-rotate(222deg) brightness(104%) contrast(100%);
+}
+
+#navbarBasicExample > div.navbar-start > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#navbarBasicExample > div.navbar-start > a > img {
+  width: 250px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  align-items: center;
+  margin: auto;
+}
+
+.tabs {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.book_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.book_container .itemcontainer {
+  width: 100%;
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+
+.book_container .itemcontainer .box {
+  height: 250px;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.media .image.is-64x64 {
+  width: 200px;
+  height: 250px;
+}
+
+.media .image.is-64x64 img {
+  width: inherit;
+  height: inherit;
+}
+
+.box .show_detail {
+  width: inherit;
+  height: inherit;
+  top: 0;
+  position: absolute;
+  opacity: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.box .show_detail:hover {
+  opacity: 0.9;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.box .show_detail button {
+  width: 150px;
+  height: 50px;
+}
+
+.itemcontainer .box .media .content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  height: 250px;
+  margin-right: 10px;
+}
+
+.book_container > div > div > div > button {
+  background-color: #3e56c4;
+  color: #ffffff;
+}
+
+.book_container > div > div > div > button:hover {
+  color: #f5f5f5;
+}
+
+#title {
+  font-size: x-large;
+}
+
+#author {
+  font-size: larger;
+}
+
+#desc {
+  margin-top: 3px;
+  font-style: italic;
+}
+
+#price {
+  margin-top: 5px;
+  font-size: large;
+  font-weight: 600;
+}
+
+.itemcontainer .box .media {
+  display: flex;
+  width: inherit;
+  height: inherit;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.itemcontainer.hidden {
+  display: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+hr {
+  border: 1px solid rgba(103, 0, 230, 0.1);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer > div > p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 28px;
+
+  display: flex;
+  align-items: center;
+  font-feature-settings: 'liga' off;
+
+  color: #6b7280;
+  letter-spacing: 1.5px;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+footer > div > img {
+  width: 150px;
+  height: 30px;
+  object-fit: cover;
+  margin-left: 500px;
+}
+
+footer > p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+
+  font-feature-settings: 'liga' off;
+
+  margin-left: 100px;
+  margin-right: 100px;
+
+  color: #6b7280;
+  letter-spacing: 1.5px;
+}

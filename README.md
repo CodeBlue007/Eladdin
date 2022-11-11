@@ -22,7 +22,7 @@
 
 ### 1-1. API 문서
 
-### https://documenter.getpostman.com/view/23952739/2s847JrX6f
+### https://documenter.getpostman.com/view/18622149/2s8YRqjqCg
 
 <br>
 
@@ -103,10 +103,8 @@
 
 ### 2-2. 백엔드 
 
-- **Express** (nodemon, babel-node로 실행됩니다.)
+- **Express**
 - Mongodb, Mongoose
-- cors
-- 이외
 
 
 
@@ -125,7 +123,16 @@
 
 | 이름 | 담당 업무 |
 | ------ | ------ |
-| 엘리스 | 팀장/개발 |
+| 윤동주 | 팀장/프론트엔드 |
+| ------ | ------ |
+| 이수빈 | 팀원/프론트엔드 |
+| ------ | ------ |
+| 김유정 | 팀원/프론트엔드 |
+| ------ | ------ |
+| 서윤지 | 팀원/백엔드 |
+| ------ | ------ |
+| 김혜민 | 팀원/백엔드 |
+| ------ | ------ |
 
 <br />
 
@@ -134,7 +141,7 @@
 1. 레포지토리를 클론하고자 하는 디렉토리에서 아래 명령어를 수행
 
 ```bash
-git clone <레포지토리 주소>
+git clone https://kdt-gitlab.elice.io/sw_track/class_03/web_project/team4/eladin.git
 ```
 
 
@@ -148,24 +155,20 @@ npm install
 3. backend에서 필요한 `.env` 설정
 
 ```bash
-MONGODB_URL=<몽고DB URL>
-PORT=5000
-JWT_SECERT_KEY=<랜덤 문자열>
+MONGODB_URL=mongodb+srv://ming:dpffltm123@cluster0.soadvsp.mongodb.net/?retryWrites=true&w=majority
+PORT=8000
+
+JWT_SECERT_KEY=<랜덤 문자열> /// ????
 ```
-
-  앱을 테스트하고 싶은 경우 다음의 몽고DB URL을 이용하세요.
-
-  - mongodb+srv://elice:W8RsZsSX2Xs1ydE4@cluster0.4gz9ij3.mongodb.net/?retryWrites=true&w=majority
-
-  단, 해당 URL은 READ만 가능하며 회원 가입을 하거나 상품 정보를 추가하는 등의 동작은 할 수 없습니다. <br>
-  주어진 URL은 테스트 용이므로 실제 개발을 할 때는 해당 URL을 사용하지 않고, 반드시 직접 설치한 몽고DB의 URL을 사용하시기를 바랍니다.
-
-
 
 4. express 앱을 실행
 
 ```bash
-npm start
+"node index.js"
+```
+또는
+```bash
+"nodemon index.js --exec babel-node"
 ```
 
 <br>
@@ -176,7 +179,7 @@ npm start
 <br>
 
 ## 7. FAQ
-<details><summary>1. 배포된 페이지는 어디에서 확인할 수 있나요?</summary>
+<!-- <details><summary>1. 배포된 페이지는 어디에서 확인할 수 있나요?</summary>
 
   <p>
     프로젝트 기본 코드는 따로 배포하지 않았습니다, 레포지토리를 클론하여 직접 실행해보세요.
@@ -187,7 +190,7 @@ npm start
 
   <p>
     해당 파일은 직접 만들어서 코드를 작성해야 합니다, DB를 비롯한 서비스의 계정 정보는 <b>절대로</b> Git에 함부로 공유하면 안되기 때문에 유의 바랍니다.
-  </p>
+  </p> -->
 
 </details>
 

@@ -1,19 +1,69 @@
-.div-container {
+* {
+  font-family: 'Elice Digital Baeum', sans-serif;
+}
+
+#navbarBasicExample {
   display: flex;
   align-items: center;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a {
+  background-color: #ffffff;
+  border: none;
+  color: #5865ff;
+}
+
+#navbarBasicExample > div.navbar-end > div > div > a > span > img {
+  filter: invert(33%) sepia(55%) saturate(2251%) hue-rotate(222deg) brightness(104%) contrast(100%);
+}
+
+#navbarBasicExample > div.navbar-start > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#navbarBasicExample > div.navbar-start > a > img {
+  width: 250px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.div_container {
+  margin-top: 60px;
+  display: flex;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  flex-direction: column;
 }
 
-.landing {
+.go_shopping {
+  margin-top: 25px;
+  border: none;
+  font-size: xx-large;
+  background-color: #6700e6;
   cursor: pointer;
-  border: 1px solid red;
-  padding: 10px;
+  border-radius: 10px;
 }
 
-.greeting {
-  cursor: pointer;
-  border: 1px solid blue;
+body > div > button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
   padding: 10px;
-  margin-left: 3rem;
+  background: #6700e6;
+  border-radius: 10px;
+}
+
+body > div > button > a {
+  width: 200px;
+  height: 30px;
+
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  color: #ffffff;
 }

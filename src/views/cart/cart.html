@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="./cart.css" />
+  <script src="./cart.js" defer type="module"></script>
+  <script src="../nav/nav.js" type="module" defer></script>
+  <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
+  <!-- 폰트 -->
+  <link href="https://font.elice.io/EliceDigitalBaeum.css" rel="stylesheet">
+  <title>cart</title>
+</head>
+
+<body>
+  <header>
+    <!-- 헤더 -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="../home/home.html">
+            <img src="./image/Eladin_CI.png" alt="eladin_logo" />
+          </a>
+        </div>
+  
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="../category-booklist/category-booklist.html" class="button ">
+                <span class="icon">
+                  <img src="./image/store-solid.svg" width="20" />
+                </span>
+                <strong>Shop</strong>
+              </a>
+              <a id="myPage_btn" class="button ">
+                <span class="icon">
+                  <img src="./image/user-solid.svg" width="15" />
+                </span>
+                <strong>My Page</strong>
+              </a>
+              <a href="../register/register.html" class="button ">
+                <span class="icon">
+                  <img src="./image/pen-to-square-solid.svg" width="20" />
+                </span>
+                <strong>Sign Up</strong>
+              </a>
+              <a href="../login/login.html" class="button ">
+                <span class="icon">
+                  <img src="./image/unlock-solid.svg" width="15" />
+                </span>
+                <strong id="login_btn">Log In</strong>
+              </a>
+              <a id="adminPage_btn" class="button">
+                <span class="icon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <strong>Admin Page</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <h1 class="header">장바구니</h1>
+  </header>
+  <main>
+    <section class="container">
+      <div class="select_container">
+        <div class="select_box">
+          <button id="selectAll_btn" class="select_btn checked"></button>
+          <label for="selectAll_btn">select all ✔️</label>
+        </div>
+        <div class="delete_box">
+          <button id="deleteall_btn">delete all 🗑</button>
+        </div>
+      </div>
+      <div class="item-container"></div>
+    </section>
+    <section class="orderbar">
+      <div class="priceTag">Total Price : </div>
+      <button class="order_btn">Total Order</button>
+    </section>
+    <section class="orderpage hidden">
+      <form class="form_container">
+        <div class="label_container">
+          <span class="tag is-success">Product Detail</span>
+          <button class="button is-success is-focused">Edit Orders</button>
+        </div>
+        <div class="field">
+          <label class="label">Product List</label>
+          <div class="orderItem_container"></div>
+
+          <div class="order_result_container">
+            <div class="control">
+              <div class="box">Total Price</div>
+            </div>
+            <div class="control">
+              <button class="button is-link submit">Order</button>
+            </div>
+          </div>
+      </form>
+    </section>
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="order-complete">
+          <img class="eladin-img" src="./image/eladin.png" width="100" /><br />
+          <span>주문이 완료 되었습니다! <br /></span>
+          <span>구매해주셔서 감사합니다 😊 <br /></span>
+          <button class="confirm-btn">확인</button>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+  </main>
+  <!-- 푸터 -->
+  <hr />
+  <footer>
+    <div>
+      <p>Eladin - Online Bookstore</p>
+      <img src="./image/Eladin_CI.png" />
+    </div>
+    <p>ⓒ 2022 Cozyma</p>
+  </footer>
+</body>
+
+</html>
