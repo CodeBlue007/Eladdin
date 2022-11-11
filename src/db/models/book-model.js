@@ -49,7 +49,7 @@ export class BookModel {
     async update(ISBN, {bookInfo}, categoryId) {
         // DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르면
         //이미 존재하지 않으면
-        if(await this.existsByISBN(ISBN)){
+        if(! await this.existsByISBN(ISBN)){
             throw new Error(`DB에 ${ISBN}에 해당하는 Book이 존재하지 않습니다`)
         }
         //ISBN 값이 중복된다면?
@@ -60,7 +60,7 @@ export class BookModel {
     }
 
     async deleteByISBN(ISBN) {
-        if(await this.existsByISBN(ISBN)){
+        if(! await this.existsByISBN(ISBN)){
             throw new Error(`DB에 ${ISBN}는 존재하지 않아 삭제할 수 없습니다.`)
         }
         await Book.deleteOne({ ISBN });
