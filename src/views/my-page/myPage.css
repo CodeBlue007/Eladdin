@@ -59,6 +59,10 @@ header .wrapper {
   display: inline-block;
 }
 
+.greeting {
+  font-weight: 800;
+}
+
 .list {
   margin-top: 50px;
   text-align: center;
@@ -73,6 +77,7 @@ header .wrapper {
   display: inline-block;
   width: 200px;
   cursor: pointer;
+  font-weight: 800;
 }
 
 .order-list li{
@@ -86,6 +91,7 @@ header .wrapper {
   display: inline-block;
   width: 200px;
   cursor: pointer;
+  font-weight: 800;
 }
 
 .userInfo_btn {
@@ -96,15 +102,17 @@ header .wrapper {
   width: 200px;
   color: black;
   cursor: pointer;
+  font-weight: 800;
 }
 
 #login_btn {
   margin-top: 50px;
-  background-color: lavender;
-  font-size: x-large;
+  font-size: medium;
   display: inline-block;
   width: 200px;
+  color: white;
   cursor: pointer;
+  font-weight: 800;
 }
 
 .deleteAccount {
@@ -114,6 +122,7 @@ header .wrapper {
   display: inline-block;
   width: 200px;
   cursor: pointer;
+  font-weight: 800;
 }
 
 .cart-products {
@@ -125,6 +134,7 @@ header .wrapper {
   justify-content: center;
   margin-top: 30px;
   display: none;
+  font-weight: 800;
 }
 
 .book {
@@ -203,3 +213,60 @@ header .wrapper {
 
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+hr {
+  border: 1px solid rgba(103, 0, 230, 0.1);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer > div > p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 28px;
+
+  display: flex;
+  align-items: center;
+  font-feature-settings: 'liga' off;
+
+  color: #6b7280;
+  letter-spacing: 1.5px;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+footer > div > img {
+  width: 150px;
+  height: 30px;
+  object-fit: cover;
+  margin-left: 500px;
+}
+
+footer > p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+
+  font-feature-settings: 'liga' off;
+
+  margin-left: 100px;
+  margin-right: 100px;
+
+  color: #6b7280;
+  letter-spacing: 1.5px;
+}

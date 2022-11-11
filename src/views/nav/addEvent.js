@@ -5,6 +5,7 @@ import { loginNeeded } from "./component/loginNeeded.js";
 function logout() {
     sessionStorage.removeItem('token');
     alert('로그아웃 되었습니다.');
+    window.location.href="../home/home.html";
   }
   
 

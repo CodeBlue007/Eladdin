@@ -2,9 +2,9 @@ export function makeAddress() {
     new daum.Postcode({
         oncomplete: function(data) {
 
-            const postCode = document.querySelector(".input.is-success.post_code");
-            const address = document.querySelector(".input.is-success.address");
-            const add_detail = document.querySelector(".input.is-success.add_detail");
+            const postCode = document.querySelector(".input.post_code");
+            const address = document.querySelector(".input.address");
+            const add_detail = document.querySelector(".input.add_detail");
 
             console.log(postCode,add_detail,address);
             // 각 주소의 노출 규칙에 따라 주소를 조합한다.

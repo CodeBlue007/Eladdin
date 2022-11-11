@@ -4,14 +4,14 @@ import { validateData } from "./validateData.js";
 export async function registerForm(event) {
 
   event.preventDefault();
-  const nameInput = document.querySelector(".input.is-success.name");
-  const phoneInput = document.querySelector(".input.is-success.phone");
-  const postCodeInput = document.querySelector(".input.is-success.post_code");
-  const addressInput = document.querySelector(".input.is-success.address");
-  const add_detailInput = document.querySelector(".input.is-success.add_detail");
-  const emailInput = document.querySelector(".input.is-success.email");
-  const passInput = document.querySelector(".input.is-success.password");
-  const passConfirmInput = document.querySelector(".input.is-success.pass_confirm");
+  const nameInput = document.querySelector(".input.name");
+  const phoneInput = document.querySelector(".input.phone");
+  const postCodeInput = document.querySelector(".input.post_code");
+  const addressInput = document.querySelector(".input.address");
+  const add_detailInput = document.querySelector(".input.add_detail");
+  const emailInput = document.querySelector(".input.email");
+  const passInput = document.querySelector(".input.password");
+  const passConfirmInput = document.querySelector(".input.pass_confirm");
 
 
   const infoArray

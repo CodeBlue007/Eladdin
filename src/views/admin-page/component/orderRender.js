@@ -9,7 +9,8 @@ function orderTemplate(orders) {
   orders.forEach(order => {
     console.log(order);
 
-    const { createdAt, items, shippingStatus, _id: orderId ,user :{fullName}} = order;
+    const { createdAt, items, shippingStatus, _id: orderId ,user} = order;
+    const fullName = user? user.fullName : "비단구렁이";
     const orderDate = createdAt? createdAt.slice(0,10) : "1997-10-23";
     let itemString = '';
     let volumeString = '';
