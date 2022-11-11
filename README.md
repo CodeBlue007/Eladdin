@@ -213,7 +213,7 @@ PORT=8000
 4. express 앱을 실행
 
 ```bash
-"npm start"
+npm start
 ```
 <br>
 
