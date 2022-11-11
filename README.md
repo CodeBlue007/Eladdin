@@ -213,15 +213,8 @@ PORT=8000
 4. express 앱을 실행
 
 ```bash
-"node index.js"
+"npm start"
 ```
-
-또는
-
-```bash
-"nodemon index.js --exec babel-node"
-```
-
 <br>
 
 ## 7. 버전
