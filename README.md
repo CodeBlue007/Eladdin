@@ -1,10 +1,9 @@
-# 쇼핑몰 웹 서비스 - 기본 코드
+<h1 align="middle">장바구니 애플리케이션</h1>
 
-<div>
-
+<div align="middle">
 <img alt="쇼핑-데모 로고" src="https://i.ibb.co/xSZHxmy/image.png">
-
 </div>
+
 
 <br />
 
@@ -20,6 +19,17 @@
 
 <br />
 
+## 4. 제작자
+
+| 이름 | 담당 업무 |
+| ------ | ------ |
+| 윤동주 | 팀장/프론트엔드 |
+| 이수빈 | 팀원/프론트엔드 |
+| 김유정 | 팀원/프론트엔드 |
+| 서윤지 | 팀원/백엔드 |
+| 김혜민 | 팀원/백엔드 |
+
+
 ### 1-1. API 문서
 
 ### https://documenter.getpostman.com/view/18622149/2s8YRqjqCg
@@ -28,7 +38,7 @@
 
 ### 1-2. 데모 영상
 
-<details><summary>사용자 회원가입, 로그인</summary>
+<details><summary>사용자 회원가입, 로그인</summary> - gif 추가필요
 
 ![image](https://user-images.githubusercontent.com/91174156/172159634-1e105633-9948-464e-a540-5429200a1353.gif)
 
@@ -90,8 +100,21 @@
 
 ## 2. 기술 스택
 
-![image](https://i.ibb.co/N34mXzy/image.png)
+<!-- ![image](https://i.ibb.co/N34mXzy/image.png) -->
+## # Language
+| Javascript |
+| :--------: |
+|  <img src="https://w.namu.la/s/18f590719ba62222718f1a68efcad20118c422b146650c97162d782ef9995d28326d1011cfb37595d9c60d66a05b343556e520204383d4429456fb54ca6bbf5af4478dcda8d69b01f1ff11d5ff591da7589496b4d6b76b740c744af82c8786c9" width="100px"/> |
 
+## # FE
+| Bulma | LocalStorage |  SessionStorage |
+| :--------: | :--------: | :------: |
+|  <img src="https://bulma.io/images/bulma-logo.png" width="100px"/> | <img src="https://w.namu.la/s/18f590719ba62222718f1a68efcad20118c422b146650c97162d782ef9995d28326d1011cfb37595d9c60d66a05b343556e520204383d4429456fb54ca6bbf5af4478dcda8d69b01f1ff11d5ff591da7589496b4d6b76b740c744af82c8786c9" width="100px"/> | <img src="https://w.namu.la/s/18f590719ba62222718f1a68efcad20118c422b146650c97162d782ef9995d28326d1011cfb37595d9c60d66a05b343556e520204383d4429456fb54ca6bbf5af4478dcda8d69b01f1ff11d5ff591da7589496b4d6b76b740c744af82c8786c9" width="100px"/> |
+
+## # BE
+| Nodejs | LocalStorage |  SessionStorage |
+| :--------: | :--------: | :------: |
+|  <img src="https://nodejs.org/static/images/logo.svg" width="100px"/> | <img src="https://w.namu.la/s/18f590719ba62222718f1a68efcad20118c422b146650c97162d782ef9995d28326d1011cfb37595d9c60d66a05b343556e520204383d4429456fb54ca6bbf5af4478dcda8d69b01f1ff11d5ff591da7589496b4d6b76b740c744af82c8786c9" width="100px"/> | <img src="https://w.namu.la/s/18f590719ba62222718f1a68efcad20118c422b146650c97162d782ef9995d28326d1011cfb37595d9c60d66a05b343556e520204383d4429456fb54ca6bbf5af4478dcda8d69b01f1ff11d5ff591da7589496b4d6b76b740c744af82c8786c9" width="100px"/> |
 <br />
 
 ### 2-1. 프론트엔드
@@ -119,20 +142,6 @@
 
 <br />
 
-## 4. 제작자
-
-| 이름 | 담당 업무 |
-| ------ | ------ |
-| 윤동주 | 팀장/프론트엔드 |
-| ------ | ------ |
-| 이수빈 | 팀원/프론트엔드 |
-| ------ | ------ |
-| 김유정 | 팀원/프론트엔드 |
-| ------ | ------ |
-| 서윤지 | 팀원/백엔드 |
-| ------ | ------ |
-| 김혜민 | 팀원/백엔드 |
-| ------ | ------ |
 
 <br />
 

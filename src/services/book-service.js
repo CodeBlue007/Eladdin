@@ -23,6 +23,7 @@ export class BookService {
     await bookModel.create({...bookInfo, category});
   }
 
+  
   async update({ ISBN, bookInfo }) {
     if((await categoryModel.existByTitle(bookInfo.category)) === false){
         throw Error('존재하지 않는 카테고리입니다.')
