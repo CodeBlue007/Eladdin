@@ -270,3 +270,42 @@ footer > p {
   color: #6b7280;
   letter-spacing: 1.5px;
 }
+
+
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  width: 400pxpx;
+  height: 400px;
+  border-radius: 20px;
+  font-family: 'Elice Digital Baeum';
+}
+
+.modal-content .view-userInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Elice Digital Baeum';
+  margin: 20px;
+  height: 90%;
+  width: 80%;
+}
+
+.modal-content .view-userInfo div{
+  font-size: 20px;
+  margin: 20px;
+}
+
+.modal-content .confirm-btn{
+  margin-top: 20px;
+  background-color: crimson;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Elice Digital Baeum';
+  cursor: pointer;
+}
