@@ -138,10 +138,16 @@ Eladin(엘라딘)
 
 |                                              |                                              |
 | -------------------------------------------- | -------------------------------------------- |
-| ![image](https://i.ibb.co/jyxjcd3/image.png) | ![image](https://i.ibb.co/Q860RKz/image.png) |
-| 메인 페이지                                  | 회원가입 화면                                |
-| ![image](https://i.ibb.co/RpYN379/image.png) |                                              |
-| 로그인 페이지                                | 앞으로 추가할 페이지                         |
+| ![image](/uploads/8fb1ebf97b41df89fd9fbe875da1fe0d/image.png) | ![image](/uploads/2b487e4eab49751c7345ca6ca75e01ba/image.png) |
+| 메인 페이지                                  | 회원가입 페이지                                |
+| ![image](/uploads/080db94a3c0dd6270fbd3ad8003ab43d/image.png) | ![image](/uploads/1c1897a1b7d828aa8e0a840772bc5630/image.png)                                             |
+| 로그인 페이지                                | 카테고리별 도서 리스트 페이지                         |
+| ![image](/uploads/e3f82f2b0984f1fa8b2df5f084007319/image.png) | ![image](/uploads/68defb35ccb0e21a3056159394748a6d/image.png)                                             |
+| 도서 상세 정보 페이지                                | 장바구니 페이지                         |
+| ![image](/uploads/135b5d757cfabff0dc03278b8d572cd8/image.png) | ![image](/uploads/62a25db17190584bf671811ccd211d89/image.png)                                             |
+| 주문 페이지(장바구니 페이지 하단)                                | 주문 완료 모달                         |
+| ![image](/uploads/6a36418e0032e1e5bff5cc4811641cb0/image.png) |                                              |
+| 마이페이지                                | 관리자페이지                         |
 
 <br />
 
@@ -169,17 +175,17 @@ Eladin(엘라딘)
 
 <br />
 
-## 5. 인프라 구조
+## 5. 구조
 
-![image](https://i.ibb.co/9tGxmx0/image.png)<br />
+### 5-1. 인프라 구조
 
-### 5-1. 폴더 구조
+![image](/uploads/8641e64efcb2892e86fcd1bf11630892/image.png)<br />
+
+### 5-2. 폴더 구조
 
 - 프론트: `src/views` 폴더
 - 백: src/views 이외 폴더 전체
 - 실행: **프론트, 백 동시에, express로 실행**
-
-<br />
 
 <br />
 
@@ -202,8 +208,6 @@ npm install
 ```bash
 MONGODB_URL=mongodb+srv://ming:dpffltm123@cluster0.soadvsp.mongodb.net/?retryWrites=true&w=majority
 PORT=8000
-
-JWT_SECERT_KEY=<랜덤 문자열> /// ????
 ```
 
 4. express 앱을 실행
@@ -225,23 +229,6 @@ JWT_SECERT_KEY=<랜덤 문자열> /// ????
 ### 1.0.0
 
 <br>
-
-## 8. FAQ
-
-<!-- <details><summary>1. 배포된 페이지는 어디에서 확인할 수 있나요?</summary>
-
-  <p>
-    프로젝트 기본 코드는 따로 배포하지 않았습니다, 레포지토리를 클론하여 직접 실행해보세요.
-  </p>
-
-</details>
-<details><summary>2. env 파일이 보이지 않습니다.</summary>
-
-  <p>
-    해당 파일은 직접 만들어서 코드를 작성해야 합니다, DB를 비롯한 서비스의 계정 정보는 <b>절대로</b> Git에 함부로 공유하면 안되기 때문에 유의 바랍니다.
-  </p> -->
-
-</details>
 
 ---
 
