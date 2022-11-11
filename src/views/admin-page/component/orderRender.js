@@ -19,7 +19,9 @@ function orderTemplate(orders) {
     const shippingString = renderByShipping(shippingStatus, orderId);
 
     items.forEach(bookData => {
-      const { book: { title }, totalPrice, volume } = bookData;
+      const { book, totalPrice, volume } = bookData;
+      const title = book? book.title : "삭제된 책입니다";
+      
       itemString += bookTemplate(title);
       volumeString += volumeTemplate(volume);
       priceString += priceTemplate(totalPrice);

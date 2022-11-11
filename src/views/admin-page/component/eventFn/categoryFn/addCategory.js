@@ -1,6 +1,8 @@
 import * as Api from "../../../../api.js";
 import { randomId } from "../../../../useful-functions.js";
 import { categoryRender } from "../../categoryRender.js";
+import { editCategory } from "./editCategory.js";
+import {deleteCategory} from "./deleteCategory.js";
 
 export function addCategory() {
 
@@ -17,10 +19,18 @@ export function addCategory() {
             const category = categoryInput.value;
             const reqData = {title : category};
             
-            const result = await Api.post("https://eladin-lgurfdxfjq-du.a.run.app/api/category/",reqData);
+            await Api.post("https://eladin-lgurfdxfjq-du.a.run.app/api/category/",reqData);
             alert("category를 성공적으로 추가했습니다.");
-            const data = [{title : category, "_id" : randomId()}];
-            categoryRender(data);
+
+            const result = await Api.get(`https://eladin-lgurfdxfjq-du.a.run.app/api/category/${category}`,'');
+
+            console.log(result);
+            // const data = [{title : category, "_id" : newId}];
+            // categoryRender(data);
+
+            const newEditBtn = document.querySelector(".editCategory_btn", deleteCategory)
+            const newDeleteBtn = document.querySelector(".deleteCategory_btn", editCategory)
+
         })
         categoryInput.value ="";
 

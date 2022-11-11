@@ -6,6 +6,7 @@ export function makeOrder(){
 
     if(!sessionStorage.getItem("token")){
         alert("로그인한 사용자만 사용가능합니다.");
+        window.location.href = "../login/login.html";
         return;
     }
 
