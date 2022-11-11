@@ -19,6 +19,8 @@ export async function changeShip(e){
     
         await Api.patch(`https://eladin-lgurfdxfjq-du.a.run.app/api/order/${id}`,"shippingStatus",data);
 
+        alert("배송수정이 완료되었습니다.");
+
 
 
     }
