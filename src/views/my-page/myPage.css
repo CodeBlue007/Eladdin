@@ -200,6 +200,11 @@ header .wrapper {
   height: inherit;
 }
 
+.box .content_contianer{
+  font-family: 'Elice Digital Baeum', sans-serif;
+  width: 400px;
+}
+
 
 
 .control{
