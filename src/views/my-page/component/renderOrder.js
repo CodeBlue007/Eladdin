@@ -32,13 +32,14 @@ function ItemListTemplate(items) {
 
   return items.map(item => {
     const { book: { imgUrl, title }, volume, totalPrice } = item;
+    const curPrice = addCommas(totalPrice);
 
     return `
      <div class="box orderItem_container">
      <div class="box img_container"><img src =${imgUrl} alt=""/></div>
     <div class="box content_contianer">
       <div>${title}</div>
-      <div>가격 : ${totalPrice}</div>
+      <div>가격 : ${curPrice}</div>
       <div>수량 : ${volume}</div>
     </div>
   </div>`
