@@ -49,6 +49,10 @@
   letter-spacing: 4px;
 }
 
+.infoBox span {
+  font-size: 2.5vh;
+}
+
 .select_container {
   display: flex;
   height: 35px;
@@ -71,6 +75,7 @@
   background-color: white;
   font-size: medium;
   cursor: pointer;
+  font-family: 'Elice Digital Baeum', 'sans-serif';
 }
 
 .container .select_btn {
@@ -144,6 +149,7 @@
 
 .item-container .itembox .priceBox .newPrice {
   margin-bottom: 10px;
+  font-size: large;
 }
 
 .add_btn_container {
@@ -165,6 +171,7 @@
   font-weight: bold;
   padding: 0;
   text-align: center;
+  font-size: larger;
 }
 
 .plus_btn,
@@ -176,9 +183,10 @@
   color: #6700e6;
 }
 
-.fa-solid.fa-caret-up{
+.fa-solid.fa-caret-up {
   z-index: -1;
 }
+
 .orderbar {
   display: flex;
   justify-content: flex-end;
@@ -189,8 +197,12 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 3000;
-  background-color: blanchedalmond;
+  background-color: rgb(182, 188, 255, 0.9);
+}
+
+.orderbar::after {
+  z-index: -1;
+  opacity: 10%;
 }
 
 .orderbar.hidden {
@@ -206,13 +218,18 @@
   background-color: #6700e6;
   color: white;
   padding: 10px;
-  font-family: 'Elice Digital Baeum';
+  font-family: 'Elice Digital Baeum', 'sans-serif';
   font-weight: 700;
+  font-size: larger;
+  z-index: 2;
 }
 
 .orderbar .priceTag {
   padding: 10px;
   font-family: 'Elice Digital Baeum';
+  color: black;
+  font-size: large;
+  z-index: 2;
 }
 
 .orderpage {
@@ -335,6 +352,7 @@ footer > div > p {
 
   color: #6b7280;
   letter-spacing: 1.5px;
+  font-family: 'Elice Digital Baeum', 'sans-serif';
 }
 
 footer > div {
@@ -365,6 +383,7 @@ footer > p {
 
   color: #6b7280;
   letter-spacing: 1.5px;
+  font-family: 'Elice Digital Baeum', 'sans-serif';
 }
 
 .modal-content {
