@@ -1,4 +1,4 @@
-@import url("../reset.css");
+@import url('../reset.css');
 * {
   font-family: 'Elice Digital Baeum', sans-serif;
 }
@@ -39,22 +39,21 @@ header {
   color: grey;
 }
 
-.link_add{
-  color:black;
+.link_add {
+  color: black;
 }
-
 
 /* 본문 */
 .contents {
   display: flex;
 }
 
-.box .category_input{
+.box .category_input {
   font-size: 20px;
   font-weight: bold;
 }
 
-.box .input_container{
+.box .input_container {
   display: flex;
   margin-top: 10px;
 }
@@ -79,7 +78,7 @@ header {
   position: relative;
 }
 
-.view-orders.hidden{
+.view-orders.hidden {
   display: none;
 }
 
@@ -107,14 +106,14 @@ header {
   align-items: center;
   border-bottom: 1px solid grey;
   background-color: bisque;
-  }
+}
 
 .bar .orderDate {
   flex-basis: 10%;
   text-align: center;
 }
 
-.bar .orderName{
+.bar .orderName {
   flex-basis: 10%;
   text-align: center;
 }
@@ -152,7 +151,6 @@ header {
   margin-top: 10px;
 }
 
-
 .order .orderDate {
   flex-basis: 10%;
   text-align: center;
@@ -183,7 +181,7 @@ header {
   text-align: center;
 }
 
-.order .count_container{
+.order .count_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,7 +197,6 @@ header {
   text-align: center;
 }
 
-
 /* 카테고리 설정 */
 .view-category {
   width: 100%;
@@ -209,7 +206,7 @@ header {
   justify-content: center;
 }
 
-.view-category.hidden{
+.view-category.hidden {
   display: none;
 }
 
@@ -236,7 +233,7 @@ header {
 .category-list {
   width: 400px;
   display: flex;
-  margin: 5px;  
+  margin: 5px;
 }
 
 .category-list .category-name {
@@ -264,15 +261,13 @@ header {
   display: flex;
 }
 
-
 .view-product.hidden {
-  display:none;
+  display: none;
 }
 
 .bar_2 {
   display: flex;
   align-items: center;
-  border: 1px solid red;
   background-color: bisque;
   font-size: medium;
 }
@@ -308,7 +303,7 @@ header {
 }
 
 .bar_2 .book-price {
-  flex-basis: 10%;
+  flex-basis: 12%;
   text-align: center;
 }
 
@@ -323,14 +318,13 @@ header {
   margin-left: 10px;
 }
 
-
 .product-list {
   display: flex;
   flex-direction: row;
   font-size: medium;
   border-bottom: 1px solid black;
   align-items: center;
-  padding : 10px 0 10px 0;
+  padding: 10px 0 10px 0;
 }
 
 .products {
@@ -369,7 +363,7 @@ header {
 }
 
 .product-list .price {
-  flex-basis: 5%;
+  flex-basis: 7%;
   text-align: center;
 }
 
@@ -377,7 +371,6 @@ header {
   flex-basis: 15%;
   text-align: center;
 }
-
 
 .product-list .edit_btn {
   flex-basis: 5%;
