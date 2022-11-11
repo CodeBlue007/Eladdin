@@ -10,7 +10,7 @@ function orderTemplate(orders) {
     console.log(order);
 
     const { createdAt, items, shippingStatus, _id: orderId } = order;
-    const orderDate = createdAt.slice(0.10);
+    const orderDate = createdAt? createdAt.slice(0.10) : "2022-11-11";
     let itemString = '';
     let volumeString = '';
     let priceString = '';

@@ -9,7 +9,7 @@ function addItems(datas=[]) {
     const { imgUrl, title, author, price, ISBN, volume} = data;
     const newPrice = addCommas(price);  
 
-    return `<div class="itembox"> 
+    return `<div class="itembox" data-id=${ISBN}> 
           <div class="imgbox">
             <button class="select_btn checked" data-id=${ISBN}></button>
             <img class="bookImg" src=${imgUrl} alt="book"></img>
