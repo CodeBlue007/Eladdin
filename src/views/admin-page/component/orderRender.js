@@ -9,7 +9,8 @@ function orderTemplate(orders) {
   orders.forEach(order => {
     console.log(order);
 
-    const { createdAt, items, shippingStatus, _id: orderId } = order;
+    const { createdAt, items, shippingStatus, _id: orderId ,user} = order;
+    const fullName = user? user.fullName : "비단구렁이";
     const orderDate = createdAt? createdAt.slice(0,10) : "1997-10-23";
     let itemString = '';
     let volumeString = '';
@@ -18,14 +19,17 @@ function orderTemplate(orders) {
     const shippingString = renderByShipping(shippingStatus, orderId);
 
     items.forEach(bookData => {
-      const { book: { title }, totalPrice, volume } = bookData;
+      const { book, totalPrice, volume } = bookData;
+      const title = book? book.title : "삭제된 책입니다";
+      
       itemString += bookTemplate(title);
       volumeString += volumeTemplate(volume);
       priceString += priceTemplate(totalPrice);
     })
 
     orderString += `<div class="order" id=${orderId}>
-    <div class="orderDate">${orderDate}</div>`
+    <div class="orderDate">${orderDate}</div>
+    <div class ="fullName">${fullName}</div>`
 
     orderString +=
       `<div class="book_container">${itemString}</div>

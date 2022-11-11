@@ -37,30 +37,30 @@ export class BookModel {
     }
   
     // admin만 가능한 기능
-    async create(bookInfo) { //Object
+    async create(bookInfo, id) { //Object
         // DB에 이미 존재하지 않으면
         if(await this.existsByISBN(bookInfo.ISBN)){
             throw new Error(`DB에 ${bookInfo.ISBN}는 존재합니다.`)
         }
 
-        return Book.create(bookInfo);
+        return Book.create({...bookInfo, category: id});
     }
 
-    async update(ISBN, {bookInfo}, categoryId) {
+    async update(ISBN, {bookInfo}, id) {
         // DB에 있는 bookInfo랑 유저가 수정하려는 bookInfo가 다르면
         //이미 존재하지 않으면
-        if(await this.existsByISBN(ISBN)){
+        if(! await this.existsByISBN(ISBN)){
             throw new Error(`DB에 ${ISBN}에 해당하는 Book이 존재하지 않습니다`)
         }
         //ISBN 값이 중복된다면?
         if(await this.existsByISBN(bookInfo.ISBN)){
             throw new Error(`해당하는 ISBN이 존재합니다. 고유한 값을 입력해주세요.`)
         }
-        await Book.findOneAndUpdate({ ISBN }, bookInfo, { returnOriginal: false });
+        await Book.findOneAndUpdate({ ISBN }, {...bookInfo, category: id}, { returnOriginal: false });
     }
 
     async deleteByISBN(ISBN) {
-        if(await this.existsByISBN(ISBN)){
+        if(! await this.existsByISBN(ISBN)){
             throw new Error(`DB에 ${ISBN}는 존재하지 않아 삭제할 수 없습니다.`)
         }
         await Book.deleteOne({ ISBN });

@@ -33,7 +33,7 @@ function addItems(datas) {
   }).join('');
 }
 
-export function renderData(datas) {
+export function renderData(datas, categories) {
   const bookContainer = document.querySelector(".book_container");
 
   const dataString = addItems(datas);
@@ -43,7 +43,7 @@ export function renderData(datas) {
 
   [...itemList].forEach(item => {
     const category = item.dataset.category;
-    if (category === "에세이") {
+    if (category === categories[0].title) {
       item.classList.remove("hidden");
     }
     else {

@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="../icons8-요정-color-16.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <link rel="stylesheet" href="./cart.css" />
   <script src="./cart.js" defer type="module"></script>
@@ -12,7 +13,7 @@
   <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
   <!-- 폰트 -->
   <link href="https://font.elice.io/EliceDigitalBaeum.css" rel="stylesheet">
-  <title>cart</title>
+  <title>Cart</title>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
             <img src="./image/Eladin_CI.png" alt="eladin_logo" />
           </a>
         </div>
-  
+
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
@@ -71,34 +72,34 @@
       <div class="select_container">
         <div class="select_box">
           <button id="selectAll_btn" class="select_btn checked"></button>
-          <label for="selectAll_btn">select all ✔️</label>
+          <label for="selectAll_btn">Select all ✔️</label>
         </div>
         <div class="delete_box">
-          <button id="deleteall_btn">delete all 🗑</button>
+          <button id="deleteall_btn">Delete all 🗑</button>
         </div>
       </div>
       <div class="item-container"></div>
     </section>
     <section class="orderbar">
-      <div class="priceTag">Total Price : </div>
-      <button class="order_btn">Total Order</button>
+      <div class="priceTag">총 가격: </div>
+      <button class="order_btn">전체 주문</button>
     </section>
     <section class="orderpage hidden">
       <form class="form_container">
         <div class="label_container">
-          <span class="tag is-success">Product Detail</span>
-          <button class="button is-success is-focused">Edit Orders</button>
+          <span class="tag is-success">주문 도서 목록</span>
+          <button class="button is-success is-focused">주문 내역 수정</button>
         </div>
         <div class="field">
-          <label class="label">Product List</label>
+          <label class="label">주문 도서 목록</label>
           <div class="orderItem_container"></div>
 
           <div class="order_result_container">
             <div class="control">
-              <div class="box">Total Price</div>
+              <div class="box">총 가격</div>
             </div>
             <div class="control">
-              <button class="button is-link submit">Order</button>
+              <button class="button is-link submit">주문하기</button>
             </div>
           </div>
       </form>

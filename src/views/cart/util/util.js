@@ -12,7 +12,7 @@ export function getLocal(key) {
   return localDatas ? JSON.parse(localDatas) : [];
 }
 
-export function getTotalPrice(datas) {
+export function getTotalPrice(datas =[]) {
   const totalPrice = datas ? datas.reduce((acc, cur) => {
     if (cur.checked) {
       const price = Number(cur.price) * (cur.volume);
@@ -27,7 +27,7 @@ export function getTotalPrice(datas) {
 export function setTotalPrice(datas) {
   const priceTag = document.querySelector(".priceTag");
   const totalPrice = getTotalPrice(datas);
-  priceTag.innerText = `Total Price: ${totalPrice}`
+  priceTag.innerText = `총 가격: ${totalPrice}원`
 }
 
 export function getFullDate() {

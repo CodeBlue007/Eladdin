@@ -12,19 +12,19 @@ function nextError(callback){
 
 // 카테고리 title이 한글이여도 괜츈?
 categoryRouter.get("/:title", nextError(async (req, res, next) => {
-    const { title } = req.params;  
+    const {title} = req.params;  
     const category = await categoryService.findByTitle(title);
     res.json(category);
   }));
-  
-  categoryRouter.put("/:title", nextError(async (req, res, next) => {
-      const { title } = req.params;
-      const categoryInfo = req.body;
-      
-      await categoryService.update({title, categoryInfo})
-  
-      res.status(200).end()
-  }));
+
+categoryRouter.put("/:title", nextError(async (req, res, next) => {
+    const { title } = req.params;
+    const categoryInfo = req.body;
+    
+    await categoryService.update({title, categoryInfo})
+
+    res.status(200).end()
+}));
   
 categoryRouter.delete("/:title", nextError(async (req, res, next) => {
       const { title } = req.params;

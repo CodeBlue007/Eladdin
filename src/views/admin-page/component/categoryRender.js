@@ -20,4 +20,6 @@ function categoryTemplate(datas){
 export function categoryRender(datas){
     const viewContainer = document.querySelector(".category_container");
     viewContainer.innerHTML += categoryTemplate(datas);
+
+    
 }

@@ -11,7 +11,7 @@ async function App() {
         console.log("books", books);
         console.log("categories", categories);
         categoryRender(categories);
-        renderData(books);
+        renderData(books ,categories);
         addEvents();
 
     } catch (err) {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>쇼핑-데모</title>
     <!-- 아이콘 -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/elice-rabbit-favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../icons8-요정-color-16.ico">
     <!-- bulma css 관련 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
     <!-- 폰트 어썸: 아이콘 -->
@@ -13,48 +13,33 @@
     <!-- 커스텀 css, js -->
     <link rel="stylesheet" href="add_item.css" />
     <script src="add_item.js" type="module" defer></script>
+    <script src="../../../nav/nav.js" type="module" defer></script>
   </head>
   <body>
     <!-- 헤더 -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+    <!-- 헤더 -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="../../../home/home.html">
+          <img src="../../image/Eladin_CI.png" alt="eladin_logo" />
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="../../../home/home.html">
-            <img src="../../image/Eladin_CI.png" width="200" />
-          </a>
-        </div>
-
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a
-                href="../../../category-booklist/category-booklist.html"
-                class="button has-text-link-dark has-background-link-light"
-              >
-                <span class="icon">
-                  <img src="../../image/store-solid.svg" width="20" />
-                </span>
-                <strong>Shop</strong>
-              </a>
-            </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="../../../category-booklist/category-booklist.html" class="button ">
+              <span class="icon">
+                <img src="../../image/store-solid.svg" width="20" />
+              </span>
+              <strong>Shop</strong>
+            </a>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
     <main>
       <form class="item_container">
         <div class="header">
@@ -114,11 +99,21 @@
               </span>
               <span class="file-label"> 이미지업로드 </span>
             </span>
-            <span class="file-name"> Screen Shot 2017-07-29 at 15.54.25.png </span>
+            <span class="file-name"> 용량제한 2MB</span>
           </label>
         </div>
         <button class="button is-black">상품추가</button>
     </form>
     </main>
   </body>
+
+  <!-- 푸터 -->
+<hr />
+<footer>
+  <div>
+    <p>Eladin - Online Bookstore</p>
+    <img src="../../image/Eladin_CI.png" />
+  </div>
+  <p>ⓒ 2022 Cozyma</p>
+</footer>
 </html>

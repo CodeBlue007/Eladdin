@@ -5,7 +5,6 @@ import * as Api from "../../../../api.js";
 async function fetchItemInfo() {
     const ISBN = JSON.parse(localStorage.getItem("ISBN"));
     const bookInfo = await Api.get(`https://eladin-lgurfdxfjq-du.a.run.app/api/books/${ISBN}`, '');
-    console.log(bookInfo);
     return bookInfo;
 }
 
