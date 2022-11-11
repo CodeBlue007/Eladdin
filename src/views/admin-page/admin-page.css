@@ -313,9 +313,12 @@ header {
 }
 
 .bar_2 .add-product {
-  flex-basis: 11%;
+  flex-basis: 10%;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 30px;
+  border-radius: 20px;
+  background-color: black;
+  color:white;
 }
 
 .product-list {
