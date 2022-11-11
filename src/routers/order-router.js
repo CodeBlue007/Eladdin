@@ -71,4 +71,13 @@ orderRouter.post("/", loginRequired, nextError(async (req, res, next) => {
 }));
 
 
+// orderRouter.get('/:orderId', nextError(async (req, res, next) => {
+//   const id = req.params.orderId;
+
+//   await orderService.findById(id);
+
+//   res.status(201).end()
+// }));
+
+
 export { orderRouter };

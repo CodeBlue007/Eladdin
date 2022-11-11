@@ -129,10 +129,10 @@ class UserService {
     return user;
   }
 
-
   async deleteUser(userId){
     return userModel.deleteUser(userId)
-  }
+  }  
+
 }
 
 const userService = new UserService(userModel);
