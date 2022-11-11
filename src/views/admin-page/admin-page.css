@@ -392,13 +392,7 @@ footer {
   margin-top: auto;
   padding-top: 20px;
   margin-bottom: 50px;
-}
-
-hr {
-  border: 1px solid rgba(103, 0, 230, 0.1);
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 30px;
 }
 
 footer > div > p {
