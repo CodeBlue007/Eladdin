@@ -9,7 +9,7 @@ function orderTemplate(orders) {
   orders.forEach(order => {
     console.log(order);
 
-    const { createdAt, items, shippingStatus, _id: orderId } = order;
+    const { createdAt, items, shippingStatus, _id: orderId ,user :{fullName}} = order;
     const orderDate = createdAt? createdAt.slice(0,10) : "1997-10-23";
     let itemString = '';
     let volumeString = '';
@@ -25,7 +25,8 @@ function orderTemplate(orders) {
     })
 
     orderString += `<div class="order" id=${orderId}>
-    <div class="orderDate">${orderDate}</div>`
+    <div class="orderDate">${orderDate}</div>
+    <div class ="fullName">${fullName}</div>`
 
     orderString +=
       `<div class="book_container">${itemString}</div>

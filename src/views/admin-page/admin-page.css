@@ -114,8 +114,13 @@ header {
   text-align: center;
 }
 
+.bar .orderName{
+  flex-basis: 10%;
+  text-align: center;
+}
+
 .bar .bookTitle {
-  flex-basis: 50%;
+  flex-basis: 40%;
   text-align: center;
 }
 
@@ -147,10 +152,17 @@ header {
   margin-top: 10px;
 }
 
+
 .order .orderDate {
   flex-basis: 10%;
   text-align: center;
 }
+
+.order .fullName {
+  flex-basis: 10%;
+  text-align: center;
+}
+
 .order .cancelOrder-btn {
   flex-basis: 10%;
   text-align: center;
@@ -167,7 +179,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: 50%;
+  flex-basis: 40%;
   text-align: center;
 }
 
