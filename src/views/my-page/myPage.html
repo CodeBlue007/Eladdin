@@ -1,107 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./myPage.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <script src="./myPage.js" defer type="module"></script>
-    <script src="../nav/nav.js" type="module" defer></script>
-    <!-- <script src="./component/logout.js" type="module" defer></script> -->
-    <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
-    <title>my-page</title>
-  </head>
-  <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a href="../home/home.html">
-            <img src="./image/Eladin_CI.png" alt="eladin_logo" />
-          </a>
-        </div>
-  
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a href="../category-booklist/category-booklist.html" class="button ">
-                <span class="icon">
-                  <img src="./image/store-solid.svg" width="20" />
-                </span>
-                <strong>Shop</strong>
-              </a>
-              <a href="../register/register.html" class="button ">
-                <span class="icon">
-                  <img src="./image/pen-to-square-solid.svg" width="20" />
-                </span>
-                <strong>Sign Up</strong>
-              </a>
-              <a href="../cart/cart.html" class="button ">
-                <span class="icon">
-                  <i class="fas fa-cart-shopping"></i>
-                </span>
-                <strong>Cart</strong>
-              </a>
-              <a id="adminPage_btn" class="button">
-                <span class="icon">
-                  <i class="fa-solid fa-lock"></i>
-                </span>
-                <strong>Admin Page</strong>
-              </a>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./myPage.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <script src="./myPage.js" defer type="module"></script>
+  <script src="../nav/nav.js" type="module" defer></script>
+  <!-- <script src="./component/logout.js" type="module" defer></script> -->
+  <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous" defer></script>
+  <title>my-page</title>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="../home/home.html">
+          <img src="./image/Eladin_CI.png" alt="eladin_logo" />
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="../category-booklist/category-booklist.html" class="button ">
+              <span class="icon">
+                <img src="./image/store-solid.svg" width="20" />
+              </span>
+              <strong>Shop</strong>
+            </a>
+            <a href="../register/register.html" class="button ">
+              <span class="icon">
+                <img src="./image/pen-to-square-solid.svg" width="20" />
+              </span>
+              <strong>Sign Up</strong>
+            </a>
+            <a href="../cart/cart.html" class="button ">
+              <span class="icon">
+                <i class="fas fa-cart-shopping"></i>
+              </span>
+              <strong>Cart</strong>
+            </a>
+            <a id="adminPage_btn" class="button">
+              <span class="icon">
+                <i class="fa-solid fa-lock"></i>
+              </span>
+              <strong>Admin Page</strong>
+            </a>
           </div>
         </div>
       </div>
-    </nav>
-    <main>
-      <header>
-        <div class="wrapper">
-          <img class="profile-picture" src="../my-page/image/icons8-요정-480.png" />
-          <div class="text-area">
-            <h1 class="greeting">Hi, </h1>
-            <div class="welcome">마이페이지에 오신 걸 환영합니다!</div>
-          </div>
+    </div>
+  </nav>
+  <main>
+    <header>
+      <div class="wrapper">
+        <img class="profile-picture" src="./image/icons8-요정-480.png" />
+        <div class="text-area">
+          <h1 class="greeting">Hi, </h1>
+          <div class="welcome">마이페이지에 오신 걸 환영합니다!</div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <div class="list">
-        
-        <!-- myPage-order.js -->
-        <button id="order-button" class="button is-link order-list">
-          주문 조회
-        </button>
-        <div class="order-products hidden"></div>
+    <div class="list">
 
-        <button class="button is-link userInfo_btn"><span>회원정보</span></button>
-        <div class="modal">
-          <div class="modal-background"></div>
-          <div class="modal-content">
-            <div class="view-userInfo">
-              <div>회원정보를 조회하려면<br /></div>
-              <div>비밀번호를 입력하셔야 합니다.</div>
-              <label class="label" for="passwordInput">비밀번호</label>
-              <div class="control">
-                <input
-                  class="input"
-                  id="passwordInput"
-                  type="password"
-                  placeholder="********"
-                  autocomplete="on"
-                />
-              </div>
-              <button class="confirm-btn">확인</button>
+      <!-- myPage-order.js -->
+      <button id="order-button" class="button is-link order-list">
+        주문 조회
+      </button>
+      <div class="order-products hidden"></div>
+
+      <button class="button is-link userInfo_btn"><span>회원정보</span></button>
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="view-userInfo">
+            <div>회원정보를 조회하려면<br /></div>
+            <div>비밀번호를 입력하셔야 합니다.</div>
+            <label class="label" for="passwordInput">비밀번호</label>
+            <div class="control">
+              <input class="input" id="passwordInput" type="password" placeholder="********" autocomplete="on" />
             </div>
+            <button class="confirm-btn">확인</button>
           </div>
-          <button class="modal-close is-large" aria-label="close"></button>
         </div>
-        <div class="userInfo"></div>
-        <button class="button is-link" id="login_btn">로그아웃</button>
-        <button class="button is-link deleteAccount">회원탈퇴</button>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <div class="userInfo"></div>
+      <button class="button is-link" id="login_btn">로그아웃</button>
+      <button class="button is-link deleteAccount">회원탈퇴</button>
       </ul>
-    </main>
-  </body>
+  </main>
+</body>
 
-  <!-- 푸터 -->
+<!-- 푸터 -->
 <hr />
 <footer>
   <div>
@@ -110,4 +106,5 @@
   </div>
   <p>ⓒ 2022 Cozyma</p>
 </footer>
+
 </html>

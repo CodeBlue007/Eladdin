@@ -35,6 +35,9 @@
 ### https://eladin-lgurfdxfjq-du.a.run.app/
 
 <br />
+![image](https://storage.googleapis.com/eladin_img/appqrcode.png)
+
+<br />
 
 ### 테스트계정
 | Role | ID | PW |
