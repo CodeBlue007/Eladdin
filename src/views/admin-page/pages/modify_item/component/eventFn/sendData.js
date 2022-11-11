@@ -22,7 +22,7 @@ export async function sendData(InfoArray) {
   try {
     await Api.put(`https://eladin-lgurfdxfjq-du.a.run.app/api/books/${ISBN}`,'',newData);
 
-    alert(`상품수정을 완료했씁니다.`);
+    alert(`상품수정을 완료했습니다.`);
 
     window.location.href = "../../admin-page.html";
   } catch (err) {
