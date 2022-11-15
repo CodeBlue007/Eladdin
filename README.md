@@ -46,7 +46,7 @@ Eladin(엘라딘)
 ### https://eladin-lgurfdxfjq-du.a.run.app/
 
 <br />
-![image](https://storage.googleapis.com/eladin_img/appqrcode.png)
+<img alt="QR코드" src="https://storage.googleapis.com/eladin_img/appqrcode.png">
 
 <br />
 
@@ -78,22 +78,6 @@ Eladin(엘라딘)
 7. 관리자: 주문, 카테고리, 도서 **CRUD** 가능
 
 <br>
-
-### 3-5. 페이지 별 화면
-
-|                                              |                                              |
-| -------------------------------------------- | -------------------------------------------- |
-| ![image](/uploads/8fb1ebf97b41df89fd9fbe875da1fe0d/image.png) | ![image](/uploads/2b487e4eab49751c7345ca6ca75e01ba/image.png) |
-| 메인 페이지                                  | 회원가입 페이지                                |
-| ![image](/uploads/080db94a3c0dd6270fbd3ad8003ab43d/image.png) | ![image](/uploads/1c1897a1b7d828aa8e0a840772bc5630/image.png)                                             |
-| 로그인 페이지                                | 카테고리별 도서 리스트 페이지                         |
-| ![image](/uploads/e3f82f2b0984f1fa8b2df5f084007319/image.png) | ![image](/uploads/68defb35ccb0e21a3056159394748a6d/image.png)                                             |
-| 도서 상세 정보 페이지                                | 장바구니 페이지                         |
-| ![image](/uploads/135b5d757cfabff0dc03278b8d572cd8/image.png) | ![image](/uploads/62a25db17190584bf671811ccd211d89/image.png)                                             |
-| 주문 페이지(장바구니 페이지 하단)                                | 주문 완료 모달                         |
-| ![image](/uploads/6a36418e0032e1e5bff5cc4811641cb0/image.png) | ![image](/uploads/ea71b33ceb604664138bcf62f98a644f/image.png)                                             |
-| 마이페이지                                | 관리자페이지                         |
-
 <br />
 
 ## 4. 기술 스택
@@ -124,7 +108,7 @@ Eladin(엘라딘)
 
 ### 5-1. 인프라 구조
 
-![image](/uploads/8641e64efcb2892e86fcd1bf11630892/image.png)<br />
+<img alt="인프라" src="https://kdt-gitlab.elice.io/sw_track/class_03/web_project/team4/eladin/uploads/8641e64efcb2892e86fcd1bf11630892/image.png">
 
 ### 5-2. 폴더 구조
 
