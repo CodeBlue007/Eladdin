@@ -15,12 +15,18 @@ Eladin(엘라딘)
 
 기존 알라딘 사이트의 UX/UI 개선
 
-### 1-4. Objective
+
+### 1-4. 시현영상
+
+https://user-images.githubusercontent.com/81899298/205054491-f6882023-1a4c-4f07-92e6-9bf009a90c86.mp4
+
+
+### 1-5. Objective
 
 기존 알라딘 사이트의 양탄자 배송에서 착안하여 사용자의 빠른 주문 및 배송이 가능하도록 단순화된 UI와 최소한의 기능 제공
 
 
-### 1-5. Target User
+### 1-6. Target User
 
 복잡한 절차 없이 도서를 빨리 구매하고 싶은 사람
 
