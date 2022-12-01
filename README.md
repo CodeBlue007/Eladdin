@@ -18,7 +18,13 @@ Eladin(엘라딘)
 
 ### 1-4. 시현영상
 
-https://user-images.githubusercontent.com/81899298/205054491-f6882023-1a4c-4f07-92e6-9bf009a90c86.mp4
+#### User 계정
+<img align="middle" src="https://user-images.githubusercontent.com/81899298/205063061-c2d65bd6-e10d-4212-acae-db205669f612.mp4"/>
+
+<hr/>
+
+#### Admin 계정
+<img  align="middle" src="https://user-images.githubusercontent.com/81899298/205063186-75ec3db7-495f-4172-b956-4f862c5cbe53.mp4"/>
 
 
 ### 1-5. Objective
@@ -117,7 +123,6 @@ https://user-images.githubusercontent.com/81899298/205054491-f6882023-1a4c-4f07-
 
 ## 4. 기술 스택
 
-<!-- ![image](https://i.ibb.co/N34mXzy/image.png) -->
 
 ### 4-1. Language
 
