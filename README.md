@@ -1,5 +1,4 @@
 <div align="middle"> <h1>Eladin 도서 판매 서비스</h1> </div>
-<div align="middle"> <img alt="엘라딘 로고" src="https://eladin-lgurfdxfjq-du.a.run.app/category-booklist/image/Eladin_CI.png"> </div><br>
 
 ## 1. 서비스 개요
 
@@ -57,14 +56,10 @@ Eladin(엘라딘)
 
 <br />
 
-### 3-1. 서비스 도메인
+### 3-1. 서비스 도메인(현재 닫힘)
 
-### https://eladin-lgurfdxfjq-du.a.run.app/
+### https://eladin-lgurfdxfjq-du.a.run.app/ 
 
-<br />
-<img alt="QR코드" src="https://storage.googleapis.com/eladin_img/appqrcode.png">
-
-<br />
 
 ### 3-2. 테스트 계정
 
